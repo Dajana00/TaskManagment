@@ -1,0 +1,1061 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\Trello\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\trello\\helpers\\serviceextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:helpers\\serviceextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\trello\\service\\boardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:service\\boardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\trello\\service\\iservice\\icolumnservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:service\\iservice\\icolumnservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\trello\\service\\columnservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:service\\columnservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\trello\\service\\projectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:service\\projectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\trello\\repository\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:repository\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\trello\\repository\\irepository\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:repository\\irepository\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\trello\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\trello\\model\\column.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:model\\column.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\trello\\service\\iservice\\iboardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:service\\iservice\\iboardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\trello\\repository\\columnrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:repository\\columnrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\trello\\repository\\boardrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:repository\\boardrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\trello\\repository\\irepository\\icolumnrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:repository\\irepository\\icolumnrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\trello\\repository\\irepository\\iboardrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:repository\\irepository\\iboardrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\trello\\service\\iservice\\iprojectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:service\\iservice\\iprojectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\trello\\mapper\\boardmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:mapper\\boardmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\trello\\helpers\\exeptionhandlingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:helpers\\exeptionhandlingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\trello\\dtos\\columndto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:dtos\\columndto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\trello\\dtos\\boarddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:dtos\\boarddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\trello\\controller\\boardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:controller\\boardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\trello\\controller\\projectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:controller\\projectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\trello\\mapper\\projectmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:mapper\\projectmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\trello\\mapper\\columnmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:mapper\\columnmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\trello\\model\\board.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:model\\board.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\trello\\repository\\projectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:repository\\projectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\trello\\repository\\irepository\\iprojectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:repository\\irepository\\iprojectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\trello\\model\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:model\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\trello\\dtos\\projectdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:dtos\\projectdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\trello\\controller\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:controller\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\trello\\controller\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:controller\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\trello\\dtos\\projectdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:dtos\\projectdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\trello\\model\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:model\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\trello\\mapper\\usermapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:mapper\\usermapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\trello\\model\\sprint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:model\\sprint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\trello\\model\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:model\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\trello\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\trello\\service\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:service\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\trello\\logs\\app20250328_011.log||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:logs\\app20250328_011.log||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\trello\\service\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:service\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\trello\\service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\trello\\controller\\baseapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:controller\\baseapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\trello\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\trello\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\trello\\helpers\\jwtsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:helpers\\jwtsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\trello\\logs\\app20250328_001.log||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:logs\\app20250328_001.log||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\trello\\dtos\\carddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:dtos\\carddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\trello\\dtos\\sprintdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:dtos\\sprintdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\trello\\mapper\\sprintmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:mapper\\sprintmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\trello\\model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\trello\\service\\iservice\\ijwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:service\\iservice\\ijwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\trello\\model\\userproject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:model\\userproject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\trello\\repository\\irepository\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:repository\\irepository\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\trello\\service\\iservice\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:service\\iservice\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\trello\\dtos\\userlogindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:dtos\\userlogindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\trello\\dtos\\authresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:dtos\\authresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\trello\\dtos\\registerrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:dtos\\registerrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\trello\\service\\iservice\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:service\\iservice\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\trello\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\trello\\model\\usercards.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:model\\usercards.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\User\\global.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\trello\\helpers\\passwordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:helpers\\passwordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 22,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trello\\Controller\\AuthController.cs",
+              "RelativeDocumentMoniker": "Controller\\AuthController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Trello\\Controller\\AuthController.cs",
+              "RelativeToolTip": "Controller\\AuthController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAnwBcAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T13:11:07.6Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trello\\Service\\UserService.cs",
+              "RelativeDocumentMoniker": "Service\\UserService.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Trello\\Service\\UserService.cs",
+              "RelativeToolTip": "Service\\UserService.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAADgv0QAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-11T13:33:40.915Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProjectService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trello\\Service\\ProjectService.cs",
+              "RelativeDocumentMoniker": "Service\\ProjectService.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Trello\\Service\\ProjectService.cs",
+              "RelativeToolTip": "Service\\ProjectService.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwCgAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-25T09:22:33.76Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "ProjectRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trello\\Repository\\ProjectRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\ProjectRepository.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Trello\\Repository\\ProjectRepository.cs",
+              "RelativeToolTip": "Repository\\ProjectRepository.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAgwEcAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T10:24:09.888Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Project.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trello\\Model\\Project.cs",
+              "RelativeDocumentMoniker": "Model\\Project.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Trello\\Model\\Project.cs",
+              "RelativeToolTip": "Model\\Project.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-11T11:00:46.896Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Board.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trello\\Model\\Board.cs",
+              "RelativeDocumentMoniker": "Model\\Board.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Trello\\Model\\Board.cs",
+              "RelativeToolTip": "Model\\Board.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-10T20:38:05.353Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "BoardDto.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trello\\DTOs\\BoardDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\BoardDto.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Trello\\DTOs\\BoardDto.cs",
+              "RelativeToolTip": "DTOs\\BoardDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T13:54:47.806Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Column.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trello\\Model\\Column.cs",
+              "RelativeDocumentMoniker": "Model\\Column.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Trello\\Model\\Column.cs",
+              "RelativeToolTip": "Model\\Column.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-10T20:42:10.517Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ColumnDto.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trello\\DTOs\\ColumnDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\ColumnDto.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Trello\\DTOs\\ColumnDto.cs",
+              "RelativeToolTip": "DTOs\\ColumnDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T14:02:53.104Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Card.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trello\\Model\\Card.cs",
+              "RelativeDocumentMoniker": "Model\\Card.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Trello\\Model\\Card.cs",
+              "RelativeToolTip": "Model\\Card.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAxwAwAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T09:42:18.874Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "CardDto.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trello\\DTOs\\CardDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\CardDto.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Trello\\DTOs\\CardDto.cs",
+              "RelativeToolTip": "DTOs\\CardDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T14:03:33.485Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "UserDto.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trello\\DTOs\\UserDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\UserDto.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Trello\\DTOs\\UserDto.cs",
+              "RelativeToolTip": "DTOs\\UserDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T11:46:00.113Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "UserMapper.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trello\\Mapper\\UserMapper.cs",
+              "RelativeDocumentMoniker": "Mapper\\UserMapper.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Trello\\Mapper\\UserMapper.cs",
+              "RelativeToolTip": "Mapper\\UserMapper.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T15:51:28.826Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "ProjectDetailsDto.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trello\\DTOs\\ProjectDetailsDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\ProjectDetailsDto.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Trello\\DTOs\\ProjectDetailsDto.cs",
+              "RelativeToolTip": "DTOs\\ProjectDetailsDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T13:54:26.781Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "BoardRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trello\\Repository\\BoardRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\BoardRepository.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Trello\\Repository\\BoardRepository.cs",
+              "RelativeToolTip": "Repository\\BoardRepository.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAkwDgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T09:39:52.22Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ColumnService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trello\\Service\\ColumnService.cs",
+              "RelativeDocumentMoniker": "Service\\ColumnService.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Trello\\Service\\ColumnService.cs",
+              "RelativeToolTip": "Service\\ColumnService.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAYwDQAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T13:20:50.073Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "IColumnRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trello\\Repository\\IRepository\\IColumnRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\IRepository\\IColumnRepository.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Trello\\Repository\\IRepository\\IColumnRepository.cs",
+              "RelativeToolTip": "Repository\\IRepository\\IColumnRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T12:49:37.318Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IBoardService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trello\\Service\\IService\\IBoardService.cs",
+              "RelativeDocumentMoniker": "Service\\IService\\IBoardService.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Trello\\Service\\IService\\IBoardService.cs",
+              "RelativeToolTip": "Service\\IService\\IBoardService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T09:47:23.327Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BoardService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trello\\Service\\BoardService.cs",
+              "RelativeDocumentMoniker": "Service\\BoardService.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Trello\\Service\\BoardService.cs",
+              "RelativeToolTip": "Service\\BoardService.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAgwCwAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T09:48:33.059Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trello\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Trello\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "Data\\AppDbContext.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T08:59:20.427Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IUnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trello\\Repository\\IRepository\\IUnitOfWork.cs",
+              "RelativeDocumentMoniker": "Repository\\IRepository\\IUnitOfWork.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Trello\\Repository\\IRepository\\IUnitOfWork.cs",
+              "RelativeToolTip": "Repository\\IRepository\\IUnitOfWork.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T08:45:10.233Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trello\\Repository\\UnitOfWork.cs",
+              "RelativeDocumentMoniker": "Repository\\UnitOfWork.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Trello\\Repository\\UnitOfWork.cs",
+              "RelativeToolTip": "Repository\\UnitOfWork.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAYwB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T08:45:26.281Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ServiceExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trello\\Helpers\\ServiceExtensions.cs",
+              "RelativeDocumentMoniker": "Helpers\\ServiceExtensions.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Trello\\Helpers\\ServiceExtensions.cs",
+              "RelativeToolTip": "Helpers\\ServiceExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T15:16:41.887Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ColumnRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trello\\Repository\\ColumnRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\ColumnRepository.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Trello\\Repository\\ColumnRepository.cs",
+              "RelativeToolTip": "Repository\\ColumnRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T12:50:00.243Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IColumnService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trello\\Service\\IService\\IColumnService.cs",
+              "RelativeDocumentMoniker": "Service\\IService\\IColumnService.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Trello\\Service\\IService\\IColumnService.cs",
+              "RelativeToolTip": "Service\\IService\\IColumnService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T13:20:26.979Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "IBoardRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trello\\Repository\\IRepository\\IBoardRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\IRepository\\IBoardRepository.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Trello\\Repository\\IRepository\\IBoardRepository.cs",
+              "RelativeToolTip": "Repository\\IRepository\\IBoardRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T12:50:02.708Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "IProjectService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trello\\Service\\IService\\IProjectService.cs",
+              "RelativeDocumentMoniker": "Service\\IService\\IProjectService.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Trello\\Service\\IService\\IProjectService.cs",
+              "RelativeToolTip": "Service\\IService\\IProjectService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-25T07:43:44.028Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "BoardMapper.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trello\\Mapper\\BoardMapper.cs",
+              "RelativeDocumentMoniker": "Mapper\\BoardMapper.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Trello\\Mapper\\BoardMapper.cs",
+              "RelativeToolTip": "Mapper\\BoardMapper.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBYAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T16:03:07.53Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ProjectController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trello\\Controller\\ProjectController.cs",
+              "RelativeDocumentMoniker": "Controller\\ProjectController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Trello\\Controller\\ProjectController.cs",
+              "RelativeToolTip": "Controller\\ProjectController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAACgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-25T14:00:41.127Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ExeptionHandlingMiddleware.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trello\\Helpers\\ExeptionHandlingMiddleware.cs",
+              "RelativeDocumentMoniker": "Helpers\\ExeptionHandlingMiddleware.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Trello\\Helpers\\ExeptionHandlingMiddleware.cs",
+              "RelativeToolTip": "Helpers\\ExeptionHandlingMiddleware.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAWwCYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T12:16:50.926Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ProjectMapper.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trello\\Mapper\\ProjectMapper.cs",
+              "RelativeDocumentMoniker": "Mapper\\ProjectMapper.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Trello\\Mapper\\ProjectMapper.cs",
+              "RelativeToolTip": "Mapper\\ProjectMapper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T11:35:07.439Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "BoardController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trello\\Controller\\BoardController.cs",
+              "RelativeDocumentMoniker": "Controller\\BoardController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Trello\\Controller\\BoardController.cs",
+              "RelativeToolTip": "Controller\\BoardController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T08:15:47.535Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "IProjectRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trello\\Repository\\IRepository\\IProjectRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\IRepository\\IProjectRepository.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Trello\\Repository\\IRepository\\IProjectRepository.cs",
+              "RelativeToolTip": "Repository\\IRepository\\IProjectRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAgAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-25T07:49:26.792Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "SprintDto.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trello\\DTOs\\SprintDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\SprintDto.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Trello\\DTOs\\SprintDto.cs",
+              "RelativeToolTip": "DTOs\\SprintDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T13:54:59.88Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ColumnMapper.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trello\\Mapper\\ColumnMapper.cs",
+              "RelativeDocumentMoniker": "Mapper\\ColumnMapper.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Trello\\Mapper\\ColumnMapper.cs",
+              "RelativeToolTip": "Mapper\\ColumnMapper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T09:59:37.157Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "Comment.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trello\\Model\\Comment.cs",
+              "RelativeDocumentMoniker": "Model\\Comment.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Trello\\Model\\Comment.cs",
+              "RelativeToolTip": "Model\\Comment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-11T09:28:54.027Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trello\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Trello\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-14T10:10:22.971Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "Sprint.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trello\\Model\\Sprint.cs",
+              "RelativeDocumentMoniker": "Model\\Sprint.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Trello\\Model\\Sprint.cs",
+              "RelativeToolTip": "Model\\Sprint.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-10T18:00:31.192Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "ProjectDto.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trello\\DTOs\\ProjectDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\ProjectDto.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Trello\\DTOs\\ProjectDto.cs",
+              "RelativeToolTip": "DTOs\\ProjectDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T11:25:45.667Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "app20250328_011.log",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trello\\logs\\app20250328_011.log",
+              "RelativeDocumentMoniker": "logs\\app20250328_011.log",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Trello\\logs\\app20250328_011.log",
+              "RelativeToolTip": "logs\\app20250328_011.log",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAG/SURBVDhPrZRNTgIxFMerDIaEhHgU97JxwUKGGaNeQJdyCY0XUBDWGhg4AB\u002BuvQk7OQCRFTP1fXWmMxUMCT94ee177eu/LVQdFK31kTSJ0WgEIa0SMJ2A6QTHcF9iicQqlYpa/6zv2\u002B2HD5nuEkWR/l4udRzHZBtjGzFor1YrPR6P9WKx0MNhpN96vTuZThyLJ1AJLK/iJFFxjBanBsXIozqkWq2qev1c1Wq19063e0ZBwBNP4JaQ6WRC/i8ajQb5wWBAvnxyghpOqQPkC8L5IEEQKjgxaqOTFsCd65tb6nmlkur1\u002BxwXCgX58KfT7QptwvCK52wrSLcJvtUKOABkQ6HFXwbGsmMRBkchzpjNphLZDSrEn5G1qnsp\u002BPEtheloXouRnXDTTjhb5tXmeyg0IgzuliHp\u002By0OANbiOCDXp1IYo3mMUxBT8/mMA/8QhGH6ZzC4Zwi5ZqoQB9M3h62I/\u002B/SAQpniBmtPvdQyGeYUdgyX8pl05eIBSxmTzQYEYbc42AuJQWLGJNQEcrJG4A4BTHneSW2sqfKOyybkxXMPbAvrx3IsyLzkPJFmUcWYtDntjG6lIvnp8cvKXNIlPoFvstpJRlQPIAAAAAASUVORK5CYII=",
+              "WhenOpened": "2025-03-28T11:14:20.635Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "JwtService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trello\\Service\\JwtService.cs",
+              "RelativeDocumentMoniker": "Service\\JwtService.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Trello\\Service\\JwtService.cs",
+              "RelativeToolTip": "Service\\JwtService.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAADwvzYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T10:40:42.801Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trello\\Service\\AuthService.cs",
+              "RelativeDocumentMoniker": "Service\\AuthService.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Trello\\Service\\AuthService.cs",
+              "RelativeToolTip": "Service\\AuthService.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAQwD8AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T10:40:51.579Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "JwtSettings.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trello\\Helpers\\JwtSettings.cs",
+              "RelativeDocumentMoniker": "Helpers\\JwtSettings.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Trello\\Helpers\\JwtSettings.cs",
+              "RelativeToolTip": "Helpers\\JwtSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T13:57:29.668Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trello\\Controller\\UserController.cs",
+              "RelativeDocumentMoniker": "Controller\\UserController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Trello\\Controller\\UserController.cs",
+              "RelativeToolTip": "Controller\\UserController.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAAABwAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T11:43:08.864Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "app20250328_001.log",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trello\\logs\\app20250328_001.log",
+              "RelativeDocumentMoniker": "logs\\app20250328_001.log",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Trello\\logs\\app20250328_001.log",
+              "RelativeToolTip": "logs\\app20250328_001.log",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAAGAAAAAAAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAG/SURBVDhPrZRNTgIxFMerDIaEhHgU97JxwUKGGaNeQJdyCY0XUBDWGhg4AB\u002BuvQk7OQCRFTP1fXWmMxUMCT94ee177eu/LVQdFK31kTSJ0WgEIa0SMJ2A6QTHcF9iicQqlYpa/6zv2\u002B2HD5nuEkWR/l4udRzHZBtjGzFor1YrPR6P9WKx0MNhpN96vTuZThyLJ1AJLK/iJFFxjBanBsXIozqkWq2qev1c1Wq19063e0ZBwBNP4JaQ6WRC/i8ajQb5wWBAvnxyghpOqQPkC8L5IEEQKjgxaqOTFsCd65tb6nmlkur1\u002BxwXCgX58KfT7QptwvCK52wrSLcJvtUKOABkQ6HFXwbGsmMRBkchzpjNphLZDSrEn5G1qnsp\u002BPEtheloXouRnXDTTjhb5tXmeyg0IgzuliHp\u002By0OANbiOCDXp1IYo3mMUxBT8/mMA/8QhGH6ZzC4Zwi5ZqoQB9M3h62I/\u002B/SAQpniBmtPvdQyGeYUdgyX8pl05eIBSxmTzQYEYbc42AuJQWLGJNQEcrJG4A4BTHneSW2sqfKOyybkxXMPbAvrx3IsyLzkPJFmUcWYtDntjG6lIvnp8cvKXNIlPoFvstpJRlQPIAAAAAASUVORK5CYII=",
+              "WhenOpened": "2025-03-28T10:12:31.22Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "BaseApiController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trello\\Controller\\BaseApiController.cs",
+              "RelativeDocumentMoniker": "Controller\\BaseApiController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Trello\\Controller\\BaseApiController.cs",
+              "RelativeToolTip": "Controller\\BaseApiController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T12:11:22.336Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trello\\Repository\\IRepository\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\IRepository\\IUserRepository.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Trello\\Repository\\IRepository\\IUserRepository.cs",
+              "RelativeToolTip": "Repository\\IRepository\\IUserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-11T14:49:27.936Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "SprintMapper.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trello\\Mapper\\SprintMapper.cs",
+              "RelativeDocumentMoniker": "Mapper\\SprintMapper.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Trello\\Mapper\\SprintMapper.cs",
+              "RelativeToolTip": "Mapper\\SprintMapper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T16:05:55.133Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trello\\Repository\\UserRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Trello\\Repository\\UserRepository.cs",
+              "RelativeToolTip": "Repository\\UserRepository.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAlwDkAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-25T07:51:55.941Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trello\\Model\\User.cs",
+              "RelativeDocumentMoniker": "Model\\User.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Trello\\Model\\User.cs",
+              "RelativeToolTip": "Model\\User.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAAB8AAABYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-10T20:40:24.493Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "IJwtService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trello\\Service\\IService\\IJwtService.cs",
+              "RelativeDocumentMoniker": "Service\\IService\\IJwtService.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Trello\\Service\\IService\\IJwtService.cs",
+              "RelativeToolTip": "Service\\IService\\IJwtService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T13:58:13.493Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trello\\Service\\IService\\IUserService.cs",
+              "RelativeDocumentMoniker": "Service\\IService\\IUserService.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Trello\\Service\\IService\\IUserService.cs",
+              "RelativeToolTip": "Service\\IService\\IUserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-21T07:06:37.021Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "UserProject.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trello\\Model\\UserProject.cs",
+              "RelativeDocumentMoniker": "Model\\UserProject.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Trello\\Model\\UserProject.cs",
+              "RelativeToolTip": "Model\\UserProject.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T10:35:03.341Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "UserLoginDto.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trello\\DTOs\\UserLoginDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\UserLoginDto.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Trello\\DTOs\\UserLoginDto.cs",
+              "RelativeToolTip": "DTOs\\UserLoginDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-11T14:48:08.537Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "AuthResponseDto.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trello\\DTOs\\AuthResponseDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\AuthResponseDto.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Trello\\DTOs\\AuthResponseDto.cs",
+              "RelativeToolTip": "DTOs\\AuthResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-25T07:48:37.442Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "RegisterRequestDto.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trello\\DTOs\\RegisterRequestDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\RegisterRequestDto.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Trello\\DTOs\\RegisterRequestDto.cs",
+              "RelativeToolTip": "DTOs\\RegisterRequestDto.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-11T14:47:24.873Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "IAuthService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trello\\Service\\IService\\IAuthService.cs",
+              "RelativeDocumentMoniker": "Service\\IService\\IAuthService.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Trello\\Service\\IService\\IAuthService.cs",
+              "RelativeToolTip": "Service\\IService\\IAuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T13:06:38.663Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trello\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Trello\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-17T11:59:52.459Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "UserCards.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trello\\Model\\UserCards.cs",
+              "RelativeDocumentMoniker": "Model\\UserCards.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Trello\\Model\\UserCards.cs",
+              "RelativeToolTip": "Model\\UserCards.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T12:51:02.302Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "global.json",
+              "DocumentMoniker": "C:\\Users\\User\\global.json",
+              "RelativeDocumentMoniker": "..\\..\\global.json",
+              "ToolTip": "C:\\Users\\User\\global.json",
+              "RelativeToolTip": "..\\..\\global.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-17T10:20:27.207Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "PasswordHasher.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Trello\\Helpers\\PasswordHasher.cs",
+              "RelativeDocumentMoniker": "Helpers\\PasswordHasher.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Trello\\Helpers\\PasswordHasher.cs",
+              "RelativeToolTip": "Helpers\\PasswordHasher.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T13:01:36.175Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

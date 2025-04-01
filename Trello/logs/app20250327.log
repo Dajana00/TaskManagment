@@ -1,0 +1,284 @@
+2025-03-27 10:28:35.223 +01:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-27 10:28:35.726 +01:00 [INF] Now listening on: http://localhost:5196
+2025-03-27 10:28:35.732 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-27 10:28:35.735 +01:00 [INF] Hosting environment: Development
+2025-03-27 10:28:35.737 +01:00 [INF] Content root path: C:\Users\User\Desktop\Trello
+2025-03-27 10:28:40.294 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5196// - null null
+2025-03-27 10:28:40.353 +01:00 [WRN] Failed to determine the https port for redirect.
+2025-03-27 10:28:40.997 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5196// - 404 0 null 728.983ms
+2025-03-27 10:28:41.033 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5196//, Response status code: 404
+2025-03-27 10:35:36.229 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5196/api/auth/login - null null
+2025-03-27 10:35:36.252 +01:00 [INF] CORS policy execution successful.
+2025-03-27 10:35:36.261 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5196/api/auth/login - 204 null null 33.3761ms
+2025-03-27 10:35:36.272 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5196/api/auth/login - application/json 41
+2025-03-27 10:35:36.284 +01:00 [INF] CORS policy execution successful.
+2025-03-27 10:35:36.291 +01:00 [INF] Executing endpoint 'Trello.Controller.AuthController.Login (Trello)'
+2025-03-27 10:35:36.341 +01:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Trello.DTOs.UserLoginDto) on controller Trello.Controller.AuthController (Trello).
+2025-03-27 10:35:39.291 +01:00 [INF] Executed DbCommand (104ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."AccessFailedCount", u."ConcurrencyStamp", u."CreatedAt", u."Email", u."EmailConfirmed", u."FirstName", u."LastName", u."LockoutEnabled", u."LockoutEnd", u."NormalizedEmail", u."NormalizedUserName", u."PasswordHash", u."PhoneNumber", u."PhoneNumberConfirmed", u."RefreshToken", u."RefreshTokenExpiry", u."SecurityStamp", u."TwoFactorEnabled", u."UserName"
+FROM "Users" AS u
+WHERE u."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2025-03-27 10:35:39.605 +01:00 [INF] Executing OkObjectResult, writing value of type 'FluentResults.Result`1[[Trello.DTOs.AuthResponseDto, Trello, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-27 10:35:39.659 +01:00 [INF] Executed action Trello.Controller.AuthController.Login (Trello) in 3308.87ms
+2025-03-27 10:35:39.664 +01:00 [INF] Executed endpoint 'Trello.Controller.AuthController.Login (Trello)'
+2025-03-27 10:35:39.676 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5196/api/auth/login - 200 null application/json; charset=utf-8 3404.3127ms
+2025-03-27 10:35:41.192 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5196/api/user/getById/5 - null null
+2025-03-27 10:35:41.226 +01:00 [INF] CORS policy execution successful.
+2025-03-27 10:35:41.236 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5196/api/user/getById/5 - 204 null null 44.0458ms
+2025-03-27 10:35:41.246 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5196/api/user/getById/5 - null null
+2025-03-27 10:35:41.387 +01:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenInvalidAudienceException: IDX10208: Unable to validate audience. validationParameters.ValidAudience is null or whitespace and validationParameters.ValidAudiences is null.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateAudience(IEnumerable`1 audiences, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-03-27 10:35:41.421 +01:00 [INF] Bearer was not authenticated. Failure message: IDX10208: Unable to validate audience. validationParameters.ValidAudience is null or whitespace and validationParameters.ValidAudiences is null.
+2025-03-27 10:35:41.424 +01:00 [INF] CORS policy execution successful.
+2025-03-27 10:35:41.427 +01:00 [INF] Executing endpoint 'Trello.Controller.UserController.GetUserById (Trello)'
+2025-03-27 10:35:41.435 +01:00 [INF] Route matched with {action = "GetUserById", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserById(Int32) on controller Trello.Controller.UserController (Trello).
+2025-03-27 10:35:41.515 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."AccessFailedCount", u."ConcurrencyStamp", u."CreatedAt", u."Email", u."EmailConfirmed", u."FirstName", u."LastName", u."LockoutEnabled", u."LockoutEnd", u."NormalizedEmail", u."NormalizedUserName", u."PasswordHash", u."PhoneNumber", u."PhoneNumberConfirmed", u."RefreshToken", u."RefreshTokenExpiry", u."SecurityStamp", u."TwoFactorEnabled", u."UserName"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 1
+2025-03-27 10:35:41.525 +01:00 [INF] Executing OkObjectResult, writing value of type 'Trello.DTOs.UserDto'.
+2025-03-27 10:35:41.535 +01:00 [INF] Executed action Trello.Controller.UserController.GetUserById (Trello) in 94.6251ms
+2025-03-27 10:35:41.539 +01:00 [INF] Executed endpoint 'Trello.Controller.UserController.GetUserById (Trello)'
+2025-03-27 10:35:41.545 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5196/api/user/getById/5 - 200 null application/json; charset=utf-8 299.3121ms
+2025-03-27 10:35:41.558 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5196/api/projects/getUserProjects/5 - null null
+2025-03-27 10:35:41.569 +01:00 [INF] CORS policy execution successful.
+2025-03-27 10:35:41.572 +01:00 [INF] Executing endpoint 'Trello.Controller.ProjectController.GetUserProjects (Trello)'
+2025-03-27 10:35:41.580 +01:00 [INF] Route matched with {action = "GetUserProjects", controller = "Project"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserProjects(Int32) on controller Trello.Controller.ProjectController (Trello).
+2025-03-27 10:35:47.040 +01:00 [INF] Executed DbCommand (8ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Name", p."OwnerId"
+FROM "Projects" AS p
+WHERE EXISTS (
+    SELECT 1
+    FROM "UserProject" AS u
+    WHERE p."Id" = u."ProjectId" AND u."UserId" = @__userId_0) OR p."OwnerId" = @__userId_0
+2025-03-27 10:35:47.060 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Trello.DTOs.ProjectDto, Trello, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-27 10:35:47.065 +01:00 [INF] Executed action Trello.Controller.ProjectController.GetUserProjects (Trello) in 5480.6243ms
+2025-03-27 10:35:47.069 +01:00 [INF] Executed endpoint 'Trello.Controller.ProjectController.GetUserProjects (Trello)'
+2025-03-27 10:35:47.073 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5196/api/projects/getUserProjects/5 - 200 null application/json; charset=utf-8 5514.9535ms
+2025-03-27 10:40:43.720 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5196/api/user/getById/5 - null null
+2025-03-27 10:40:43.741 +01:00 [INF] CORS policy execution successful.
+2025-03-27 10:40:43.747 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5196/api/user/getById/5 - 204 null null 28.1019ms
+2025-03-27 10:40:43.765 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5196/api/user/getById/5 - null null
+2025-03-27 10:40:43.774 +01:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenInvalidAudienceException: IDX10208: Unable to validate audience. validationParameters.ValidAudience is null or whitespace and validationParameters.ValidAudiences is null.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateAudience(IEnumerable`1 audiences, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-03-27 10:40:43.785 +01:00 [INF] Bearer was not authenticated. Failure message: IDX10208: Unable to validate audience. validationParameters.ValidAudience is null or whitespace and validationParameters.ValidAudiences is null.
+2025-03-27 10:40:43.791 +01:00 [INF] CORS policy execution successful.
+2025-03-27 10:40:43.797 +01:00 [INF] Executing endpoint 'Trello.Controller.UserController.GetUserById (Trello)'
+2025-03-27 10:40:43.803 +01:00 [INF] Route matched with {action = "GetUserById", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserById(Int32) on controller Trello.Controller.UserController (Trello).
+2025-03-27 10:40:43.938 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."AccessFailedCount", u."ConcurrencyStamp", u."CreatedAt", u."Email", u."EmailConfirmed", u."FirstName", u."LastName", u."LockoutEnabled", u."LockoutEnd", u."NormalizedEmail", u."NormalizedUserName", u."PasswordHash", u."PhoneNumber", u."PhoneNumberConfirmed", u."RefreshToken", u."RefreshTokenExpiry", u."SecurityStamp", u."TwoFactorEnabled", u."UserName"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 1
+2025-03-27 10:40:43.948 +01:00 [INF] Executing OkObjectResult, writing value of type 'Trello.DTOs.UserDto'.
+2025-03-27 10:40:43.951 +01:00 [INF] Executed action Trello.Controller.UserController.GetUserById (Trello) in 138.4823ms
+2025-03-27 10:40:43.955 +01:00 [INF] Executed endpoint 'Trello.Controller.UserController.GetUserById (Trello)'
+2025-03-27 10:40:43.958 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5196/api/user/getById/5 - 200 null application/json; charset=utf-8 193.1866ms
+2025-03-27 10:40:43.969 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5196/api/projects/getUserProjects/5 - null null
+2025-03-27 10:40:43.976 +01:00 [INF] CORS policy execution successful.
+2025-03-27 10:40:43.980 +01:00 [INF] Executing endpoint 'Trello.Controller.ProjectController.GetUserProjects (Trello)'
+2025-03-27 10:40:43.983 +01:00 [INF] Route matched with {action = "GetUserProjects", controller = "Project"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserProjects(Int32) on controller Trello.Controller.ProjectController (Trello).
+2025-03-27 10:45:08.558 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5196/api/user/getById/5 - null null
+2025-03-27 10:45:08.560 +01:00 [INF] Executed DbCommand (26ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Name", p."OwnerId"
+FROM "Projects" AS p
+WHERE EXISTS (
+    SELECT 1
+    FROM "UserProject" AS u
+    WHERE p."Id" = u."ProjectId" AND u."UserId" = @__userId_0) OR p."OwnerId" = @__userId_0
+2025-03-27 10:45:08.569 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5196/api/user/getById/5 - null null
+2025-03-27 10:45:08.603 +01:00 [INF] CORS policy execution successful.
+2025-03-27 10:45:08.610 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Trello.DTOs.ProjectDto, Trello, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-27 10:45:08.616 +01:00 [INF] CORS policy execution successful.
+2025-03-27 10:45:08.624 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5196/api/user/getById/5 - 204 null null 65.6507ms
+2025-03-27 10:45:08.627 +01:00 [INF] Executed action Trello.Controller.ProjectController.GetUserProjects (Trello) in 264638.4269ms
+2025-03-27 10:45:08.628 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5196/api/user/getById/5 - 204 null null 58.4664ms
+2025-03-27 10:45:08.654 +01:00 [INF] Executed endpoint 'Trello.Controller.ProjectController.GetUserProjects (Trello)'
+2025-03-27 10:45:08.663 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5196/api/projects/getUserProjects/5 - 200 null application/json; charset=utf-8 264693.7446ms
+2025-03-27 10:45:08.670 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5196/api/user/getById/5 - null null
+2025-03-27 10:45:08.704 +01:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenInvalidAudienceException: IDX10208: Unable to validate audience. validationParameters.ValidAudience is null or whitespace and validationParameters.ValidAudiences is null.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateAudience(IEnumerable`1 audiences, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-03-27 10:45:08.717 +01:00 [INF] Bearer was not authenticated. Failure message: IDX10208: Unable to validate audience. validationParameters.ValidAudience is null or whitespace and validationParameters.ValidAudiences is null.
+2025-03-27 10:45:08.722 +01:00 [INF] CORS policy execution successful.
+2025-03-27 10:45:08.725 +01:00 [INF] Executing endpoint 'Trello.Controller.UserController.GetUserById (Trello)'
+2025-03-27 10:45:08.729 +01:00 [INF] Route matched with {action = "GetUserById", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserById(Int32) on controller Trello.Controller.UserController (Trello).
+2025-03-27 10:45:08.743 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."AccessFailedCount", u."ConcurrencyStamp", u."CreatedAt", u."Email", u."EmailConfirmed", u."FirstName", u."LastName", u."LockoutEnabled", u."LockoutEnd", u."NormalizedEmail", u."NormalizedUserName", u."PasswordHash", u."PhoneNumber", u."PhoneNumberConfirmed", u."RefreshToken", u."RefreshTokenExpiry", u."SecurityStamp", u."TwoFactorEnabled", u."UserName"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 1
+2025-03-27 10:45:08.754 +01:00 [INF] Executing OkObjectResult, writing value of type 'Trello.DTOs.UserDto'.
+2025-03-27 10:45:08.759 +01:00 [INF] Executed action Trello.Controller.UserController.GetUserById (Trello) in 20.1521ms
+2025-03-27 10:45:08.761 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5196/api/user/getById/5 - null null
+2025-03-27 10:45:08.762 +01:00 [INF] Executed endpoint 'Trello.Controller.UserController.GetUserById (Trello)'
+2025-03-27 10:45:08.771 +01:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenInvalidAudienceException: IDX10208: Unable to validate audience. validationParameters.ValidAudience is null or whitespace and validationParameters.ValidAudiences is null.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateAudience(IEnumerable`1 audiences, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-03-27 10:45:08.779 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5196/api/user/getById/5 - 200 null application/json; charset=utf-8 109.5523ms
+2025-03-27 10:45:08.788 +01:00 [INF] Bearer was not authenticated. Failure message: IDX10208: Unable to validate audience. validationParameters.ValidAudience is null or whitespace and validationParameters.ValidAudiences is null.
+2025-03-27 10:45:08.801 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5196/api/projects/getUserProjects/5 - null null
+2025-03-27 10:45:08.803 +01:00 [INF] CORS policy execution successful.
+2025-03-27 10:45:08.816 +01:00 [INF] Executing endpoint 'Trello.Controller.UserController.GetUserById (Trello)'
+2025-03-27 10:45:08.816 +01:00 [INF] CORS policy execution successful.
+2025-03-27 10:45:08.819 +01:00 [INF] Route matched with {action = "GetUserById", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserById(Int32) on controller Trello.Controller.UserController (Trello).
+2025-03-27 10:45:08.826 +01:00 [INF] Executing endpoint 'Trello.Controller.ProjectController.GetUserProjects (Trello)'
+2025-03-27 10:45:08.834 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."AccessFailedCount", u."ConcurrencyStamp", u."CreatedAt", u."Email", u."EmailConfirmed", u."FirstName", u."LastName", u."LockoutEnabled", u."LockoutEnd", u."NormalizedEmail", u."NormalizedUserName", u."PasswordHash", u."PhoneNumber", u."PhoneNumberConfirmed", u."RefreshToken", u."RefreshTokenExpiry", u."SecurityStamp", u."TwoFactorEnabled", u."UserName"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 1
+2025-03-27 10:45:08.835 +01:00 [INF] Route matched with {action = "GetUserProjects", controller = "Project"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserProjects(Int32) on controller Trello.Controller.ProjectController (Trello).
+2025-03-27 10:45:08.851 +01:00 [INF] Executing OkObjectResult, writing value of type 'Trello.DTOs.UserDto'.
+2025-03-27 10:45:31.186 +01:00 [INF] Executed action Trello.Controller.UserController.GetUserById (Trello) in 22354.5421ms
+2025-03-27 10:45:31.223 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Name", p."OwnerId"
+FROM "Projects" AS p
+WHERE EXISTS (
+    SELECT 1
+    FROM "UserProject" AS u
+    WHERE p."Id" = u."ProjectId" AND u."UserId" = @__userId_0) OR p."OwnerId" = @__userId_0
+2025-03-27 10:45:31.236 +01:00 [INF] Executed endpoint 'Trello.Controller.UserController.GetUserById (Trello)'
+2025-03-27 10:45:31.243 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Trello.DTOs.ProjectDto, Trello, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-27 10:45:31.250 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5196/api/user/getById/5 - 200 null application/json; charset=utf-8 22488.9675ms
+2025-03-27 10:45:31.253 +01:00 [INF] Executed action Trello.Controller.ProjectController.GetUserProjects (Trello) in 22400.0538ms
+2025-03-27 10:45:31.272 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5196/api/projects/getUserProjects/5 - null null
+2025-03-27 10:45:31.273 +01:00 [INF] Executed endpoint 'Trello.Controller.ProjectController.GetUserProjects (Trello)'
+2025-03-27 10:45:31.283 +01:00 [INF] CORS policy execution successful.
+2025-03-27 10:45:31.285 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5196/api/projects/getUserProjects/5 - 200 null application/json; charset=utf-8 22484.0618ms
+2025-03-27 10:45:31.294 +01:00 [INF] Executing endpoint 'Trello.Controller.ProjectController.GetUserProjects (Trello)'
+2025-03-27 10:45:31.301 +01:00 [INF] Route matched with {action = "GetUserProjects", controller = "Project"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserProjects(Int32) on controller Trello.Controller.ProjectController (Trello).
+2025-03-27 10:45:35.883 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Name", p."OwnerId"
+FROM "Projects" AS p
+WHERE EXISTS (
+    SELECT 1
+    FROM "UserProject" AS u
+    WHERE p."Id" = u."ProjectId" AND u."UserId" = @__userId_0) OR p."OwnerId" = @__userId_0
+2025-03-27 10:45:35.892 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Trello.DTOs.ProjectDto, Trello, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-27 10:45:35.897 +01:00 [INF] Executed action Trello.Controller.ProjectController.GetUserProjects (Trello) in 4589.759ms
+2025-03-27 10:45:35.902 +01:00 [INF] Executed endpoint 'Trello.Controller.ProjectController.GetUserProjects (Trello)'
+2025-03-27 10:45:35.908 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5196/api/projects/getUserProjects/5 - 200 null application/json; charset=utf-8 4636.04ms
+2025-03-27 11:12:36.624 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5196/api/user/getById/5 - null null
+2025-03-27 11:12:36.665 +01:00 [INF] CORS policy execution successful.
+2025-03-27 11:12:36.680 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5196/api/user/getById/5 - 204 null null 54.0939ms
+2025-03-27 11:12:36.754 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5196/api/user/getById/5 - null null
+2025-03-27 11:12:36.836 +01:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '27/03/2025 9:50:39 AM', Current time (UTC): '27/03/2025 10:12:36 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-03-27 11:12:36.867 +01:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '27/03/2025 9:50:39 AM', Current time (UTC): '27/03/2025 10:12:36 AM'.
+2025-03-27 11:12:36.878 +01:00 [INF] CORS policy execution successful.
+2025-03-27 11:12:36.885 +01:00 [INF] Executing endpoint 'Trello.Controller.UserController.GetUserById (Trello)'
+2025-03-27 11:12:36.895 +01:00 [INF] Route matched with {action = "GetUserById", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserById(Int32) on controller Trello.Controller.UserController (Trello).
+2025-03-27 11:12:37.083 +01:00 [INF] Executed DbCommand (16ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."AccessFailedCount", u."ConcurrencyStamp", u."CreatedAt", u."Email", u."EmailConfirmed", u."FirstName", u."LastName", u."LockoutEnabled", u."LockoutEnd", u."NormalizedEmail", u."NormalizedUserName", u."PasswordHash", u."PhoneNumber", u."PhoneNumberConfirmed", u."RefreshToken", u."RefreshTokenExpiry", u."SecurityStamp", u."TwoFactorEnabled", u."UserName"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 1
+2025-03-27 11:12:37.116 +01:00 [INF] Executing OkObjectResult, writing value of type 'Trello.DTOs.UserDto'.
+2025-03-27 11:12:37.126 +01:00 [INF] Executed action Trello.Controller.UserController.GetUserById (Trello) in 215.6076ms
+2025-03-27 11:12:37.133 +01:00 [INF] Executed endpoint 'Trello.Controller.UserController.GetUserById (Trello)'
+2025-03-27 11:12:37.142 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5196/api/user/getById/5 - 200 null application/json; charset=utf-8 388.0724ms
+2025-03-27 11:12:37.178 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5196/api/projects/getUserProjects/5 - null null
+2025-03-27 11:12:37.189 +01:00 [INF] CORS policy execution successful.
+2025-03-27 11:12:37.195 +01:00 [INF] Executing endpoint 'Trello.Controller.ProjectController.GetUserProjects (Trello)'
+2025-03-27 11:12:37.201 +01:00 [INF] Route matched with {action = "GetUserProjects", controller = "Project"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserProjects(Int32) on controller Trello.Controller.ProjectController (Trello).
+2025-03-27 11:12:37.228 +01:00 [INF] Executed DbCommand (10ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Name", p."OwnerId"
+FROM "Projects" AS p
+WHERE EXISTS (
+    SELECT 1
+    FROM "UserProject" AS u
+    WHERE p."Id" = u."ProjectId" AND u."UserId" = @__userId_0) OR p."OwnerId" = @__userId_0
+2025-03-27 11:12:37.249 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Trello.DTOs.ProjectDto, Trello, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-27 11:12:37.263 +01:00 [INF] Executed action Trello.Controller.ProjectController.GetUserProjects (Trello) in 47.6204ms
+2025-03-27 11:12:37.272 +01:00 [INF] Executed endpoint 'Trello.Controller.ProjectController.GetUserProjects (Trello)'
+2025-03-27 11:12:37.281 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5196/api/projects/getUserProjects/5 - 200 null application/json; charset=utf-8 103.3258ms
+2025-03-27 11:13:54.708 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5196/api/user/getById/5 - null null
+2025-03-27 11:13:54.809 +01:00 [INF] CORS policy execution successful.
+2025-03-27 11:13:54.819 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5196/api/user/getById/5 - 204 null null 114.9068ms
+2025-03-27 11:13:54.847 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5196/api/user/getById/5 - null null
+2025-03-27 11:13:54.863 +01:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '27/03/2025 9:50:39 AM', Current time (UTC): '27/03/2025 10:13:54 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-03-27 11:13:54.882 +01:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '27/03/2025 9:50:39 AM', Current time (UTC): '27/03/2025 10:13:54 AM'.
+2025-03-27 11:13:54.890 +01:00 [INF] CORS policy execution successful.
+2025-03-27 11:13:54.894 +01:00 [INF] Executing endpoint 'Trello.Controller.UserController.GetUserById (Trello)'
+2025-03-27 11:13:54.899 +01:00 [INF] Route matched with {action = "GetUserById", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserById(Int32) on controller Trello.Controller.UserController (Trello).
+2025-03-27 11:13:54.941 +01:00 [INF] Executed DbCommand (25ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."AccessFailedCount", u."ConcurrencyStamp", u."CreatedAt", u."Email", u."EmailConfirmed", u."FirstName", u."LastName", u."LockoutEnabled", u."LockoutEnd", u."NormalizedEmail", u."NormalizedUserName", u."PasswordHash", u."PhoneNumber", u."PhoneNumberConfirmed", u."RefreshToken", u."RefreshTokenExpiry", u."SecurityStamp", u."TwoFactorEnabled", u."UserName"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 1
+2025-03-27 11:13:54.991 +01:00 [INF] Executing OkObjectResult, writing value of type 'Trello.DTOs.UserDto'.
+2025-03-27 11:13:54.998 +01:00 [INF] Executed action Trello.Controller.UserController.GetUserById (Trello) in 86.7408ms
+2025-03-27 11:13:55.095 +01:00 [INF] Executed endpoint 'Trello.Controller.UserController.GetUserById (Trello)'
+2025-03-27 11:13:55.140 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5196/api/user/getById/5 - 200 null application/json; charset=utf-8 293.5272ms
+2025-03-27 11:13:55.266 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5196/api/projects/getUserProjects/5 - null null
+2025-03-27 11:13:55.289 +01:00 [INF] CORS policy execution successful.
+2025-03-27 11:13:55.319 +01:00 [INF] Executing endpoint 'Trello.Controller.ProjectController.GetUserProjects (Trello)'
+2025-03-27 11:13:55.332 +01:00 [INF] Route matched with {action = "GetUserProjects", controller = "Project"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserProjects(Int32) on controller Trello.Controller.ProjectController (Trello).
+2025-03-27 11:13:55.354 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Name", p."OwnerId"
+FROM "Projects" AS p
+WHERE EXISTS (
+    SELECT 1
+    FROM "UserProject" AS u
+    WHERE p."Id" = u."ProjectId" AND u."UserId" = @__userId_0) OR p."OwnerId" = @__userId_0
+2025-03-27 11:13:55.374 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Trello.DTOs.ProjectDto, Trello, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-27 11:13:55.385 +01:00 [INF] Executed action Trello.Controller.ProjectController.GetUserProjects (Trello) in 37.9733ms
+2025-03-27 11:13:55.392 +01:00 [INF] Executed endpoint 'Trello.Controller.ProjectController.GetUserProjects (Trello)'
+2025-03-27 11:13:55.399 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5196/api/projects/getUserProjects/5 - 200 null application/json; charset=utf-8 133.0456ms
+2025-03-27 11:18:45.786 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5196/api/user/getById/5 - null null
+2025-03-27 11:18:45.803 +01:00 [INF] CORS policy execution successful.
+2025-03-27 11:18:45.809 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5196/api/user/getById/5 - 204 null null 23.2431ms
+2025-03-27 11:18:45.848 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5196/api/user/getById/5 - null null
+2025-03-27 11:18:45.867 +01:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '27/03/2025 9:50:39 AM', Current time (UTC): '27/03/2025 10:18:45 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-03-27 11:18:45.890 +01:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '27/03/2025 9:50:39 AM', Current time (UTC): '27/03/2025 10:18:45 AM'.
+2025-03-27 11:18:45.899 +01:00 [INF] CORS policy execution successful.
+2025-03-27 11:18:45.904 +01:00 [INF] Executing endpoint 'Trello.Controller.UserController.GetUserById (Trello)'
+2025-03-27 11:18:45.912 +01:00 [INF] Route matched with {action = "GetUserById", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserById(Int32) on controller Trello.Controller.UserController (Trello).
+2025-03-27 11:18:46.039 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."AccessFailedCount", u."ConcurrencyStamp", u."CreatedAt", u."Email", u."EmailConfirmed", u."FirstName", u."LastName", u."LockoutEnabled", u."LockoutEnd", u."NormalizedEmail", u."NormalizedUserName", u."PasswordHash", u."PhoneNumber", u."PhoneNumberConfirmed", u."RefreshToken", u."RefreshTokenExpiry", u."SecurityStamp", u."TwoFactorEnabled", u."UserName"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 1
+2025-03-27 11:18:46.065 +01:00 [INF] Executing OkObjectResult, writing value of type 'Trello.DTOs.UserDto'.
+2025-03-27 11:18:46.072 +01:00 [INF] Executed action Trello.Controller.UserController.GetUserById (Trello) in 147.3735ms
+2025-03-27 11:18:46.080 +01:00 [INF] Executed endpoint 'Trello.Controller.UserController.GetUserById (Trello)'
+2025-03-27 11:18:46.086 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5196/api/user/getById/5 - 200 null application/json; charset=utf-8 237.9378ms
+2025-03-27 11:18:46.107 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5196/api/projects/getUserProjects/5 - null null
+2025-03-27 11:18:46.124 +01:00 [INF] CORS policy execution successful.
+2025-03-27 11:18:46.131 +01:00 [INF] Executing endpoint 'Trello.Controller.ProjectController.GetUserProjects (Trello)'
+2025-03-27 11:18:46.137 +01:00 [INF] Route matched with {action = "GetUserProjects", controller = "Project"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserProjects(Int32) on controller Trello.Controller.ProjectController (Trello).
+2025-03-27 11:18:46.159 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Name", p."OwnerId"
+FROM "Projects" AS p
+WHERE EXISTS (
+    SELECT 1
+    FROM "UserProject" AS u
+    WHERE p."Id" = u."ProjectId" AND u."UserId" = @__userId_0) OR p."OwnerId" = @__userId_0
+2025-03-27 11:18:46.175 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Trello.DTOs.ProjectDto, Trello, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-27 11:18:46.186 +01:00 [INF] Executed action Trello.Controller.ProjectController.GetUserProjects (Trello) in 35.2849ms
+2025-03-27 11:18:46.195 +01:00 [INF] Executed endpoint 'Trello.Controller.ProjectController.GetUserProjects (Trello)'
+2025-03-27 11:18:46.203 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5196/api/projects/getUserProjects/5 - 200 null application/json; charset=utf-8 96.2402ms

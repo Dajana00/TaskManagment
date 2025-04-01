@@ -1,0 +1,233 @@
+2025-03-31 09:54:02.252 +02:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-31 09:54:02.748 +02:00 [INF] Now listening on: http://localhost:5196
+2025-03-31 09:54:02.755 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-31 09:54:02.759 +02:00 [INF] Hosting environment: Development
+2025-03-31 09:54:02.762 +02:00 [INF] Content root path: C:\Users\User\Desktop\Trello
+2025-03-31 09:54:05.711 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5196// - null null
+2025-03-31 09:54:05.913 +02:00 [WRN] Failed to determine the https port for redirect.
+2025-03-31 09:54:06.577 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5196// - 404 0 null 906.5761ms
+2025-03-31 09:54:06.646 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5196//, Response status code: 404
+2025-03-31 09:56:25.439 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5196/api/user/getById/1 - null null
+2025-03-31 09:56:26.708 +02:00 [INF] CORS policy execution successful.
+2025-03-31 09:56:26.716 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5196/api/user/getById/1 - 204 null null 1281.1583ms
+2025-03-31 09:56:26.762 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5196/api/user/getById/1 - null null
+2025-03-31 09:56:27.025 +02:00 [INF] CORS policy execution successful.
+2025-03-31 09:56:27.031 +02:00 [INF] Executing endpoint 'Trello.Controller.UserController.GetUserById (Trello)'
+2025-03-31 09:56:27.124 +02:00 [INF] Route matched with {action = "GetUserById", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserById(Int32) on controller Trello.Controller.UserController (Trello).
+2025-03-31 09:56:28.042 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5196/api/auth/login - null null
+2025-03-31 09:56:28.054 +02:00 [INF] CORS policy execution successful.
+2025-03-31 09:56:28.065 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5196/api/auth/login - 204 null null 23.4069ms
+2025-03-31 09:56:28.086 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5196/api/auth/login - application/json 41
+2025-03-31 09:56:28.095 +02:00 [INF] CORS policy execution successful.
+2025-03-31 09:56:28.097 +02:00 [INF] Executing endpoint 'Trello.Controller.AuthController.Login (Trello)'
+2025-03-31 09:56:28.111 +02:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Trello.DTOs.UserLoginDto) on controller Trello.Controller.AuthController (Trello).
+2025-03-31 09:56:29.758 +02:00 [INF] Executed DbCommand (95ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."AccessFailedCount", u."ConcurrencyStamp", u."CreatedAt", u."Email", u."EmailConfirmed", u."FirstName", u."LastName", u."LockoutEnabled", u."LockoutEnd", u."NormalizedEmail", u."NormalizedUserName", u."PasswordHash", u."PhoneNumber", u."PhoneNumberConfirmed", u."RefreshToken", u."RefreshTokenExpiry", u."SecurityStamp", u."TwoFactorEnabled", u."UserName"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 1
+2025-03-31 09:56:29.758 +02:00 [INF] Executed DbCommand (95ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."AccessFailedCount", u."ConcurrencyStamp", u."CreatedAt", u."Email", u."EmailConfirmed", u."FirstName", u."LastName", u."LockoutEnabled", u."LockoutEnd", u."NormalizedEmail", u."NormalizedUserName", u."PasswordHash", u."PhoneNumber", u."PhoneNumberConfirmed", u."RefreshToken", u."RefreshTokenExpiry", u."SecurityStamp", u."TwoFactorEnabled", u."UserName"
+FROM "Users" AS u
+WHERE u."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2025-03-31 09:56:29.930 +02:00 [INF] Executing OkObjectResult, writing value of type 'Trello.DTOs.UserDto'.
+2025-03-31 09:56:29.969 +02:00 [INF] Executed action Trello.Controller.UserController.GetUserById (Trello) in 2822.5818ms
+2025-03-31 09:56:29.973 +02:00 [INF] Executed endpoint 'Trello.Controller.UserController.GetUserById (Trello)'
+2025-03-31 09:56:29.985 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5196/api/user/getById/1 - 200 null application/json; charset=utf-8 3223.9489ms
+2025-03-31 09:56:30.048 +02:00 [INF] Executing OkObjectResult, writing value of type 'FluentResults.Result`1[[Trello.DTOs.AuthResponseDto, Trello, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-31 09:56:30.066 +02:00 [INF] Executed action Trello.Controller.AuthController.Login (Trello) in 1944.7509ms
+2025-03-31 09:56:30.070 +02:00 [INF] Executed endpoint 'Trello.Controller.AuthController.Login (Trello)'
+2025-03-31 09:56:30.079 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5196/api/auth/login - 200 null application/json; charset=utf-8 1993.0512ms
+2025-03-31 09:56:32.066 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5196/api/user/getById/1 - null null
+2025-03-31 09:56:32.103 +02:00 [INF] CORS policy execution successful.
+2025-03-31 09:56:32.109 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5196/api/user/getById/1 - 204 null null 42.3434ms
+2025-03-31 09:56:32.125 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5196/api/user/getById/1 - null null
+2025-03-31 09:56:32.139 +02:00 [INF] CORS policy execution successful.
+2025-03-31 09:56:32.144 +02:00 [INF] Executing endpoint 'Trello.Controller.UserController.GetUserById (Trello)'
+2025-03-31 09:56:32.149 +02:00 [INF] Route matched with {action = "GetUserById", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserById(Int32) on controller Trello.Controller.UserController (Trello).
+2025-03-31 09:56:32.294 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."AccessFailedCount", u."ConcurrencyStamp", u."CreatedAt", u."Email", u."EmailConfirmed", u."FirstName", u."LastName", u."LockoutEnabled", u."LockoutEnd", u."NormalizedEmail", u."NormalizedUserName", u."PasswordHash", u."PhoneNumber", u."PhoneNumberConfirmed", u."RefreshToken", u."RefreshTokenExpiry", u."SecurityStamp", u."TwoFactorEnabled", u."UserName"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 1
+2025-03-31 09:56:32.303 +02:00 [INF] Executing OkObjectResult, writing value of type 'Trello.DTOs.UserDto'.
+2025-03-31 09:56:32.306 +02:00 [INF] Executed action Trello.Controller.UserController.GetUserById (Trello) in 145.8394ms
+2025-03-31 09:56:32.310 +02:00 [INF] Executed endpoint 'Trello.Controller.UserController.GetUserById (Trello)'
+2025-03-31 09:56:32.314 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5196/api/user/getById/1 - 200 null application/json; charset=utf-8 188.6562ms
+2025-03-31 09:56:32.326 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5196/api/projects/getUserProjects/1 - null null
+2025-03-31 09:56:32.335 +02:00 [INF] CORS policy execution successful.
+2025-03-31 09:56:32.338 +02:00 [INF] Executing endpoint 'Trello.Controller.ProjectController.GetUserProjects (Trello)'
+2025-03-31 09:56:32.348 +02:00 [INF] Route matched with {action = "GetUserProjects", controller = "Project"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserProjects(Int32) on controller Trello.Controller.ProjectController (Trello).
+2025-03-31 09:56:32.472 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."BoardId", p."Name", p."OwnerId"
+FROM "Projects" AS p
+WHERE EXISTS (
+    SELECT 1
+    FROM "UserProject" AS u
+    WHERE p."Id" = u."ProjectId" AND u."UserId" = @__userId_0) OR p."OwnerId" = @__userId_0
+2025-03-31 09:56:32.497 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Trello.DTOs.ProjectDetailsDto, Trello, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-31 09:56:32.505 +02:00 [INF] Executed action Trello.Controller.ProjectController.GetUserProjects (Trello) in 150.0402ms
+2025-03-31 09:56:32.510 +02:00 [INF] Executed endpoint 'Trello.Controller.ProjectController.GetUserProjects (Trello)'
+2025-03-31 09:56:32.514 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5196/api/projects/getUserProjects/1 - 200 null application/json; charset=utf-8 188.0143ms
+2025-03-31 13:54:33.934 +02:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-31 13:54:34.676 +02:00 [INF] Now listening on: http://localhost:5196
+2025-03-31 13:54:34.682 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-31 13:54:34.685 +02:00 [INF] Hosting environment: Development
+2025-03-31 13:54:34.688 +02:00 [INF] Content root path: C:\Users\User\Desktop\Trello
+2025-03-31 13:54:36.538 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5196// - null null
+2025-03-31 13:54:36.604 +02:00 [WRN] Failed to determine the https port for redirect.
+2025-03-31 13:54:36.890 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5196// - 404 0 null 373.5246ms
+2025-03-31 13:54:36.973 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5196//, Response status code: 404
+2025-03-31 13:54:47.011 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5196/api/auth/login - null null
+2025-03-31 13:54:47.034 +02:00 [INF] CORS policy execution successful.
+2025-03-31 13:54:47.047 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5196/api/auth/login - 204 null null 37.0513ms
+2025-03-31 13:54:47.060 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5196/api/auth/login - application/json 41
+2025-03-31 13:54:47.075 +02:00 [INF] CORS policy execution successful.
+2025-03-31 13:54:47.085 +02:00 [INF] Executing endpoint 'Trello.Controller.AuthController.Login (Trello)'
+2025-03-31 13:54:47.155 +02:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Trello.DTOs.UserLoginDto) on controller Trello.Controller.AuthController (Trello).
+2025-03-31 13:54:50.372 +02:00 [INF] Executed DbCommand (80ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."AccessFailedCount", u."ConcurrencyStamp", u."CreatedAt", u."Email", u."EmailConfirmed", u."FirstName", u."LastName", u."LockoutEnabled", u."LockoutEnd", u."NormalizedEmail", u."NormalizedUserName", u."PasswordHash", u."PhoneNumber", u."PhoneNumberConfirmed", u."RefreshToken", u."RefreshTokenExpiry", u."SecurityStamp", u."TwoFactorEnabled", u."UserName"
+FROM "Users" AS u
+WHERE u."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2025-03-31 13:54:50.757 +02:00 [INF] Executing OkObjectResult, writing value of type 'FluentResults.Result`1[[Trello.DTOs.AuthResponseDto, Trello, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-31 13:54:50.796 +02:00 [INF] Executed action Trello.Controller.AuthController.Login (Trello) in 3631.3078ms
+2025-03-31 13:54:50.800 +02:00 [INF] Executed endpoint 'Trello.Controller.AuthController.Login (Trello)'
+2025-03-31 13:54:50.813 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5196/api/auth/login - 200 null application/json; charset=utf-8 3752.3582ms
+2025-03-31 13:54:53.069 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5196/api/user/getById/1 - null null
+2025-03-31 13:54:53.109 +02:00 [INF] CORS policy execution successful.
+2025-03-31 13:54:53.124 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5196/api/user/getById/1 - 204 null null 55.6157ms
+2025-03-31 13:54:53.176 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5196/api/user/getById/1 - null null
+2025-03-31 13:54:53.308 +02:00 [INF] CORS policy execution successful.
+2025-03-31 13:54:53.313 +02:00 [INF] Executing endpoint 'Trello.Controller.UserController.GetUserById (Trello)'
+2025-03-31 13:54:53.357 +02:00 [INF] Route matched with {action = "GetUserById", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserById(Int32) on controller Trello.Controller.UserController (Trello).
+2025-03-31 13:54:53.469 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."AccessFailedCount", u."ConcurrencyStamp", u."CreatedAt", u."Email", u."EmailConfirmed", u."FirstName", u."LastName", u."LockoutEnabled", u."LockoutEnd", u."NormalizedEmail", u."NormalizedUserName", u."PasswordHash", u."PhoneNumber", u."PhoneNumberConfirmed", u."RefreshToken", u."RefreshTokenExpiry", u."SecurityStamp", u."TwoFactorEnabled", u."UserName"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 1
+2025-03-31 13:54:53.478 +02:00 [INF] Executing OkObjectResult, writing value of type 'Trello.DTOs.UserDto'.
+2025-03-31 13:54:53.490 +02:00 [INF] Executed action Trello.Controller.UserController.GetUserById (Trello) in 120.753ms
+2025-03-31 13:54:53.494 +02:00 [INF] Executed endpoint 'Trello.Controller.UserController.GetUserById (Trello)'
+2025-03-31 13:54:53.502 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5196/api/user/getById/1 - 200 null application/json; charset=utf-8 326.0798ms
+2025-03-31 13:54:53.513 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5196/api/projects/getUserProjects/1 - null null
+2025-03-31 13:54:53.524 +02:00 [INF] CORS policy execution successful.
+2025-03-31 13:54:53.526 +02:00 [INF] Executing endpoint 'Trello.Controller.ProjectController.GetUserProjects (Trello)'
+2025-03-31 13:54:53.534 +02:00 [INF] Route matched with {action = "GetUserProjects", controller = "Project"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserProjects(Int32) on controller Trello.Controller.ProjectController (Trello).
+2025-03-31 13:54:53.661 +02:00 [INF] Executed DbCommand (9ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."BoardId", p."Name", p."OwnerId"
+FROM "Projects" AS p
+WHERE EXISTS (
+    SELECT 1
+    FROM "UserProject" AS u
+    WHERE p."Id" = u."ProjectId" AND u."UserId" = @__userId_0) OR p."OwnerId" = @__userId_0
+2025-03-31 13:54:53.688 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Trello.DTOs.ProjectDetailsDto, Trello, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-31 13:54:53.698 +02:00 [INF] Executed action Trello.Controller.ProjectController.GetUserProjects (Trello) in 155.8219ms
+2025-03-31 13:54:53.706 +02:00 [INF] Executed endpoint 'Trello.Controller.ProjectController.GetUserProjects (Trello)'
+2025-03-31 13:54:53.711 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5196/api/projects/getUserProjects/1 - 200 null application/json; charset=utf-8 198.2975ms
+2025-03-31 13:58:26.778 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5196/api/boards/getById/1 - null null
+2025-03-31 13:58:26.805 +02:00 [INF] CORS policy execution successful.
+2025-03-31 13:58:26.808 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5196/api/boards/getById/1 - 204 null null 29.751ms
+2025-03-31 13:58:26.828 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5196/api/boards/getById/1 - null null
+2025-03-31 13:58:26.838 +02:00 [INF] CORS policy execution successful.
+2025-03-31 13:58:26.841 +02:00 [INF] Executing endpoint 'Trello.Controller.BoardController.GetById (Trello)'
+2025-03-31 13:58:26.851 +02:00 [INF] Route matched with {action = "GetById", controller = "Board"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32) on controller Trello.Controller.BoardController (Trello).
+2025-03-31 13:58:27.100 +02:00 [INF] Executed DbCommand (16ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT b0."Id", b0."ActiveSprintId", b0."Description", b0."Name", b0."ProjectId", c."Id", c."BoardId", c."Name"
+FROM (
+    SELECT b."Id", b."ActiveSprintId", b."Description", b."Name", b."ProjectId"
+    FROM "Boards" AS b
+    WHERE b."Id" = @__id_0
+    LIMIT 1
+) AS b0
+LEFT JOIN "Columns" AS c ON b0."Id" = c."BoardId"
+ORDER BY b0."Id"
+2025-03-31 13:58:27.690 +02:00 [INF] Executing OkObjectResult, writing value of type 'Trello.DTOs.BoardDto'.
+2025-03-31 13:58:28.056 +02:00 [INF] Executed action Trello.Controller.BoardController.GetById (Trello) in 1197.5605ms
+2025-03-31 13:58:28.064 +02:00 [INF] Executed endpoint 'Trello.Controller.BoardController.GetById (Trello)'
+2025-03-31 13:58:28.069 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5196/api/boards/getById/1 - 200 null application/json; charset=utf-8 1240.941ms
+2025-03-31 13:58:34.409 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5196/api/boards/getById/2 - null null
+2025-03-31 13:58:34.422 +02:00 [INF] CORS policy execution successful.
+2025-03-31 13:58:34.425 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5196/api/boards/getById/2 - 204 null null 16.0961ms
+2025-03-31 13:58:34.438 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5196/api/boards/getById/2 - null null
+2025-03-31 13:58:34.451 +02:00 [INF] CORS policy execution successful.
+2025-03-31 13:58:34.454 +02:00 [INF] Executing endpoint 'Trello.Controller.BoardController.GetById (Trello)'
+2025-03-31 13:58:34.458 +02:00 [INF] Route matched with {action = "GetById", controller = "Board"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32) on controller Trello.Controller.BoardController (Trello).
+2025-03-31 13:58:34.481 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT b0."Id", b0."ActiveSprintId", b0."Description", b0."Name", b0."ProjectId", c."Id", c."BoardId", c."Name"
+FROM (
+    SELECT b."Id", b."ActiveSprintId", b."Description", b."Name", b."ProjectId"
+    FROM "Boards" AS b
+    WHERE b."Id" = @__id_0
+    LIMIT 1
+) AS b0
+LEFT JOIN "Columns" AS c ON b0."Id" = c."BoardId"
+ORDER BY b0."Id"
+2025-03-31 13:58:34.491 +02:00 [INF] Executing OkObjectResult, writing value of type 'Trello.DTOs.BoardDto'.
+2025-03-31 13:58:34.498 +02:00 [INF] Executed action Trello.Controller.BoardController.GetById (Trello) in 30.6367ms
+2025-03-31 13:58:34.503 +02:00 [INF] Executed endpoint 'Trello.Controller.BoardController.GetById (Trello)'
+2025-03-31 13:58:34.506 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5196/api/boards/getById/2 - 200 null application/json; charset=utf-8 68.1858ms
+2025-03-31 13:59:34.260 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5196/api/boards/getById/1 - null null
+2025-03-31 13:59:34.287 +02:00 [INF] CORS policy execution successful.
+2025-03-31 13:59:34.329 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5196/api/boards/getById/1 - 204 null null 77.0082ms
+2025-03-31 13:59:34.346 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5196/api/boards/getById/1 - null null
+2025-03-31 13:59:34.363 +02:00 [INF] CORS policy execution successful.
+2025-03-31 13:59:34.365 +02:00 [INF] Executing endpoint 'Trello.Controller.BoardController.GetById (Trello)'
+2025-03-31 13:59:34.368 +02:00 [INF] Route matched with {action = "GetById", controller = "Board"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32) on controller Trello.Controller.BoardController (Trello).
+2025-03-31 13:59:34.393 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT b0."Id", b0."ActiveSprintId", b0."Description", b0."Name", b0."ProjectId", c."Id", c."BoardId", c."Name"
+FROM (
+    SELECT b."Id", b."ActiveSprintId", b."Description", b."Name", b."ProjectId"
+    FROM "Boards" AS b
+    WHERE b."Id" = @__id_0
+    LIMIT 1
+) AS b0
+LEFT JOIN "Columns" AS c ON b0."Id" = c."BoardId"
+ORDER BY b0."Id"
+2025-03-31 13:59:34.411 +02:00 [INF] Executing OkObjectResult, writing value of type 'Trello.DTOs.BoardDto'.
+2025-03-31 13:59:34.416 +02:00 [INF] Executed action Trello.Controller.BoardController.GetById (Trello) in 40.142ms
+2025-03-31 13:59:34.420 +02:00 [INF] Executed endpoint 'Trello.Controller.BoardController.GetById (Trello)'
+2025-03-31 13:59:34.425 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5196/api/boards/getById/1 - 200 null application/json; charset=utf-8 79.3756ms
+2025-03-31 13:59:43.295 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5196/api/boards/getById/2 - null null
+2025-03-31 13:59:43.326 +02:00 [INF] CORS policy execution successful.
+2025-03-31 13:59:43.336 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5196/api/boards/getById/2 - 204 null null 40.7868ms
+2025-03-31 13:59:43.349 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5196/api/boards/getById/2 - null null
+2025-03-31 13:59:43.361 +02:00 [INF] CORS policy execution successful.
+2025-03-31 13:59:43.365 +02:00 [INF] Executing endpoint 'Trello.Controller.BoardController.GetById (Trello)'
+2025-03-31 13:59:43.370 +02:00 [INF] Route matched with {action = "GetById", controller = "Board"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32) on controller Trello.Controller.BoardController (Trello).
+2025-03-31 13:59:43.388 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT b0."Id", b0."ActiveSprintId", b0."Description", b0."Name", b0."ProjectId", c."Id", c."BoardId", c."Name"
+FROM (
+    SELECT b."Id", b."ActiveSprintId", b."Description", b."Name", b."ProjectId"
+    FROM "Boards" AS b
+    WHERE b."Id" = @__id_0
+    LIMIT 1
+) AS b0
+LEFT JOIN "Columns" AS c ON b0."Id" = c."BoardId"
+ORDER BY b0."Id"
+2025-03-31 13:59:43.403 +02:00 [INF] Executing OkObjectResult, writing value of type 'Trello.DTOs.BoardDto'.
+2025-03-31 13:59:43.408 +02:00 [INF] Executed action Trello.Controller.BoardController.GetById (Trello) in 29.7971ms
+2025-03-31 13:59:43.412 +02:00 [INF] Executed endpoint 'Trello.Controller.BoardController.GetById (Trello)'
+2025-03-31 13:59:43.418 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5196/api/boards/getById/2 - 200 null application/json; charset=utf-8 69.1233ms
+2025-03-31 14:00:28.770 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5196/api/boards/getById/1 - null null
+2025-03-31 14:00:28.780 +02:00 [INF] CORS policy execution successful.
+2025-03-31 14:00:28.785 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5196/api/boards/getById/1 - 204 null null 15.2727ms
+2025-03-31 14:00:28.809 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5196/api/boards/getById/1 - null null
+2025-03-31 14:00:28.815 +02:00 [INF] CORS policy execution successful.
+2025-03-31 14:00:28.817 +02:00 [INF] Executing endpoint 'Trello.Controller.BoardController.GetById (Trello)'
+2025-03-31 14:00:28.822 +02:00 [INF] Route matched with {action = "GetById", controller = "Board"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32) on controller Trello.Controller.BoardController (Trello).
+2025-03-31 14:00:28.898 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT b0."Id", b0."ActiveSprintId", b0."Description", b0."Name", b0."ProjectId", c."Id", c."BoardId", c."Name"
+FROM (
+    SELECT b."Id", b."ActiveSprintId", b."Description", b."Name", b."ProjectId"
+    FROM "Boards" AS b
+    WHERE b."Id" = @__id_0
+    LIMIT 1
+) AS b0
+LEFT JOIN "Columns" AS c ON b0."Id" = c."BoardId"
+ORDER BY b0."Id"
+2025-03-31 14:00:28.934 +02:00 [INF] Executing OkObjectResult, writing value of type 'Trello.DTOs.BoardDto'.
+2025-03-31 14:00:28.946 +02:00 [INF] Executed action Trello.Controller.BoardController.GetById (Trello) in 118.4967ms
+2025-03-31 14:00:28.952 +02:00 [INF] Executed endpoint 'Trello.Controller.BoardController.GetById (Trello)'
+2025-03-31 14:00:28.962 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5196/api/boards/getById/1 - 200 null application/json; charset=utf-8 153.0119ms
