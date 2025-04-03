@@ -10,7 +10,10 @@ namespace Trello.Repository
         public IUserRepository Users { get; private set; }
         public IProjectRepository Projects { get; private set; }
         public IBoardRepository Boards { get; private set; }
-        public IColumnRepository Columns { get; private set; }
+        public ICardRepository Cards { get; private set; }
+        public IBacklogRepository Backlogs { get; private set; }
+        public IUserStoryRepository UserStories { get; private set; }
+
         private readonly ILoggerFactory _loggerFactory;  
 
 
@@ -21,7 +24,9 @@ namespace Trello.Repository
             Users = new UserRepository(_context, _loggerFactory.CreateLogger<UserRepository>());
             Projects = new ProjectRepository(_context, _loggerFactory.CreateLogger<ProjectRepository>());
             Boards = new BoardRepository(_context, _loggerFactory.CreateLogger<BoardRepository>());
-            Columns = new ColumnRepository(_context, _loggerFactory.CreateLogger<ColumnRepository>());
+            Cards = new CardRepository(_context, _loggerFactory.CreateLogger<CardRepository>());
+            Backlogs = new BacklogRepository(_context, _loggerFactory.CreateLogger<BacklogRepository>());
+            UserStories = new UserStoryRepository(_context, _loggerFactory.CreateLogger<UserStoryRepository>());
         }
 
         public async Task SaveAsync()

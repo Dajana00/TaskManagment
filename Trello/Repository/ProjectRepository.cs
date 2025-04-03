@@ -59,7 +59,6 @@ namespace Trello.Repository
                 var project = await _context.Projects
                     .Include(p => p.Owner)
                     .Include(p => p.UserProjects).ThenInclude(up => up.User)
-                    .Include(p => p.Board).ThenInclude(b => b.Columns)
                     .Include(p => p.Sprints)
                     .FirstOrDefaultAsync(p => p.Id == id);
 

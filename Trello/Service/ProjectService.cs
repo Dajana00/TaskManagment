@@ -1,4 +1,5 @@
 ﻿using FluentResults;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Trello.DTOs;
 using Trello.Mapper;
 using Trello.Model;
@@ -11,13 +12,15 @@ namespace Trello.Service
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IBoardService _boardService;   
+        private readonly IBacklogService _backlogService;
         private readonly ProjectMapper _projectMapper;  
         
 
-        public ProjectService(IUnitOfWork unitOfWork, IBoardService boardService)
+        public ProjectService(IUnitOfWork unitOfWork, IBoardService boardService, IBacklogService backlogService)
         {
             _unitOfWork = unitOfWork;
             _boardService = boardService; 
+            _backlogService = backlogService;
             _projectMapper = new ProjectMapper();
         }
 
@@ -38,21 +41,32 @@ namespace Trello.Service
             };
 
             await _unitOfWork.Projects.CreateAsync(project);
-            await _unitOfWork.SaveAsync(); // Mora se sačuvati da bi Project.Id bio dostupan za Board
+            await _unitOfWork.SaveAsync();
 
-            // Kreiramo podrazumevani board za projekat
+            //CreateDeafaultBoard(project);
+            //CreateDeafaultBacklog(project);
             var boardResult = await _boardService.CreateDefaultBoardAsync(project);
             if (boardResult.IsFailed)
                 return Result.Fail(boardResult.Errors);
 
             project.Board = boardResult.Value;
             project.BoardId = boardResult.Value.Id;
+
+            var backlogResult = await _backlogService.CreateDefaultBacklogAsync(project);
+            if (backlogResult.IsFailed)
+                return Result.Fail(backlogResult.Errors);
+
+            project.Backlog = backlogResult.Value;
+            project.BacklogId = backlogResult.Value.Id;
+
             await _unitOfWork.SaveAsync(); 
 
             return Result.Ok(MapToProjectDto(project));
         }
 
-        public async Task<Result<ICollection<ProjectDetailsDto>>> GetUserProjects(int userId)
+       
+
+            public async Task<Result<ICollection<ProjectDetailsDto>>> GetUserProjects(int userId)
         {
             if (userId <= 0)
                 return Result.Fail("Invalid user ID.");
