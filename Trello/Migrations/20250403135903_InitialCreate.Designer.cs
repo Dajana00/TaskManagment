@@ -12,7 +12,7 @@ using Trello.Data;
 namespace Trello.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250331072330_InitialCreate")]
+    [Migration("20250403135903_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -24,6 +24,25 @@ namespace Trello.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
+
+            modelBuilder.Entity("Trello.Model.Backlog", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("ProjectId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProjectId")
+                        .IsUnique();
+
+                    b.ToTable("Backlogs");
+                });
 
             modelBuilder.Entity("Trello.Model.Board", b =>
                 {
@@ -66,9 +85,6 @@ namespace Trello.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("ColumnId")
-                        .HasColumnType("integer");
-
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("text");
@@ -76,7 +92,10 @@ namespace Trello.Migrations
                     b.Property<DateTime>("DueDate")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<int>("SprintId")
+                    b.Property<int?>("SprintId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("Status")
                         .HasColumnType("integer");
 
                     b.Property<string>("Title")
@@ -85,32 +104,9 @@ namespace Trello.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ColumnId");
-
                     b.HasIndex("SprintId");
 
                     b.ToTable("Cards");
-                });
-
-            modelBuilder.Entity("Trello.Model.Column", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("BoardId")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("Name")
-                        .HasColumnType("integer");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("BoardId");
-
-                    b.ToTable("Columns");
                 });
 
             modelBuilder.Entity("Trello.Model.Comment", b =>
@@ -150,6 +146,9 @@ namespace Trello.Migrations
                         .HasColumnType("integer");
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("BacklogId")
+                        .HasColumnType("integer");
 
                     b.Property<int>("BoardId")
                         .HasColumnType("integer");
@@ -308,6 +307,43 @@ namespace Trello.Migrations
                     b.ToTable("UserProject");
                 });
 
+            modelBuilder.Entity("Trello.Model.UserStory", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("BacklogId")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BacklogId");
+
+                    b.ToTable("UserStories");
+                });
+
+            modelBuilder.Entity("Trello.Model.Backlog", b =>
+                {
+                    b.HasOne("Trello.Model.Project", "Project")
+                        .WithOne("Backlog")
+                        .HasForeignKey("Trello.Model.Backlog", "ProjectId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Project");
+                });
+
             modelBuilder.Entity("Trello.Model.Board", b =>
                 {
                     b.HasOne("Trello.Model.Sprint", "ActiveSprint")
@@ -328,32 +364,12 @@ namespace Trello.Migrations
 
             modelBuilder.Entity("Trello.Model.Card", b =>
                 {
-                    b.HasOne("Trello.Model.Column", "Column")
-                        .WithMany("Cards")
-                        .HasForeignKey("ColumnId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
                     b.HasOne("Trello.Model.Sprint", "Sprint")
                         .WithMany()
                         .HasForeignKey("SprintId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Column");
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.Navigation("Sprint");
-                });
-
-            modelBuilder.Entity("Trello.Model.Column", b =>
-                {
-                    b.HasOne("Trello.Model.Board", "Board")
-                        .WithMany("Columns")
-                        .HasForeignKey("BoardId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Board");
                 });
 
             modelBuilder.Entity("Trello.Model.Comment", b =>
@@ -435,9 +451,20 @@ namespace Trello.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("Trello.Model.Board", b =>
+            modelBuilder.Entity("Trello.Model.UserStory", b =>
                 {
-                    b.Navigation("Columns");
+                    b.HasOne("Trello.Model.Backlog", "Backlog")
+                        .WithMany("UserStories")
+                        .HasForeignKey("BacklogId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Backlog");
+                });
+
+            modelBuilder.Entity("Trello.Model.Backlog", b =>
+                {
+                    b.Navigation("UserStories");
                 });
 
             modelBuilder.Entity("Trello.Model.Card", b =>
@@ -447,13 +474,11 @@ namespace Trello.Migrations
                     b.Navigation("UserCards");
                 });
 
-            modelBuilder.Entity("Trello.Model.Column", b =>
-                {
-                    b.Navigation("Cards");
-                });
-
             modelBuilder.Entity("Trello.Model.Project", b =>
                 {
+                    b.Navigation("Backlog")
+                        .IsRequired();
+
                     b.Navigation("Board")
                         .IsRequired();
 

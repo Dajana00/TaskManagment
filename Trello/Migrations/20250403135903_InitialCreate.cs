@@ -51,7 +51,8 @@ namespace Trello.Migrations
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     Name = table.Column<string>(type: "text", nullable: false),
                     OwnerId = table.Column<int>(type: "integer", nullable: false),
-                    BoardId = table.Column<int>(type: "integer", nullable: false)
+                    BoardId = table.Column<int>(type: "integer", nullable: false),
+                    BacklogId = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -60,6 +61,25 @@ namespace Trello.Migrations
                         name: "FK_Projects_Users_OwnerId",
                         column: x => x.OwnerId,
                         principalTable: "Users",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Backlogs",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    ProjectId = table.Column<int>(type: "integer", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Backlogs", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Backlogs_Projects_ProjectId",
+                        column: x => x.ProjectId,
+                        principalTable: "Projects",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -110,6 +130,27 @@ namespace Trello.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "UserStories",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    Title = table.Column<string>(type: "text", nullable: false),
+                    Description = table.Column<string>(type: "text", nullable: false),
+                    BacklogId = table.Column<int>(type: "integer", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_UserStories", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_UserStories_Backlogs_BacklogId",
+                        column: x => x.BacklogId,
+                        principalTable: "Backlogs",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Boards",
                 columns: table => new
                 {
@@ -137,26 +178,6 @@ namespace Trello.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Columns",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "integer", nullable: false)
-                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    Name = table.Column<int>(type: "integer", nullable: false),
-                    BoardId = table.Column<int>(type: "integer", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Columns", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Columns_Boards_BoardId",
-                        column: x => x.BoardId,
-                        principalTable: "Boards",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Cards",
                 columns: table => new
                 {
@@ -164,19 +185,13 @@ namespace Trello.Migrations
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     Title = table.Column<string>(type: "text", nullable: false),
                     Description = table.Column<string>(type: "text", nullable: false),
+                    Status = table.Column<int>(type: "integer", nullable: false),
                     DueDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    ColumnId = table.Column<int>(type: "integer", nullable: false),
-                    SprintId = table.Column<int>(type: "integer", nullable: false)
+                    SprintId = table.Column<int>(type: "integer", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Cards", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Cards_Columns_ColumnId",
-                        column: x => x.ColumnId,
-                        principalTable: "Columns",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Cards_Sprints_SprintId",
                         column: x => x.SprintId,
@@ -238,6 +253,12 @@ namespace Trello.Migrations
                 });
 
             migrationBuilder.CreateIndex(
+                name: "IX_Backlogs_ProjectId",
+                table: "Backlogs",
+                column: "ProjectId",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Boards_ActiveSprintId",
                 table: "Boards",
                 column: "ActiveSprintId",
@@ -250,19 +271,9 @@ namespace Trello.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_Cards_ColumnId",
-                table: "Cards",
-                column: "ColumnId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Cards_SprintId",
                 table: "Cards",
                 column: "SprintId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Columns_BoardId",
-                table: "Columns",
-                column: "BoardId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Comments_AuthorId",
@@ -293,11 +304,19 @@ namespace Trello.Migrations
                 name: "IX_UserProject_ProjectId",
                 table: "UserProject",
                 column: "ProjectId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_UserStories_BacklogId",
+                table: "UserStories",
+                column: "BacklogId");
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "Boards");
+
             migrationBuilder.DropTable(
                 name: "Comments");
 
@@ -308,13 +327,13 @@ namespace Trello.Migrations
                 name: "UserProject");
 
             migrationBuilder.DropTable(
+                name: "UserStories");
+
+            migrationBuilder.DropTable(
                 name: "Cards");
 
             migrationBuilder.DropTable(
-                name: "Columns");
-
-            migrationBuilder.DropTable(
-                name: "Boards");
+                name: "Backlogs");
 
             migrationBuilder.DropTable(
                 name: "Sprints");

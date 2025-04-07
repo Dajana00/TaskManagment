@@ -32,17 +32,14 @@ builder.Logging.ClearProviders();
 builder.Logging.AddSerilog(Log.Logger);
 
 
-
 // 🔹 Konfiguriši bazu podataka
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("PostgresConnection")));
 
 
 
-// 🔹 Registruj servise i repozitorijume u poseban fajl (čistiji kod)
 builder.Services.ConfigureApplicationServices(builder.Configuration);
 
-// 🔹 Konfiguriši JSON opcije
 
 
 

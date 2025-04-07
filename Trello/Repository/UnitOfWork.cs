@@ -1,37 +1,42 @@
 ﻿using Trello.Data;
 using Trello.Repository.IRepository;
 
-namespace Trello.Repository
+public class UnitOfWork : IUnitOfWork
 {
-    public class UnitOfWork : IUnitOfWork
+    private readonly AppDbContext _context;
+
+    public IUserRepository Users { get; }
+    public IProjectRepository Projects { get; }
+    public IBoardRepository Boards { get; }
+    public ICardRepository Cards { get; }
+    public IBacklogRepository Backlogs { get; }
+    public IUserStoryRepository UserStories { get; }
+
+    public UnitOfWork(
+        AppDbContext context,
+        IUserRepository users,
+        IProjectRepository projects,
+        IBoardRepository boards,
+        ICardRepository cards,
+        IBacklogRepository backlogs,
+        IUserStoryRepository userStories)
     {
-        private readonly AppDbContext _context;
+        _context = context;
+        Users = users;
+        Projects = projects;
+        Boards = boards;
+        Cards = cards;
+        Backlogs = backlogs;
+        UserStories = userStories;
+    }
 
-        public IUserRepository Users { get; private set; }
-        public IProjectRepository Projects { get; private set; }
-        public IBoardRepository Boards { get; private set; }
-        public IColumnRepository Columns { get; private set; }
-        private readonly ILoggerFactory _loggerFactory;  
+    public async Task SaveAsync()
+    {
+        await _context.SaveChangesAsync();
+    }
 
-
-        public UnitOfWork(AppDbContext context, ILoggerFactory loggerFactory)
-        {
-            _context = context;
-            _loggerFactory = loggerFactory;
-            Users = new UserRepository(_context, _loggerFactory.CreateLogger<UserRepository>());
-            Projects = new ProjectRepository(_context, _loggerFactory.CreateLogger<ProjectRepository>());
-            Boards = new BoardRepository(_context, _loggerFactory.CreateLogger<BoardRepository>());
-            Columns = new ColumnRepository(_context, _loggerFactory.CreateLogger<ColumnRepository>());
-        }
-
-        public async Task SaveAsync()
-        {
-            await _context.SaveChangesAsync();
-        }
-
-        public void Dispose()
-        {
-            _context.Dispose();
-        }
+    public void Dispose()
+    {
+        _context.Dispose();
     }
 }
