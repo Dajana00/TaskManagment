@@ -44,5 +44,52 @@ namespace Trello.Service
 
             return Result.Ok(_userStoryMapper.CreateDto(userStory));
         }
+
+        public async Task<Result<ICollection<UserStoryDto>>> GetAll()
+        {
+            try
+            {
+                var userStories = await _unitOfWork.UserStories.GetAll();
+
+                if (userStories == null || userStories.Count == 0)
+                    return Result.Fail("No user stories found.");
+
+                var userStoryDtos = userStories
+                    .Select(us => _userStoryMapper.CreateDto(us))
+                    .ToList();
+
+                return Result.Ok((ICollection<UserStoryDto>)userStoryDtos);
+            }
+            catch (Exception ex)
+            {
+                return Result.Fail($"An error occurred while retrieving user stories: {ex.Message}");
+            }
+        }
+
+
+        public async Task<Result<ICollection<UserStoryDto>>> GetByBacklogIdAsync(int backlogId)
+        {
+            if (backlogId <= 0)
+                return Result.Fail("Invalid backlog ID.");
+
+            try
+            {
+                var userStories = await _unitOfWork.UserStories.GetByBacklogId(backlogId);
+
+                if (userStories == null || userStories.Count == 0)
+                    return Result.Fail("No user stories found for the provided backlog ID.");
+
+                var userStoryDtos = userStories
+                    .Select(us => _userStoryMapper.CreateDto(us))
+                    .ToList();
+
+                return Result.Ok((ICollection<UserStoryDto>)userStoryDtos);
+            }
+            catch (Exception ex)
+            {
+                return Result.Fail($"An error occurred while retrieving user stories: {ex.Message}");
+            }
+        }
+
     }
 }

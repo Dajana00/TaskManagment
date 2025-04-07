@@ -9,7 +9,7 @@ namespace Trello.Controller
     {
         private readonly IBacklogService _backlogService;
 
-        public BacklogController(IBacklogService backlogService)
+        public BacklogController(IBacklogService backlogService, IUserStoryService userStoryService)
         {
             _backlogService = backlogService;
         }

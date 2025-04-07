@@ -4,6 +4,7 @@ using Trello.Model;
 using Trello.Repository.IRepository;
 using Trello.Service;
 using Microsoft.Extensions.Logging;
+using Trello.Service.IService;
 
 namespace Trello.Repository
 {

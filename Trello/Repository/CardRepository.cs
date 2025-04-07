@@ -2,6 +2,7 @@
 using Trello.Data;
 using Trello.Model;
 using Trello.Repository.IRepository;
+using Trello.Service.IService;
 
 namespace Trello.Repository
 {
@@ -33,6 +34,21 @@ namespace Trello.Repository
 
                 _logger.LogError(ex, "Unexpected error occurred while adding card.");
                 throw new Exception($"An unexpected error occurred while adding the card. Please try again. {ex}");
+            }
+        }
+
+        public async Task<ICollection<Card>> GetAll()
+        {
+            try
+            {
+                var cards = await _context.Cards.ToListAsync();
+                _logger.LogInformation("Successfully fetched all cards.");
+                return cards;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "An error occurred while fetching all cards.");
+                throw new Exception("An error occurred while retrieving all cards. Please try again.");
             }
         }
 

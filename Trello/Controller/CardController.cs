@@ -30,7 +30,12 @@ namespace Trello.Controller
             return Ok(response);
         }
 
-
+        [HttpGet("getAll")]
+        public async Task<IActionResult> GetAll()
+        {
+            var response = await _cardService.GetAll();
+            return Ok(response.Value);
+        }
     }
 
 

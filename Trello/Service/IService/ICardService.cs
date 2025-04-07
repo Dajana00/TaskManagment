@@ -7,5 +7,7 @@ namespace Trello.Service.IService
     {
         Task<Result<CardDto>> CreateAsync(CardDto card);
         Task<Result> UpdateCardStatus(MoveCardDto moveCarddto);
+        Task<Result<ICollection<CardDto>>> GetAll();
+
     }
 }

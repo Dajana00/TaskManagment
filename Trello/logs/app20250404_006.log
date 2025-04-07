@@ -1,0 +1,781 @@
+2025-04-04 12:04:40.623 +02:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-04 12:04:41.231 +02:00 [INF] Now listening on: http://localhost:5196
+2025-04-04 12:04:41.243 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-04 12:04:41.247 +02:00 [INF] Hosting environment: Development
+2025-04-04 12:04:41.249 +02:00 [INF] Content root path: C:\Users\User\Desktop\TaskManagment\Trello
+2025-04-04 12:04:45.792 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5196// - null null
+2025-04-04 12:04:51.433 +02:00 [WRN] Failed to determine the https port for redirect.
+2025-04-04 12:04:52.198 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5196// - 404 0 null 6464.2376ms
+2025-04-04 12:04:52.224 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5196//, Response status code: 404
+2025-04-04 12:04:56.217 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5196/api/user/getById/1 - null null
+2025-04-04 12:04:56.857 +02:00 [INF] CORS policy execution successful.
+2025-04-04 12:04:56.940 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5196/api/user/getById/1 - 204 null null 724.5035ms
+2025-04-04 12:04:56.990 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5196/api/user/getById/1 - null null
+2025-04-04 12:04:57.363 +02:00 [INF] CORS policy execution successful.
+2025-04-04 12:04:57.372 +02:00 [INF] Executing endpoint 'Trello.Controller.UserController.GetUserById (Trello)'
+2025-04-04 12:04:57.500 +02:00 [INF] Route matched with {action = "GetUserById", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserById(Int32) on controller Trello.Controller.UserController (Trello).
+2025-04-04 12:04:58.102 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5196/api/auth/login - null null
+2025-04-04 12:04:58.123 +02:00 [INF] CORS policy execution successful.
+2025-04-04 12:04:58.159 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5196/api/auth/login - 204 null null 56.8338ms
+2025-04-04 12:04:58.202 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5196/api/auth/login - application/json 40
+2025-04-04 12:04:58.223 +02:00 [INF] CORS policy execution successful.
+2025-04-04 12:04:58.228 +02:00 [INF] Executing endpoint 'Trello.Controller.AuthController.Login (Trello)'
+2025-04-04 12:04:58.311 +02:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Trello.DTOs.UserLoginDto) on controller Trello.Controller.AuthController (Trello).
+2025-04-04 12:05:04.218 +02:00 [INF] Executed DbCommand (146ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."AccessFailedCount", u."ConcurrencyStamp", u."CreatedAt", u."Email", u."EmailConfirmed", u."FirstName", u."LastName", u."LockoutEnabled", u."LockoutEnd", u."NormalizedEmail", u."NormalizedUserName", u."PasswordHash", u."PhoneNumber", u."PhoneNumberConfirmed", u."RefreshToken", u."RefreshTokenExpiry", u."SecurityStamp", u."TwoFactorEnabled", u."UserName"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 1
+2025-04-04 12:05:04.218 +02:00 [INF] Executed DbCommand (146ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."AccessFailedCount", u."ConcurrencyStamp", u."CreatedAt", u."Email", u."EmailConfirmed", u."FirstName", u."LastName", u."LockoutEnabled", u."LockoutEnd", u."NormalizedEmail", u."NormalizedUserName", u."PasswordHash", u."PhoneNumber", u."PhoneNumberConfirmed", u."RefreshToken", u."RefreshTokenExpiry", u."SecurityStamp", u."TwoFactorEnabled", u."UserName"
+FROM "Users" AS u
+WHERE u."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2025-04-04 12:05:04.538 +02:00 [INF] Executing OkObjectResult, writing value of type 'Trello.DTOs.UserDto'.
+2025-04-04 12:05:04.601 +02:00 [INF] Executed action Trello.Controller.UserController.GetUserById (Trello) in 6941.3848ms
+2025-04-04 12:05:04.608 +02:00 [INF] Executed endpoint 'Trello.Controller.UserController.GetUserById (Trello)'
+2025-04-04 12:05:04.623 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5196/api/user/getById/1 - 200 null application/json; charset=utf-8 7633.679ms
+2025-04-04 12:05:05.932 +02:00 [INF] Executed DbCommand (19ms) [Parameters=[@p2='?' (DbType = Int32), @p0='?', @p1='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Users" SET "RefreshToken" = @p0, "RefreshTokenExpiry" = @p1
+WHERE "Id" = @p2;
+2025-04-04 12:05:05.947 +02:00 [INF] Executing OkObjectResult, writing value of type 'FluentResults.Result`1[[Trello.DTOs.AuthResponseDto, Trello, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-04 12:05:05.993 +02:00 [INF] Executed action Trello.Controller.AuthController.Login (Trello) in 7581.3294ms
+2025-04-04 12:05:06.007 +02:00 [INF] Executed endpoint 'Trello.Controller.AuthController.Login (Trello)'
+2025-04-04 12:05:06.015 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5196/api/auth/login - 200 null application/json; charset=utf-8 7813.7611ms
+2025-04-04 12:05:07.461 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5196/api/user/getById/1 - null null
+2025-04-04 12:05:07.708 +02:00 [INF] CORS policy execution successful.
+2025-04-04 12:05:07.714 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5196/api/user/getById/1 - 204 null null 253.6351ms
+2025-04-04 12:05:07.740 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5196/api/user/getById/1 - null null
+2025-04-04 12:05:07.755 +02:00 [INF] CORS policy execution successful.
+2025-04-04 12:05:07.761 +02:00 [INF] Executing endpoint 'Trello.Controller.UserController.GetUserById (Trello)'
+2025-04-04 12:05:07.771 +02:00 [INF] Route matched with {action = "GetUserById", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserById(Int32) on controller Trello.Controller.UserController (Trello).
+2025-04-04 12:05:08.002 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."AccessFailedCount", u."ConcurrencyStamp", u."CreatedAt", u."Email", u."EmailConfirmed", u."FirstName", u."LastName", u."LockoutEnabled", u."LockoutEnd", u."NormalizedEmail", u."NormalizedUserName", u."PasswordHash", u."PhoneNumber", u."PhoneNumberConfirmed", u."RefreshToken", u."RefreshTokenExpiry", u."SecurityStamp", u."TwoFactorEnabled", u."UserName"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 1
+2025-04-04 12:05:08.024 +02:00 [INF] Executing OkObjectResult, writing value of type 'Trello.DTOs.UserDto'.
+2025-04-04 12:05:08.034 +02:00 [INF] Executed action Trello.Controller.UserController.GetUserById (Trello) in 242.08ms
+2025-04-04 12:05:08.043 +02:00 [INF] Executed endpoint 'Trello.Controller.UserController.GetUserById (Trello)'
+2025-04-04 12:05:08.053 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5196/api/user/getById/1 - 200 null application/json; charset=utf-8 311.2996ms
+2025-04-04 12:05:08.081 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5196/api/projects/getUserProjects/1 - null null
+2025-04-04 12:05:08.109 +02:00 [INF] CORS policy execution successful.
+2025-04-04 12:05:08.116 +02:00 [INF] Executing endpoint 'Trello.Controller.ProjectController.GetUserProjects (Trello)'
+2025-04-04 12:05:08.143 +02:00 [INF] Route matched with {action = "GetUserProjects", controller = "Project"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserProjects(Int32) on controller Trello.Controller.ProjectController (Trello).
+2025-04-04 12:05:08.430 +02:00 [INF] Executed DbCommand (13ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."BacklogId", p."BoardId", p."Name", p."OwnerId"
+FROM "Projects" AS p
+WHERE EXISTS (
+    SELECT 1
+    FROM "UserProject" AS u
+    WHERE p."Id" = u."ProjectId" AND u."UserId" = @__userId_0) OR p."OwnerId" = @__userId_0
+2025-04-04 12:05:08.481 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Trello.DTOs.ProjectDetailsDto, Trello, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-04 12:05:08.494 +02:00 [INF] Executed action Trello.Controller.ProjectController.GetUserProjects (Trello) in 319.8434ms
+2025-04-04 12:05:08.505 +02:00 [INF] Executed endpoint 'Trello.Controller.ProjectController.GetUserProjects (Trello)'
+2025-04-04 12:05:08.512 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5196/api/projects/getUserProjects/1 - 200 null application/json; charset=utf-8 431.2702ms
+2025-04-04 12:05:08.520 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5196/api/card/getAll - null null
+2025-04-04 12:05:08.588 +02:00 [INF] CORS policy execution successful.
+2025-04-04 12:05:08.573 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5196/api/boards/getById/1 - null null
+2025-04-04 12:05:08.623 +02:00 [INF] CORS policy execution successful.
+2025-04-04 12:05:08.604 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5196/api/card/getAll - 204 null null 83.7725ms
+2025-04-04 12:05:08.633 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5196/api/boards/getById/1 - 204 null null 60.0724ms
+2025-04-04 12:05:08.659 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5196/api/card/getAll - null null
+2025-04-04 12:05:08.684 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5196/api/boards/getById/1 - null null
+2025-04-04 12:05:08.929 +02:00 [INF] CORS policy execution successful.
+2025-04-04 12:05:08.939 +02:00 [INF] Executing endpoint 'Trello.Controller.BoardController.GetById (Trello)'
+2025-04-04 12:05:08.970 +02:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2025-04-04 12:05:09.099 +02:00 [INF] Route matched with {action = "GetById", controller = "Board"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32) on controller Trello.Controller.BoardController (Trello).
+2025-04-04 12:05:09.114 +02:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-04-04 12:05:09.144 +02:00 [INF] CORS policy execution successful.
+2025-04-04 12:05:09.150 +02:00 [INF] Executing endpoint 'Trello.Controller.CardController.GetAll (Trello)'
+2025-04-04 12:05:09.180 +02:00 [INF] Route matched with {action = "GetAll", controller = "Card"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Trello.Controller.CardController (Trello).
+2025-04-04 12:05:09.219 +02:00 [INF] Executed DbCommand (59ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."ActiveSprintId", b."Description", b."Name", b."ProjectId"
+FROM "Boards" AS b
+WHERE b."Id" = @__id_0
+LIMIT 1
+2025-04-04 12:05:09.304 +02:00 [INF] Executing OkObjectResult, writing value of type 'Trello.DTOs.BoardDto'.
+2025-04-04 12:05:09.311 +02:00 [INF] Executed DbCommand (40ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT c."Id", c."Description", c."DueDate", c."SprintId", c."Status", c."Title"
+FROM "Cards" AS c
+2025-04-04 12:05:09.343 +02:00 [INF] Executed action Trello.Controller.BoardController.GetById (Trello) in 214.3948ms
+2025-04-04 12:05:09.379 +02:00 [INF] Executed endpoint 'Trello.Controller.BoardController.GetById (Trello)'
+2025-04-04 12:05:09.389 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5196/api/boards/getById/1 - 200 null application/json; charset=utf-8 705.787ms
+2025-04-04 12:05:09.454 +02:00 [INF] Successfully fetched all cards.
+2025-04-04 12:05:09.489 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Trello.DTOs.CardDto, Trello, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-04 12:05:09.557 +02:00 [INF] Executed action Trello.Controller.CardController.GetAll (Trello) in 318.8535ms
+2025-04-04 12:05:09.566 +02:00 [INF] Executed endpoint 'Trello.Controller.CardController.GetAll (Trello)'
+2025-04-04 12:05:09.575 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5196/api/card/getAll - 200 null application/json; charset=utf-8 915.8176ms
+2025-04-04 12:05:17.781 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5196/api/userStory/getByBacklogId/1 - null null
+2025-04-04 12:05:17.813 +02:00 [INF] CORS policy execution successful.
+2025-04-04 12:05:17.820 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5196/api/userStory/getByBacklogId/1 - 204 null null 39.8305ms
+2025-04-04 12:05:17.978 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5196/api/userStory/getByBacklogId/1 - null null
+2025-04-04 12:05:18.083 +02:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2025-04-04 12:05:18.114 +02:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-04-04 12:05:18.132 +02:00 [INF] CORS policy execution successful.
+2025-04-04 12:05:18.138 +02:00 [INF] Executing endpoint 'Trello.Controller.UserStoryController.GetByBacklogId (Trello)'
+2025-04-04 12:05:18.155 +02:00 [INF] Route matched with {action = "GetByBacklogId", controller = "UserStory"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetByBacklogId(Int32) on controller Trello.Controller.UserStoryController (Trello).
+2025-04-04 12:05:18.193 +02:00 [INF] Executed DbCommand (8ms) [Parameters=[@__backlogId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."BacklogId", u."Description", u."Title"
+FROM "UserStories" AS u
+WHERE u."BacklogId" = @__backlogId_0
+2025-04-04 12:05:18.213 +02:00 [INF] Retrieved 1 user stories for BacklogId: 1
+2025-04-04 12:05:18.222 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Trello.DTOs.UserStoryDto, Trello, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-04 12:05:18.230 +02:00 [INF] Executed action Trello.Controller.UserStoryController.GetByBacklogId (Trello) in 62.3254ms
+2025-04-04 12:05:18.237 +02:00 [INF] Executed endpoint 'Trello.Controller.UserStoryController.GetByBacklogId (Trello)'
+2025-04-04 12:05:18.242 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5196/api/userStory/getByBacklogId/1 - 200 null application/json; charset=utf-8 264.1484ms
+2025-04-04 12:12:15.565 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5196/api/projects/create - null null
+2025-04-04 12:12:15.614 +02:00 [INF] CORS policy execution successful.
+2025-04-04 12:12:15.622 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5196/api/projects/create - 204 null null 59.6172ms
+2025-04-04 12:12:15.653 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5196/api/projects/create - application/json 38
+2025-04-04 12:12:15.665 +02:00 [INF] CORS policy execution successful.
+2025-04-04 12:12:15.670 +02:00 [INF] Executing endpoint 'Trello.Controller.ProjectController.Create (Trello)'
+2025-04-04 12:12:15.681 +02:00 [INF] Route matched with {action = "Create", controller = "Project"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(Trello.DTOs.ProjectDto) on controller Trello.Controller.ProjectController (Trello).
+2025-04-04 12:12:15.801 +02:00 [INF] Executed DbCommand (7ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."AccessFailedCount", u."ConcurrencyStamp", u."CreatedAt", u."Email", u."EmailConfirmed", u."FirstName", u."LastName", u."LockoutEnabled", u."LockoutEnd", u."NormalizedEmail", u."NormalizedUserName", u."PasswordHash", u."PhoneNumber", u."PhoneNumberConfirmed", u."RefreshToken", u."RefreshTokenExpiry", u."SecurityStamp", u."TwoFactorEnabled", u."UserName"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 1
+2025-04-04 12:12:15.916 +02:00 [INF] Executed DbCommand (11ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?', @p3='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Projects" ("BacklogId", "BoardId", "Name", "OwnerId")
+VALUES (@p0, @p1, @p2, @p3)
+RETURNING "Id";
+2025-04-04 12:12:15.952 +02:00 [INF] Project added successifully
+2025-04-04 12:12:15.989 +02:00 [INF] Executed DbCommand (9ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?', @p2='?', @p3='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Boards" ("ActiveSprintId", "Description", "Name", "ProjectId")
+VALUES (@p0, @p1, @p2, @p3)
+RETURNING "Id";
+2025-04-04 12:12:16.061 +02:00 [INF] Boards added successifully
+2025-04-04 12:12:16.114 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Int32), @p2='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Backlogs" ("ProjectId")
+VALUES (@p0)
+RETURNING "Id";
+UPDATE "Projects" SET "BoardId" = @p1
+WHERE "Id" = @p2;
+2025-04-04 12:12:16.167 +02:00 [INF] Backlog added successifully
+2025-04-04 12:12:16.178 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Projects" SET "BacklogId" = @p0
+WHERE "Id" = @p1;
+2025-04-04 12:12:16.207 +02:00 [INF] Executing OkObjectResult, writing value of type 'FluentResults.Result`1[[Trello.DTOs.ProjectDto, Trello, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-04 12:12:16.253 +02:00 [INF] Executed action Trello.Controller.ProjectController.Create (Trello) in 557.8746ms
+2025-04-04 12:12:16.273 +02:00 [INF] Executed endpoint 'Trello.Controller.ProjectController.Create (Trello)'
+2025-04-04 12:12:16.283 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5196/api/projects/create - 200 null application/json; charset=utf-8 627.2746ms
+2025-04-04 12:12:18.993 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5196/api/user/getById/1 - null null
+2025-04-04 12:12:19.001 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5196/api/user/getById/1 - null null
+2025-04-04 12:12:19.090 +02:00 [INF] CORS policy execution successful.
+2025-04-04 12:12:19.084 +02:00 [INF] CORS policy execution successful.
+2025-04-04 12:12:19.099 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5196/api/user/getById/1 - 204 null null 98.839ms
+2025-04-04 12:12:19.102 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5196/api/user/getById/1 - 204 null null 109.0202ms
+2025-04-04 12:12:19.140 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5196/api/user/getById/1 - null null
+2025-04-04 12:12:19.173 +02:00 [INF] CORS policy execution successful.
+2025-04-04 12:12:19.177 +02:00 [INF] Executing endpoint 'Trello.Controller.UserController.GetUserById (Trello)'
+2025-04-04 12:12:19.186 +02:00 [INF] Route matched with {action = "GetUserById", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserById(Int32) on controller Trello.Controller.UserController (Trello).
+2025-04-04 12:12:19.223 +02:00 [INF] Executed DbCommand (14ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."AccessFailedCount", u."ConcurrencyStamp", u."CreatedAt", u."Email", u."EmailConfirmed", u."FirstName", u."LastName", u."LockoutEnabled", u."LockoutEnd", u."NormalizedEmail", u."NormalizedUserName", u."PasswordHash", u."PhoneNumber", u."PhoneNumberConfirmed", u."RefreshToken", u."RefreshTokenExpiry", u."SecurityStamp", u."TwoFactorEnabled", u."UserName"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 1
+2025-04-04 12:12:19.314 +02:00 [INF] Executing OkObjectResult, writing value of type 'Trello.DTOs.UserDto'.
+2025-04-04 12:12:19.323 +02:00 [INF] Executed action Trello.Controller.UserController.GetUserById (Trello) in 118.2197ms
+2025-04-04 12:12:19.331 +02:00 [INF] Executed endpoint 'Trello.Controller.UserController.GetUserById (Trello)'
+2025-04-04 12:12:19.339 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5196/api/user/getById/1 - null null
+2025-04-04 12:12:19.340 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5196/api/user/getById/1 - 200 null application/json; charset=utf-8 200.1194ms
+2025-04-04 12:12:19.351 +02:00 [INF] CORS policy execution successful.
+2025-04-04 12:12:19.375 +02:00 [INF] Executing endpoint 'Trello.Controller.UserController.GetUserById (Trello)'
+2025-04-04 12:12:19.380 +02:00 [INF] Route matched with {action = "GetUserById", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserById(Int32) on controller Trello.Controller.UserController (Trello).
+2025-04-04 12:12:19.403 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."AccessFailedCount", u."ConcurrencyStamp", u."CreatedAt", u."Email", u."EmailConfirmed", u."FirstName", u."LastName", u."LockoutEnabled", u."LockoutEnd", u."NormalizedEmail", u."NormalizedUserName", u."PasswordHash", u."PhoneNumber", u."PhoneNumberConfirmed", u."RefreshToken", u."RefreshTokenExpiry", u."SecurityStamp", u."TwoFactorEnabled", u."UserName"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 1
+2025-04-04 12:12:19.434 +02:00 [INF] Executing OkObjectResult, writing value of type 'Trello.DTOs.UserDto'.
+2025-04-04 12:12:19.454 +02:00 [INF] Executed action Trello.Controller.UserController.GetUserById (Trello) in 56.1956ms
+2025-04-04 12:12:19.504 +02:00 [INF] Executed endpoint 'Trello.Controller.UserController.GetUserById (Trello)'
+2025-04-04 12:12:19.538 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5196/api/user/getById/1 - 200 null application/json; charset=utf-8 199.9384ms
+2025-04-04 12:12:19.560 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5196/api/projects/getUserProjects/1 - null null
+2025-04-04 12:12:19.572 +02:00 [INF] CORS policy execution successful.
+2025-04-04 12:12:19.579 +02:00 [INF] Executing endpoint 'Trello.Controller.ProjectController.GetUserProjects (Trello)'
+2025-04-04 12:12:19.583 +02:00 [INF] Route matched with {action = "GetUserProjects", controller = "Project"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserProjects(Int32) on controller Trello.Controller.ProjectController (Trello).
+2025-04-04 12:12:19.607 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."BacklogId", p."BoardId", p."Name", p."OwnerId"
+FROM "Projects" AS p
+WHERE EXISTS (
+    SELECT 1
+    FROM "UserProject" AS u
+    WHERE p."Id" = u."ProjectId" AND u."UserId" = @__userId_0) OR p."OwnerId" = @__userId_0
+2025-04-04 12:12:19.627 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Trello.DTOs.ProjectDetailsDto, Trello, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-04 12:12:19.642 +02:00 [INF] Executed action Trello.Controller.ProjectController.GetUserProjects (Trello) in 43.2411ms
+2025-04-04 12:12:19.651 +02:00 [INF] Executed endpoint 'Trello.Controller.ProjectController.GetUserProjects (Trello)'
+2025-04-04 12:12:19.668 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5196/api/card/getAll - null null
+2025-04-04 12:12:19.659 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5196/api/projects/getUserProjects/1 - 200 null application/json; charset=utf-8 98.8755ms
+2025-04-04 12:12:19.728 +02:00 [INF] CORS policy execution successful.
+2025-04-04 12:12:19.759 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5196/api/boards/getById/1 - null null
+2025-04-04 12:12:19.794 +02:00 [INF] CORS policy execution successful.
+2025-04-04 12:12:19.766 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5196/api/card/getAll - 204 null null 98.0888ms
+2025-04-04 12:12:19.815 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5196/api/boards/getById/1 - 204 null null 55.4018ms
+2025-04-04 12:12:19.845 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5196/api/card/getAll - null null
+2025-04-04 12:12:19.851 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5196/api/boards/getById/1 - null null
+2025-04-04 12:12:20.354 +02:00 [INF] CORS policy execution successful.
+2025-04-04 12:12:20.359 +02:00 [INF] Executing endpoint 'Trello.Controller.BoardController.GetById (Trello)'
+2025-04-04 12:12:20.351 +02:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2025-04-04 12:12:20.409 +02:00 [INF] Route matched with {action = "GetById", controller = "Board"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32) on controller Trello.Controller.BoardController (Trello).
+2025-04-04 12:12:20.557 +02:00 [INF] Executed DbCommand (82ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."ActiveSprintId", b."Description", b."Name", b."ProjectId"
+FROM "Boards" AS b
+WHERE b."Id" = @__id_0
+LIMIT 1
+2025-04-04 12:12:20.455 +02:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-04-04 12:12:20.609 +02:00 [INF] Executing OkObjectResult, writing value of type 'Trello.DTOs.BoardDto'.
+2025-04-04 12:12:20.621 +02:00 [INF] CORS policy execution successful.
+2025-04-04 12:12:20.638 +02:00 [INF] Executed action Trello.Controller.BoardController.GetById (Trello) in 165.3772ms
+2025-04-04 12:12:20.647 +02:00 [INF] Executing endpoint 'Trello.Controller.CardController.GetAll (Trello)'
+2025-04-04 12:12:20.651 +02:00 [INF] Executed endpoint 'Trello.Controller.BoardController.GetById (Trello)'
+2025-04-04 12:12:20.660 +02:00 [INF] Route matched with {action = "GetAll", controller = "Card"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Trello.Controller.CardController (Trello).
+2025-04-04 12:12:20.664 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5196/api/boards/getById/1 - 200 null application/json; charset=utf-8 813.3876ms
+2025-04-04 12:12:20.717 +02:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT c."Id", c."Description", c."DueDate", c."SprintId", c."Status", c."Title"
+FROM "Cards" AS c
+2025-04-04 12:12:20.754 +02:00 [INF] Successfully fetched all cards.
+2025-04-04 12:12:20.763 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Trello.DTOs.CardDto, Trello, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-04 12:12:20.777 +02:00 [INF] Executed action Trello.Controller.CardController.GetAll (Trello) in 79.599ms
+2025-04-04 12:12:20.784 +02:00 [INF] Executed endpoint 'Trello.Controller.CardController.GetAll (Trello)'
+2025-04-04 12:12:20.789 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5196/api/card/getAll - 200 null application/json; charset=utf-8 944.2584ms
+2025-04-04 12:12:28.123 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5196/api/userStory/getByBacklogId/1 - null null
+2025-04-04 12:12:28.143 +02:00 [INF] CORS policy execution successful.
+2025-04-04 12:12:28.153 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5196/api/userStory/getByBacklogId/1 - 204 null null 29.5926ms
+2025-04-04 12:12:28.189 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5196/api/userStory/getByBacklogId/1 - null null
+2025-04-04 12:12:28.290 +02:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2025-04-04 12:12:28.328 +02:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-04-04 12:12:28.344 +02:00 [INF] CORS policy execution successful.
+2025-04-04 12:12:28.351 +02:00 [INF] Executing endpoint 'Trello.Controller.UserStoryController.GetByBacklogId (Trello)'
+2025-04-04 12:12:28.357 +02:00 [INF] Route matched with {action = "GetByBacklogId", controller = "UserStory"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetByBacklogId(Int32) on controller Trello.Controller.UserStoryController (Trello).
+2025-04-04 12:12:28.383 +02:00 [INF] Executed DbCommand (7ms) [Parameters=[@__backlogId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."BacklogId", u."Description", u."Title"
+FROM "UserStories" AS u
+WHERE u."BacklogId" = @__backlogId_0
+2025-04-04 12:12:28.460 +02:00 [INF] Retrieved 1 user stories for BacklogId: 1
+2025-04-04 12:12:28.469 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Trello.DTOs.UserStoryDto, Trello, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-04 12:12:28.480 +02:00 [INF] Executed action Trello.Controller.UserStoryController.GetByBacklogId (Trello) in 107.6675ms
+2025-04-04 12:12:28.485 +02:00 [INF] Executed endpoint 'Trello.Controller.UserStoryController.GetByBacklogId (Trello)'
+2025-04-04 12:12:28.494 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5196/api/userStory/getByBacklogId/1 - 200 null application/json; charset=utf-8 304.6786ms
+2025-04-04 12:12:41.688 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5196/api/boards/getById/1 - null null
+2025-04-04 12:12:41.735 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5196/api/card/getAll - null null
+2025-04-04 12:12:41.769 +02:00 [INF] CORS policy execution successful.
+2025-04-04 12:12:41.774 +02:00 [INF] CORS policy execution successful.
+2025-04-04 12:12:41.781 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5196/api/boards/getById/1 - 204 null null 93.0095ms
+2025-04-04 12:12:41.787 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5196/api/card/getAll - 204 null null 52.2163ms
+2025-04-04 12:12:41.818 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5196/api/boards/getById/1 - null null
+2025-04-04 12:12:41.810 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5196/api/card/getAll - null null
+2025-04-04 12:12:41.834 +02:00 [INF] CORS policy execution successful.
+2025-04-04 12:12:41.873 +02:00 [INF] Executing endpoint 'Trello.Controller.BoardController.GetById (Trello)'
+2025-04-04 12:12:41.898 +02:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2025-04-04 12:12:41.900 +02:00 [INF] Route matched with {action = "GetById", controller = "Board"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32) on controller Trello.Controller.BoardController (Trello).
+2025-04-04 12:12:41.965 +02:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-04-04 12:12:41.985 +02:00 [INF] Executed DbCommand (8ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."ActiveSprintId", b."Description", b."Name", b."ProjectId"
+FROM "Boards" AS b
+WHERE b."Id" = @__id_0
+LIMIT 1
+2025-04-04 12:12:42.002 +02:00 [INF] CORS policy execution successful.
+2025-04-04 12:12:42.025 +02:00 [INF] Executing OkObjectResult, writing value of type 'Trello.DTOs.BoardDto'.
+2025-04-04 12:12:42.027 +02:00 [INF] Executing endpoint 'Trello.Controller.CardController.GetAll (Trello)'
+2025-04-04 12:12:42.039 +02:00 [INF] Executed action Trello.Controller.BoardController.GetById (Trello) in 63.5817ms
+2025-04-04 12:12:42.042 +02:00 [INF] Route matched with {action = "GetAll", controller = "Card"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Trello.Controller.CardController (Trello).
+2025-04-04 12:12:42.058 +02:00 [INF] Executed endpoint 'Trello.Controller.BoardController.GetById (Trello)'
+2025-04-04 12:12:42.079 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5196/api/boards/getById/1 - 200 null application/json; charset=utf-8 261.0398ms
+2025-04-04 12:12:42.083 +02:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT c."Id", c."Description", c."DueDate", c."SprintId", c."Status", c."Title"
+FROM "Cards" AS c
+2025-04-04 12:12:42.117 +02:00 [INF] Successfully fetched all cards.
+2025-04-04 12:12:42.126 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Trello.DTOs.CardDto, Trello, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-04 12:12:42.135 +02:00 [INF] Executed action Trello.Controller.CardController.GetAll (Trello) in 66.5826ms
+2025-04-04 12:12:42.146 +02:00 [INF] Executed endpoint 'Trello.Controller.CardController.GetAll (Trello)'
+2025-04-04 12:12:42.151 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5196/api/card/getAll - 200 null application/json; charset=utf-8 341.1786ms
+2025-04-04 12:13:23.799 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5196/api/userStory/getByBacklogId/1 - null null
+2025-04-04 12:13:23.887 +02:00 [INF] CORS policy execution successful.
+2025-04-04 12:13:23.891 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5196/api/userStory/getByBacklogId/1 - 204 null null 92.2347ms
+2025-04-04 12:13:23.921 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5196/api/userStory/getByBacklogId/1 - null null
+2025-04-04 12:13:24.091 +02:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2025-04-04 12:13:24.145 +02:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-04-04 12:13:24.157 +02:00 [INF] CORS policy execution successful.
+2025-04-04 12:13:24.165 +02:00 [INF] Executing endpoint 'Trello.Controller.UserStoryController.GetByBacklogId (Trello)'
+2025-04-04 12:13:24.171 +02:00 [INF] Route matched with {action = "GetByBacklogId", controller = "UserStory"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetByBacklogId(Int32) on controller Trello.Controller.UserStoryController (Trello).
+2025-04-04 12:13:24.209 +02:00 [INF] Executed DbCommand (8ms) [Parameters=[@__backlogId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."BacklogId", u."Description", u."Title"
+FROM "UserStories" AS u
+WHERE u."BacklogId" = @__backlogId_0
+2025-04-04 12:13:24.234 +02:00 [INF] Retrieved 1 user stories for BacklogId: 1
+2025-04-04 12:13:24.247 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Trello.DTOs.UserStoryDto, Trello, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-04 12:13:24.263 +02:00 [INF] Executed action Trello.Controller.UserStoryController.GetByBacklogId (Trello) in 67.141ms
+2025-04-04 12:13:24.275 +02:00 [INF] Executed endpoint 'Trello.Controller.UserStoryController.GetByBacklogId (Trello)'
+2025-04-04 12:13:24.280 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5196/api/userStory/getByBacklogId/1 - 200 null application/json; charset=utf-8 358.4306ms
+2025-04-04 12:13:56.112 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5196/api/boards/getById/1 - null null
+2025-04-04 12:13:56.152 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5196/api/card/getAll - null null
+2025-04-04 12:13:56.172 +02:00 [INF] CORS policy execution successful.
+2025-04-04 12:13:56.177 +02:00 [INF] CORS policy execution successful.
+2025-04-04 12:13:56.187 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5196/api/boards/getById/1 - 204 null null 75.6551ms
+2025-04-04 12:13:56.201 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5196/api/card/getAll - 204 null null 49.2927ms
+2025-04-04 12:13:56.218 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5196/api/boards/getById/1 - null null
+2025-04-04 12:13:56.241 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5196/api/card/getAll - null null
+2025-04-04 12:13:56.247 +02:00 [INF] CORS policy execution successful.
+2025-04-04 12:13:56.335 +02:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2025-04-04 12:13:56.276 +02:00 [INF] Executing endpoint 'Trello.Controller.BoardController.GetById (Trello)'
+2025-04-04 12:13:56.378 +02:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-04-04 12:13:56.380 +02:00 [INF] Route matched with {action = "GetById", controller = "Board"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32) on controller Trello.Controller.BoardController (Trello).
+2025-04-04 12:13:56.405 +02:00 [INF] CORS policy execution successful.
+2025-04-04 12:13:56.418 +02:00 [INF] Executing endpoint 'Trello.Controller.CardController.GetAll (Trello)'
+2025-04-04 12:13:56.420 +02:00 [INF] Executed DbCommand (9ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."ActiveSprintId", b."Description", b."Name", b."ProjectId"
+FROM "Boards" AS b
+WHERE b."Id" = @__id_0
+LIMIT 1
+2025-04-04 12:13:56.435 +02:00 [INF] Route matched with {action = "GetAll", controller = "Card"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Trello.Controller.CardController (Trello).
+2025-04-04 12:13:56.442 +02:00 [INF] Executing OkObjectResult, writing value of type 'Trello.DTOs.BoardDto'.
+2025-04-04 12:13:56.470 +02:00 [INF] Executed action Trello.Controller.BoardController.GetById (Trello) in 60.3478ms
+2025-04-04 12:13:56.486 +02:00 [INF] Executed endpoint 'Trello.Controller.BoardController.GetById (Trello)'
+2025-04-04 12:13:56.470 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT c."Id", c."Description", c."DueDate", c."SprintId", c."Status", c."Title"
+FROM "Cards" AS c
+2025-04-04 12:13:56.504 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5196/api/boards/getById/1 - 200 null application/json; charset=utf-8 286.1156ms
+2025-04-04 12:13:56.530 +02:00 [INF] Successfully fetched all cards.
+2025-04-04 12:13:56.564 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Trello.DTOs.CardDto, Trello, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-04 12:13:56.576 +02:00 [INF] Executed action Trello.Controller.CardController.GetAll (Trello) in 114.3213ms
+2025-04-04 12:13:56.584 +02:00 [INF] Executed endpoint 'Trello.Controller.CardController.GetAll (Trello)'
+2025-04-04 12:13:56.592 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5196/api/card/getAll - 200 null application/json; charset=utf-8 351.1901ms
+2025-04-04 12:14:28.103 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5196/api/user/getById/1 - null null
+2025-04-04 12:14:28.236 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5196/api/user/getById/1 - null null
+2025-04-04 12:14:28.619 +02:00 [INF] CORS policy execution successful.
+2025-04-04 12:14:28.610 +02:00 [INF] CORS policy execution successful.
+2025-04-04 12:14:28.633 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5196/api/user/getById/1 - 204 null null 397.0402ms
+2025-04-04 12:14:28.647 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5196/api/user/getById/1 - 204 null null 544.5854ms
+2025-04-04 12:14:28.714 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5196/api/user/getById/1 - null null
+2025-04-04 12:14:28.728 +02:00 [INF] CORS policy execution successful.
+2025-04-04 12:14:28.731 +02:00 [INF] Executing endpoint 'Trello.Controller.UserController.GetUserById (Trello)'
+2025-04-04 12:14:28.742 +02:00 [INF] Route matched with {action = "GetUserById", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserById(Int32) on controller Trello.Controller.UserController (Trello).
+2025-04-04 12:14:28.779 +02:00 [INF] Executed DbCommand (14ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."AccessFailedCount", u."ConcurrencyStamp", u."CreatedAt", u."Email", u."EmailConfirmed", u."FirstName", u."LastName", u."LockoutEnabled", u."LockoutEnd", u."NormalizedEmail", u."NormalizedUserName", u."PasswordHash", u."PhoneNumber", u."PhoneNumberConfirmed", u."RefreshToken", u."RefreshTokenExpiry", u."SecurityStamp", u."TwoFactorEnabled", u."UserName"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 1
+2025-04-04 12:14:28.836 +02:00 [INF] Executing OkObjectResult, writing value of type 'Trello.DTOs.UserDto'.
+2025-04-04 12:14:28.851 +02:00 [INF] Executed action Trello.Controller.UserController.GetUserById (Trello) in 89.0487ms
+2025-04-04 12:14:28.855 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5196/api/user/getById/1 - null null
+2025-04-04 12:14:28.873 +02:00 [INF] Executed endpoint 'Trello.Controller.UserController.GetUserById (Trello)'
+2025-04-04 12:14:28.882 +02:00 [INF] CORS policy execution successful.
+2025-04-04 12:14:28.890 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5196/api/user/getById/1 - 200 null application/json; charset=utf-8 175.3923ms
+2025-04-04 12:14:28.902 +02:00 [INF] Executing endpoint 'Trello.Controller.UserController.GetUserById (Trello)'
+2025-04-04 12:14:28.935 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5196/api/projects/getUserProjects/1 - null null
+2025-04-04 12:14:28.947 +02:00 [INF] Route matched with {action = "GetUserById", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserById(Int32) on controller Trello.Controller.UserController (Trello).
+2025-04-04 12:14:28.979 +02:00 [INF] CORS policy execution successful.
+2025-04-04 12:14:29.044 +02:00 [INF] Executing endpoint 'Trello.Controller.ProjectController.GetUserProjects (Trello)'
+2025-04-04 12:14:29.043 +02:00 [INF] Executed DbCommand (46ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."AccessFailedCount", u."ConcurrencyStamp", u."CreatedAt", u."Email", u."EmailConfirmed", u."FirstName", u."LastName", u."LockoutEnabled", u."LockoutEnd", u."NormalizedEmail", u."NormalizedUserName", u."PasswordHash", u."PhoneNumber", u."PhoneNumberConfirmed", u."RefreshToken", u."RefreshTokenExpiry", u."SecurityStamp", u."TwoFactorEnabled", u."UserName"
+FROM "Users" AS u
+WHERE u."Id" = @__id_0
+LIMIT 1
+2025-04-04 12:14:29.070 +02:00 [INF] Route matched with {action = "GetUserProjects", controller = "Project"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserProjects(Int32) on controller Trello.Controller.ProjectController (Trello).
+2025-04-04 12:14:29.087 +02:00 [INF] Executing OkObjectResult, writing value of type 'Trello.DTOs.UserDto'.
+2025-04-04 12:14:29.127 +02:00 [INF] Executed DbCommand (21ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."BacklogId", p."BoardId", p."Name", p."OwnerId"
+FROM "Projects" AS p
+WHERE EXISTS (
+    SELECT 1
+    FROM "UserProject" AS u
+    WHERE p."Id" = u."ProjectId" AND u."UserId" = @__userId_0) OR p."OwnerId" = @__userId_0
+2025-04-04 12:14:29.128 +02:00 [INF] Executed action Trello.Controller.UserController.GetUserById (Trello) in 132.2368ms
+2025-04-04 12:14:29.153 +02:00 [INF] Executed endpoint 'Trello.Controller.UserController.GetUserById (Trello)'
+2025-04-04 12:14:29.151 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Trello.DTOs.ProjectDetailsDto, Trello, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-04 12:14:29.165 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5196/api/user/getById/1 - 200 null application/json; charset=utf-8 309.7169ms
+2025-04-04 12:14:29.172 +02:00 [INF] Executed action Trello.Controller.ProjectController.GetUserProjects (Trello) in 67.3939ms
+2025-04-04 12:14:29.198 +02:00 [INF] Executed endpoint 'Trello.Controller.ProjectController.GetUserProjects (Trello)'
+2025-04-04 12:14:29.210 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5196/api/projects/getUserProjects/1 - 200 null application/json; charset=utf-8 274.9945ms
+2025-04-04 12:14:29.262 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5196/api/boards/getById/1 - null null
+2025-04-04 12:14:29.248 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5196/api/card/getAll - null null
+2025-04-04 12:14:29.289 +02:00 [INF] CORS policy execution successful.
+2025-04-04 12:14:29.295 +02:00 [INF] CORS policy execution successful.
+2025-04-04 12:14:29.301 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5196/api/boards/getById/1 - 204 null null 38.8986ms
+2025-04-04 12:14:29.305 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5196/api/card/getAll - 204 null null 56.6814ms
+2025-04-04 12:14:29.335 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5196/api/boards/getById/1 - null null
+2025-04-04 12:14:29.344 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5196/api/card/getAll - null null
+2025-04-04 12:14:29.349 +02:00 [INF] CORS policy execution successful.
+2025-04-04 12:14:29.376 +02:00 [INF] Executing endpoint 'Trello.Controller.BoardController.GetById (Trello)'
+2025-04-04 12:14:29.382 +02:00 [INF] Route matched with {action = "GetById", controller = "Board"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32) on controller Trello.Controller.BoardController (Trello).
+2025-04-04 12:14:29.502 +02:00 [INF] Executed DbCommand (10ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."ActiveSprintId", b."Description", b."Name", b."ProjectId"
+FROM "Boards" AS b
+WHERE b."Id" = @__id_0
+LIMIT 1
+2025-04-04 12:14:29.488 +02:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2025-04-04 12:14:29.562 +02:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-04-04 12:14:29.539 +02:00 [INF] Executing OkObjectResult, writing value of type 'Trello.DTOs.BoardDto'.
+2025-04-04 12:14:29.580 +02:00 [INF] CORS policy execution successful.
+2025-04-04 12:14:29.585 +02:00 [INF] Executed action Trello.Controller.BoardController.GetById (Trello) in 94.8053ms
+2025-04-04 12:14:29.589 +02:00 [INF] Executing endpoint 'Trello.Controller.CardController.GetAll (Trello)'
+2025-04-04 12:14:29.604 +02:00 [INF] Executed endpoint 'Trello.Controller.BoardController.GetById (Trello)'
+2025-04-04 12:14:29.611 +02:00 [INF] Route matched with {action = "GetAll", controller = "Card"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Trello.Controller.CardController (Trello).
+2025-04-04 12:14:29.626 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5196/api/boards/getById/1 - 200 null application/json; charset=utf-8 290.8079ms
+2025-04-04 12:14:29.649 +02:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT c."Id", c."Description", c."DueDate", c."SprintId", c."Status", c."Title"
+FROM "Cards" AS c
+2025-04-04 12:14:29.739 +02:00 [INF] Successfully fetched all cards.
+2025-04-04 12:14:29.756 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Trello.DTOs.CardDto, Trello, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-04 12:14:29.815 +02:00 [INF] Executed action Trello.Controller.CardController.GetAll (Trello) in 179.0517ms
+2025-04-04 12:14:30.029 +02:00 [INF] Executed endpoint 'Trello.Controller.CardController.GetAll (Trello)'
+2025-04-04 12:14:30.066 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5196/api/card/getAll - 200 null application/json; charset=utf-8 721.7801ms
+2025-04-04 12:16:28.060 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5196/api/userStory/getByBacklogId/1 - null null
+2025-04-04 12:16:28.085 +02:00 [INF] CORS policy execution successful.
+2025-04-04 12:16:28.088 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5196/api/userStory/getByBacklogId/1 - 204 null null 28.0006ms
+2025-04-04 12:16:28.105 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5196/api/userStory/getByBacklogId/1 - null null
+2025-04-04 12:16:28.172 +02:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2025-04-04 12:16:28.216 +02:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-04-04 12:16:28.233 +02:00 [INF] CORS policy execution successful.
+2025-04-04 12:16:28.242 +02:00 [INF] Executing endpoint 'Trello.Controller.UserStoryController.GetByBacklogId (Trello)'
+2025-04-04 12:16:28.248 +02:00 [INF] Route matched with {action = "GetByBacklogId", controller = "UserStory"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetByBacklogId(Int32) on controller Trello.Controller.UserStoryController (Trello).
+2025-04-04 12:16:28.268 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[@__backlogId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."BacklogId", u."Description", u."Title"
+FROM "UserStories" AS u
+WHERE u."BacklogId" = @__backlogId_0
+2025-04-04 12:16:28.282 +02:00 [INF] Retrieved 1 user stories for BacklogId: 1
+2025-04-04 12:16:28.289 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Trello.DTOs.UserStoryDto, Trello, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-04 12:16:28.298 +02:00 [INF] Executed action Trello.Controller.UserStoryController.GetByBacklogId (Trello) in 34.9744ms
+2025-04-04 12:16:28.305 +02:00 [INF] Executed endpoint 'Trello.Controller.UserStoryController.GetByBacklogId (Trello)'
+2025-04-04 12:16:28.311 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5196/api/userStory/getByBacklogId/1 - 200 null application/json; charset=utf-8 205.3621ms
+2025-04-04 12:16:39.512 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5196/api/boards/getById/1 - null null
+2025-04-04 12:16:39.549 +02:00 [INF] CORS policy execution successful.
+2025-04-04 12:16:39.565 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5196/api/boards/getById/1 - 204 null null 53.5618ms
+2025-04-04 12:16:39.529 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5196/api/card/getAll - null null
+2025-04-04 12:16:39.578 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5196/api/boards/getById/1 - null null
+2025-04-04 12:16:39.585 +02:00 [INF] CORS policy execution successful.
+2025-04-04 12:16:39.596 +02:00 [INF] CORS policy execution successful.
+2025-04-04 12:16:39.598 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5196/api/card/getAll - 204 null null 69.5848ms
+2025-04-04 12:16:39.615 +02:00 [INF] Executing endpoint 'Trello.Controller.BoardController.GetById (Trello)'
+2025-04-04 12:16:39.621 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5196/api/card/getAll - null null
+2025-04-04 12:16:39.632 +02:00 [INF] Route matched with {action = "GetById", controller = "Board"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32) on controller Trello.Controller.BoardController (Trello).
+2025-04-04 12:16:39.687 +02:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2025-04-04 12:16:39.766 +02:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-04-04 12:16:39.710 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."ActiveSprintId", b."Description", b."Name", b."ProjectId"
+FROM "Boards" AS b
+WHERE b."Id" = @__id_0
+LIMIT 1
+2025-04-04 12:16:39.781 +02:00 [INF] CORS policy execution successful.
+2025-04-04 12:16:39.791 +02:00 [INF] Executing OkObjectResult, writing value of type 'Trello.DTOs.BoardDto'.
+2025-04-04 12:16:39.796 +02:00 [INF] Executing endpoint 'Trello.Controller.CardController.GetAll (Trello)'
+2025-04-04 12:16:39.799 +02:00 [INF] Executed action Trello.Controller.BoardController.GetById (Trello) in 97.7151ms
+2025-04-04 12:16:39.810 +02:00 [INF] Route matched with {action = "GetAll", controller = "Card"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Trello.Controller.CardController (Trello).
+2025-04-04 12:16:39.812 +02:00 [INF] Executed endpoint 'Trello.Controller.BoardController.GetById (Trello)'
+2025-04-04 12:16:39.832 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT c."Id", c."Description", c."DueDate", c."SprintId", c."Status", c."Title"
+FROM "Cards" AS c
+2025-04-04 12:16:39.840 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5196/api/boards/getById/1 - 200 null application/json; charset=utf-8 262.1619ms
+2025-04-04 12:16:39.859 +02:00 [INF] Successfully fetched all cards.
+2025-04-04 12:16:39.874 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Trello.DTOs.CardDto, Trello, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-04 12:16:39.887 +02:00 [INF] Executed action Trello.Controller.CardController.GetAll (Trello) in 58.3818ms
+2025-04-04 12:16:39.892 +02:00 [INF] Executed endpoint 'Trello.Controller.CardController.GetAll (Trello)'
+2025-04-04 12:16:39.898 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5196/api/card/getAll - 200 null application/json; charset=utf-8 277.1963ms
+2025-04-04 12:17:18.269 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5196/api/userStory/getByBacklogId/1 - null null
+2025-04-04 12:17:18.288 +02:00 [INF] CORS policy execution successful.
+2025-04-04 12:17:18.292 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5196/api/userStory/getByBacklogId/1 - 204 null null 23.3097ms
+2025-04-04 12:17:18.322 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5196/api/userStory/getByBacklogId/1 - null null
+2025-04-04 12:17:18.368 +02:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2025-04-04 12:17:18.400 +02:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-04-04 12:17:18.414 +02:00 [INF] CORS policy execution successful.
+2025-04-04 12:17:18.424 +02:00 [INF] Executing endpoint 'Trello.Controller.UserStoryController.GetByBacklogId (Trello)'
+2025-04-04 12:17:18.431 +02:00 [INF] Route matched with {action = "GetByBacklogId", controller = "UserStory"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetByBacklogId(Int32) on controller Trello.Controller.UserStoryController (Trello).
+2025-04-04 12:17:18.535 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[@__backlogId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."BacklogId", u."Description", u."Title"
+FROM "UserStories" AS u
+WHERE u."BacklogId" = @__backlogId_0
+2025-04-04 12:17:18.553 +02:00 [INF] Retrieved 1 user stories for BacklogId: 1
+2025-04-04 12:17:18.565 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Trello.DTOs.UserStoryDto, Trello, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-04 12:17:18.575 +02:00 [INF] Executed action Trello.Controller.UserStoryController.GetByBacklogId (Trello) in 121.8606ms
+2025-04-04 12:17:18.584 +02:00 [INF] Executed endpoint 'Trello.Controller.UserStoryController.GetByBacklogId (Trello)'
+2025-04-04 12:17:18.591 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5196/api/userStory/getByBacklogId/1 - 200 null application/json; charset=utf-8 269.051ms
+2025-04-04 12:17:25.044 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5196/api/card/getAll - null null
+2025-04-04 12:17:25.044 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5196/api/boards/getById/1 - null null
+2025-04-04 12:17:25.062 +02:00 [INF] CORS policy execution successful.
+2025-04-04 12:17:25.075 +02:00 [INF] CORS policy execution successful.
+2025-04-04 12:17:25.082 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5196/api/card/getAll - 204 null null 38.1637ms
+2025-04-04 12:17:25.105 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5196/api/boards/getById/1 - 204 null null 60.9969ms
+2025-04-04 12:17:25.112 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5196/api/card/getAll - null null
+2025-04-04 12:17:25.128 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5196/api/boards/getById/1 - null null
+2025-04-04 12:17:25.180 +02:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2025-04-04 12:17:25.218 +02:00 [INF] CORS policy execution successful.
+2025-04-04 12:17:25.233 +02:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-04-04 12:17:25.244 +02:00 [INF] Executing endpoint 'Trello.Controller.BoardController.GetById (Trello)'
+2025-04-04 12:17:25.249 +02:00 [INF] CORS policy execution successful.
+2025-04-04 12:17:25.257 +02:00 [INF] Route matched with {action = "GetById", controller = "Board"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32) on controller Trello.Controller.BoardController (Trello).
+2025-04-04 12:17:25.262 +02:00 [INF] Executing endpoint 'Trello.Controller.CardController.GetAll (Trello)'
+2025-04-04 12:17:25.282 +02:00 [INF] Route matched with {action = "GetAll", controller = "Card"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Trello.Controller.CardController (Trello).
+2025-04-04 12:17:25.283 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."ActiveSprintId", b."Description", b."Name", b."ProjectId"
+FROM "Boards" AS b
+WHERE b."Id" = @__id_0
+LIMIT 1
+2025-04-04 12:17:25.320 +02:00 [INF] Executing OkObjectResult, writing value of type 'Trello.DTOs.BoardDto'.
+2025-04-04 12:17:25.325 +02:00 [INF] Executed action Trello.Controller.BoardController.GetById (Trello) in 47.9598ms
+2025-04-04 12:17:25.335 +02:00 [INF] Executed endpoint 'Trello.Controller.BoardController.GetById (Trello)'
+2025-04-04 12:17:25.341 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5196/api/boards/getById/1 - 200 null application/json; charset=utf-8 213.0764ms
+2025-04-04 12:17:25.403 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT c."Id", c."Description", c."DueDate", c."SprintId", c."Status", c."Title"
+FROM "Cards" AS c
+2025-04-04 12:17:25.421 +02:00 [INF] Successfully fetched all cards.
+2025-04-04 12:17:25.425 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Trello.DTOs.CardDto, Trello, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-04 12:17:25.454 +02:00 [INF] Executed action Trello.Controller.CardController.GetAll (Trello) in 152.7874ms
+2025-04-04 12:17:25.478 +02:00 [INF] Executed endpoint 'Trello.Controller.CardController.GetAll (Trello)'
+2025-04-04 12:17:25.483 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5196/api/card/getAll - 200 null application/json; charset=utf-8 370.9477ms
+2025-04-04 12:17:58.439 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5196/api/userStory/getByBacklogId/1 - null null
+2025-04-04 12:17:58.458 +02:00 [INF] CORS policy execution successful.
+2025-04-04 12:17:58.463 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5196/api/userStory/getByBacklogId/1 - 204 null null 23.6315ms
+2025-04-04 12:17:58.491 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5196/api/userStory/getByBacklogId/1 - null null
+2025-04-04 12:17:58.569 +02:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2025-04-04 12:17:58.610 +02:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-04-04 12:17:58.622 +02:00 [INF] CORS policy execution successful.
+2025-04-04 12:17:58.629 +02:00 [INF] Executing endpoint 'Trello.Controller.UserStoryController.GetByBacklogId (Trello)'
+2025-04-04 12:17:58.636 +02:00 [INF] Route matched with {action = "GetByBacklogId", controller = "UserStory"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetByBacklogId(Int32) on controller Trello.Controller.UserStoryController (Trello).
+2025-04-04 12:17:58.663 +02:00 [INF] Executed DbCommand (10ms) [Parameters=[@__backlogId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."BacklogId", u."Description", u."Title"
+FROM "UserStories" AS u
+WHERE u."BacklogId" = @__backlogId_0
+2025-04-04 12:17:58.707 +02:00 [INF] Retrieved 1 user stories for BacklogId: 1
+2025-04-04 12:17:58.715 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Trello.DTOs.UserStoryDto, Trello, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-04 12:17:58.725 +02:00 [INF] Executed action Trello.Controller.UserStoryController.GetByBacklogId (Trello) in 74.27ms
+2025-04-04 12:17:58.735 +02:00 [INF] Executed endpoint 'Trello.Controller.UserStoryController.GetByBacklogId (Trello)'
+2025-04-04 12:17:58.742 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5196/api/userStory/getByBacklogId/1 - 200 null application/json; charset=utf-8 251.1644ms
+2025-04-04 12:18:09.555 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5196/api/card/getAll - null null
+2025-04-04 12:18:09.555 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5196/api/boards/getById/1 - null null
+2025-04-04 12:18:09.585 +02:00 [INF] CORS policy execution successful.
+2025-04-04 12:18:09.593 +02:00 [INF] CORS policy execution successful.
+2025-04-04 12:18:09.600 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5196/api/card/getAll - 204 null null 45.1561ms
+2025-04-04 12:18:09.605 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5196/api/boards/getById/1 - 204 null null 50.6428ms
+2025-04-04 12:18:09.626 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5196/api/card/getAll - null null
+2025-04-04 12:18:09.646 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5196/api/boards/getById/1 - null null
+2025-04-04 12:18:09.697 +02:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2025-04-04 12:18:09.706 +02:00 [INF] CORS policy execution successful.
+2025-04-04 12:18:09.745 +02:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-04-04 12:18:09.748 +02:00 [INF] Executing endpoint 'Trello.Controller.BoardController.GetById (Trello)'
+2025-04-04 12:18:09.771 +02:00 [INF] CORS policy execution successful.
+2025-04-04 12:18:09.775 +02:00 [INF] Route matched with {action = "GetById", controller = "Board"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32) on controller Trello.Controller.BoardController (Trello).
+2025-04-04 12:18:09.779 +02:00 [INF] Executing endpoint 'Trello.Controller.CardController.GetAll (Trello)'
+2025-04-04 12:18:09.810 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."ActiveSprintId", b."Description", b."Name", b."ProjectId"
+FROM "Boards" AS b
+WHERE b."Id" = @__id_0
+LIMIT 1
+2025-04-04 12:18:09.810 +02:00 [INF] Route matched with {action = "GetAll", controller = "Card"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Trello.Controller.CardController (Trello).
+2025-04-04 12:18:09.839 +02:00 [INF] Executing OkObjectResult, writing value of type 'Trello.DTOs.BoardDto'.
+2025-04-04 12:18:09.853 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT c."Id", c."Description", c."DueDate", c."SprintId", c."Status", c."Title"
+FROM "Cards" AS c
+2025-04-04 12:18:09.871 +02:00 [INF] Successfully fetched all cards.
+2025-04-04 12:18:09.864 +02:00 [INF] Executed action Trello.Controller.BoardController.GetById (Trello) in 62.8313ms
+2025-04-04 12:18:09.881 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Trello.DTOs.CardDto, Trello, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-04 12:18:09.884 +02:00 [INF] Executed endpoint 'Trello.Controller.BoardController.GetById (Trello)'
+2025-04-04 12:18:09.898 +02:00 [INF] Executed action Trello.Controller.CardController.GetAll (Trello) in 50.9546ms
+2025-04-04 12:18:09.903 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5196/api/boards/getById/1 - 200 null application/json; charset=utf-8 257.3984ms
+2025-04-04 12:18:09.922 +02:00 [INF] Executed endpoint 'Trello.Controller.CardController.GetAll (Trello)'
+2025-04-04 12:18:09.933 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5196/api/card/getAll - 200 null application/json; charset=utf-8 307.0526ms
+2025-04-04 12:18:56.813 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5196/api/userStory/getByBacklogId/1 - null null
+2025-04-04 12:18:56.822 +02:00 [INF] CORS policy execution successful.
+2025-04-04 12:18:56.831 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5196/api/userStory/getByBacklogId/1 - 204 null null 17.9573ms
+2025-04-04 12:18:56.880 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5196/api/userStory/getByBacklogId/1 - null null
+2025-04-04 12:18:57.006 +02:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2025-04-04 12:18:57.085 +02:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-04-04 12:18:57.099 +02:00 [INF] CORS policy execution successful.
+2025-04-04 12:18:57.110 +02:00 [INF] Executing endpoint 'Trello.Controller.UserStoryController.GetByBacklogId (Trello)'
+2025-04-04 12:18:57.121 +02:00 [INF] Route matched with {action = "GetByBacklogId", controller = "UserStory"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetByBacklogId(Int32) on controller Trello.Controller.UserStoryController (Trello).
+2025-04-04 12:18:57.172 +02:00 [INF] Executed DbCommand (22ms) [Parameters=[@__backlogId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."BacklogId", u."Description", u."Title"
+FROM "UserStories" AS u
+WHERE u."BacklogId" = @__backlogId_0
+2025-04-04 12:18:57.213 +02:00 [INF] Retrieved 1 user stories for BacklogId: 1
+2025-04-04 12:18:57.219 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Trello.DTOs.UserStoryDto, Trello, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-04 12:18:57.232 +02:00 [INF] Executed action Trello.Controller.UserStoryController.GetByBacklogId (Trello) in 86.1748ms
+2025-04-04 12:18:57.245 +02:00 [INF] Executed endpoint 'Trello.Controller.UserStoryController.GetByBacklogId (Trello)'
+2025-04-04 12:18:57.250 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5196/api/userStory/getByBacklogId/1 - 200 null application/json; charset=utf-8 369.8798ms
+2025-04-04 12:18:58.314 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5196/api/boards/getById/1 - null null
+2025-04-04 12:18:58.320 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5196/api/card/getAll - null null
+2025-04-04 12:18:58.347 +02:00 [INF] CORS policy execution successful.
+2025-04-04 12:18:58.361 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5196/api/boards/getById/1 - 204 null null 47.7411ms
+2025-04-04 12:18:58.353 +02:00 [INF] CORS policy execution successful.
+2025-04-04 12:18:58.377 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5196/api/boards/getById/1 - null null
+2025-04-04 12:18:58.387 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5196/api/card/getAll - 204 null null 67.0056ms
+2025-04-04 12:18:58.392 +02:00 [INF] CORS policy execution successful.
+2025-04-04 12:18:58.421 +02:00 [INF] Executing endpoint 'Trello.Controller.BoardController.GetById (Trello)'
+2025-04-04 12:18:58.428 +02:00 [INF] Route matched with {action = "GetById", controller = "Board"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32) on controller Trello.Controller.BoardController (Trello).
+2025-04-04 12:18:58.420 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5196/api/card/getAll - null null
+2025-04-04 12:18:58.493 +02:00 [INF] Executed DbCommand (42ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."ActiveSprintId", b."Description", b."Name", b."ProjectId"
+FROM "Boards" AS b
+WHERE b."Id" = @__id_0
+LIMIT 1
+2025-04-04 12:18:58.551 +02:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2025-04-04 12:18:58.585 +02:00 [INF] Executing OkObjectResult, writing value of type 'Trello.DTOs.BoardDto'.
+2025-04-04 12:18:58.610 +02:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-04-04 12:18:58.630 +02:00 [INF] CORS policy execution successful.
+2025-04-04 12:18:58.625 +02:00 [INF] Executed action Trello.Controller.BoardController.GetById (Trello) in 175.7947ms
+2025-04-04 12:18:58.639 +02:00 [INF] Executing endpoint 'Trello.Controller.CardController.GetAll (Trello)'
+2025-04-04 12:18:58.643 +02:00 [INF] Executed endpoint 'Trello.Controller.BoardController.GetById (Trello)'
+2025-04-04 12:18:58.652 +02:00 [INF] Route matched with {action = "GetAll", controller = "Card"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Trello.Controller.CardController (Trello).
+2025-04-04 12:18:58.655 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5196/api/boards/getById/1 - 200 null application/json; charset=utf-8 277.8755ms
+2025-04-04 12:18:58.694 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT c."Id", c."Description", c."DueDate", c."SprintId", c."Status", c."Title"
+FROM "Cards" AS c
+2025-04-04 12:18:58.723 +02:00 [INF] Successfully fetched all cards.
+2025-04-04 12:18:58.729 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Trello.DTOs.CardDto, Trello, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-04 12:18:58.738 +02:00 [INF] Executed action Trello.Controller.CardController.GetAll (Trello) in 51.451ms
+2025-04-04 12:18:58.748 +02:00 [INF] Executed endpoint 'Trello.Controller.CardController.GetAll (Trello)'
+2025-04-04 12:18:58.753 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5196/api/card/getAll - 200 null application/json; charset=utf-8 333.0869ms
+2025-04-04 13:08:46.831 +02:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-04 13:08:47.925 +02:00 [INF] Now listening on: http://localhost:5196
+2025-04-04 13:08:48.574 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-04 13:08:50.666 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5196// - null null
+2025-04-04 13:08:50.711 +02:00 [INF] Hosting environment: Development
+2025-04-04 13:08:50.818 +02:00 [INF] Content root path: C:\Users\User\Desktop\TaskManagment\Trello
+2025-04-04 13:08:50.980 +02:00 [WRN] Failed to determine the https port for redirect.
+2025-04-04 13:08:53.045 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5196// - 404 0 null 2427.0246ms
+2025-04-04 13:08:53.544 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5196//, Response status code: 404

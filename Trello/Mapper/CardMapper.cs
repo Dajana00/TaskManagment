@@ -17,9 +17,10 @@ namespace Trello.Mapper
                 Id = card.Id,
                 Title = card.Title,
                 Description = card.Description,
-                DueDate = card.DueDate
+                DueDate = card.DueDate,
+                Status = card.Status
             };
-        }
+        } // auto maperi ,mmapify 
 
         public ICollection<CardDto> CreateDtoList(ICollection<Card> cards)
         {

@@ -61,6 +61,25 @@ namespace Trello.Service
 
             return Result.Ok();
         }
+        public async Task<Result<ICollection<CardDto>>> GetAll()
+        {
+            try
+            {
+                var userStories = await _unitOfWork.Cards.GetAll();
 
+                if (userStories == null || userStories.Count == 0)
+                    return Result.Fail("No cards found.");
+
+                var userStoryDtos = userStories
+                    .Select(us => _cardMapper.CreateDto(us))
+                    .ToList();
+
+                return Result.Ok((ICollection<CardDto>)userStoryDtos);
+            }
+            catch (Exception ex)
+            {
+                return Result.Fail($"An error occurred while retrieving user stories: {ex.Message}");
+            }
+        }
     }
 }

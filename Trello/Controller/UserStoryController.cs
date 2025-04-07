@@ -23,5 +23,19 @@ namespace Trello.Controller
             return Ok(response);
 
         }
+
+        [HttpGet("getByBacklogId/{backlogId}")]
+        public async Task<IActionResult> GetByBacklogId(int backlogId)
+        {
+            var response = await _userStoryService.GetByBacklogIdAsync(backlogId);
+            return Ok(response.Value);
+
+        }
+        [HttpGet("getAll")]
+        public async Task<IActionResult> GetAll()
+        {
+            var response = await _userStoryService.GetAll();
+            return Ok(response);
+        }
     }
 }
