@@ -10,6 +10,8 @@
         public Board Board { get; set; }
         public int BoardId { get; set; }
         public ICollection<Sprint> Sprints { get; set; }  = new HashSet<Sprint>();    
+        public Backlog Backlog { get; set; }    
+        public int BacklogId { get; set; }  
         public Project() { }
 
     }

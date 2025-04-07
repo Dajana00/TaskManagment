@@ -11,13 +11,11 @@ namespace Trello.Service
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly BoardMapper _boardMapper;
-        private readonly IColumnService _columnService;
 
-        public BoardService(IUnitOfWork unitOfWork,IColumnService columnService)
+        public BoardService(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
             _boardMapper = new BoardMapper(); 
-            _columnService = columnService; 
         }
 
         public async Task<Result<Board>> CreateDefaultBoardAsync(Project project)
@@ -35,12 +33,6 @@ namespace Trello.Service
             await _unitOfWork.Boards.CreateAsync(board);
             _unitOfWork.SaveAsync();
 
-
-            var columnResult = await _columnService.CreateDefaultBoardColumnsAsync(board);
-            if (columnResult.IsFailed)
-                return Result.Fail(columnResult.Errors);
-
-            board.Columns = columnResult.Value;
             await _unitOfWork.SaveAsync();
             return Result.Ok(board);
         }

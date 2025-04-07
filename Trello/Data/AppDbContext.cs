@@ -11,9 +11,11 @@ namespace Trello.Data
         public DbSet<Project> Projects { get; set; }    
         public DbSet<Board> Boards { get; set; }
         public DbSet<Sprint> Sprints { get; set; }
-        public DbSet<Column> Columns { get; set; }  
+       // public DbSet<Column> Columns { get; set; }  
         public DbSet<Card> Cards { get; set; }
         public DbSet<Comment> Comments { get; set; }    
+        public DbSet<Backlog> Backlogs { get; set; }
+        public DbSet<UserStory> UserStories { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -39,17 +41,22 @@ namespace Trello.Data
                .WithOne(b => b.Project) // Board pripada tačno jednom projektu
                .HasForeignKey<Board>(b => b.ProjectId) // Ključ se čuva u Board tabeli
                .OnDelete(DeleteBehavior.Cascade); // Ako se Project obriše, briše se i Board
-
-            modelBuilder.Entity<Column>()
-                .HasOne(c => c.Board)
-                .WithMany(b => b.Columns)
-                .HasForeignKey(c => c.BoardId)
-                .OnDelete(DeleteBehavior.Cascade); 
+            modelBuilder.Entity<Project>()
+               .HasOne(p => p.Backlog)  // Project ima jednu tablu
+               .WithOne(b => b.Project) // Backlog pripada tačno jednom projektu
+               .HasForeignKey<Backlog>(b => b.ProjectId) // Ključ se čuva u backlog tabeli
+               .OnDelete(DeleteBehavior.Cascade); // Ako se Project obriše, briše se i Board
 
             modelBuilder.Entity<Sprint>()
                 .HasOne(s => s.Project)       
                 .WithMany(p => p.Sprints)       
                 .HasForeignKey(s => s.ProjectId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<UserStory>()
+                .HasOne(s => s.Backlog)
+                .WithMany(p => p.UserStories)          // nadam se da je ok provejritiiti
+                .HasForeignKey(s => s.BacklogId)
                 .OnDelete(DeleteBehavior.Cascade);
 
             modelBuilder.Entity<Board>()
@@ -58,11 +65,7 @@ namespace Trello.Data
                 .HasForeignKey<Board>(b => b.ActiveSprintId)
                 .OnDelete(DeleteBehavior.NoAction); // ako se sprint obrise onda board ostaje bez aktivnog sprinta
 
-            modelBuilder.Entity<Card>()
-                .HasOne(c => c.Column)   // kartica pripada jednoj koloni
-                .WithMany(col => col.Cards)
-                .HasForeignKey(c => c.ColumnId)
-                .OnDelete(DeleteBehavior.Restrict);  // ako obtisem kolonu da kartice ostanu u bazi?
+         
 
             modelBuilder.Entity<Card>()
                 .HasOne(c => c.Sprint)   // pitanjee***********************************

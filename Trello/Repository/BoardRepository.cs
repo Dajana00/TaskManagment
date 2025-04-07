@@ -41,7 +41,6 @@ namespace Trello.Repository
             try
             {
                 var board = await _context.Boards
-                    .Include(p => p.Columns)
                     .FirstOrDefaultAsync(p => p.Id == id);
 
                 return board;
