@@ -24,6 +24,7 @@ namespace Trello.Mapper
                 Name = project.Name,
                 OwnerId = project.OwnerId,
                 BoardId = project.BoardId,
+                BacklogId = project.BacklogId,
                 //UserIds = project.UserProjects.Select(up => up.User.Id).ToList(),
                 //BoardId = project.Board.Id,
                 //SprintIds = project.Sprints.Select(s => s.Id).ToList()

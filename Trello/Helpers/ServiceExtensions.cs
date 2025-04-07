@@ -14,7 +14,10 @@ namespace Trello.Helpers
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IProjectRepository, ProjectRepository>();
             services.AddScoped<IBoardRepository, BoardRepository>();
-            services.AddScoped<IColumnRepository, ColumnRepository>();
+            services.AddScoped<ICardRepository, CardRepository>();
+            services.AddScoped<IBacklogRepository, BacklogRepository>();
+            services.AddScoped<IUserStoryRepository, UserStoryRepository>();
+            //singlton da provjerim ovde
 
 
             // Servisi
@@ -23,7 +26,10 @@ namespace Trello.Helpers
             services.AddScoped<IJwtService, JwtService>();
             services.AddScoped<IProjectService, ProjectService>();
             services.AddScoped<IBoardService, BoardService>();
-            services.AddScoped<IColumnService, ColumnService>();
+            services.AddScoped<ICardService, CardService>();
+            services.AddScoped<IBacklogService, BacklogService>();
+            services.AddScoped<IUserStoryService, UserStoryService>();
+            
 
             // Konfiguracija za JWT
             services.Configure<JwtSettings>(configuration.GetSection("JwtSettings"));

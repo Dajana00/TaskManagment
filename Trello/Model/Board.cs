@@ -5,7 +5,7 @@
         public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-        public ICollection<Column> Columns { get; set; } = new HashSet<Column>();
+        //public ICollection<Column> Columns { get; set; } = new HashSet<Column>();
         //sadrzi user story , koji sadrzi vise taskova
         //task sadrzi property sattsusa da li je to do , in progress itd
 
