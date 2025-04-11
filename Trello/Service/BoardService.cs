@@ -1,4 +1,5 @@
-﻿using FluentResults;
+﻿using AutoMapper;
+using FluentResults;
 using Trello.DTOs;
 using Trello.Mapper;
 using Trello.Model;
@@ -10,12 +11,12 @@ namespace Trello.Service
     public class BoardService : IBoardService
     {
         private readonly IUnitOfWork _unitOfWork;
-        private readonly BoardMapper _boardMapper;
+        private readonly IMapper _mapper;
 
-        public BoardService(IUnitOfWork unitOfWork)
+        public BoardService(IUnitOfWork unitOfWork,IMapper mapper)
         {
             _unitOfWork = unitOfWork;
-            _boardMapper = new BoardMapper(); 
+            _mapper = mapper;
         }
 
         public async Task<Result<Board>> CreateDefaultBoardAsync(Project project)
@@ -49,7 +50,7 @@ namespace Trello.Service
                     return Result.Fail($"No board found with id: {id}.");
 
 
-                return Result.Ok(_boardMapper.CreateDto(board));
+                return Result.Ok(_mapper.Map<BoardDto>(board));
             }
             catch (Exception ex)
             {

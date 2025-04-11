@@ -99,9 +99,14 @@ namespace Trello.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<int>("UserStoryId")
+                        .HasColumnType("integer");
+
                     b.HasKey("Id");
 
                     b.HasIndex("SprintId");
+
+                    b.HasIndex("UserStoryId");
 
                     b.ToTable("Cards");
                 });
@@ -366,7 +371,15 @@ namespace Trello.Migrations
                         .HasForeignKey("SprintId")
                         .OnDelete(DeleteBehavior.Cascade);
 
+                    b.HasOne("Trello.Model.UserStory", "UserStory")
+                        .WithMany("Cards")
+                        .HasForeignKey("UserStoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("Sprint");
+
+                    b.Navigation("UserStory");
                 });
 
             modelBuilder.Entity("Trello.Model.Comment", b =>
@@ -491,6 +504,11 @@ namespace Trello.Migrations
                     b.Navigation("UserCards");
 
                     b.Navigation("UserProjects");
+                });
+
+            modelBuilder.Entity("Trello.Model.UserStory", b =>
+                {
+                    b.Navigation("Cards");
                 });
 #pragma warning restore 612, 618
         }

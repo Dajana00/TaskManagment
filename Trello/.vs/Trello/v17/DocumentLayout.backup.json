@@ -3,48 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\taskmanagment\\trello\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\taskmanagment\\trello\\repository\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:repository\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\taskmanagment\\trello\\controller\\backlogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:controller\\backlogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\taskmanagment\\trello\\helpers\\serviceextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:helpers\\serviceextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\taskmanagment\\trello\\service\\backlogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:service\\backlogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\taskmanagment\\trello\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\taskmanagment\\trello\\repository\\boardrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:repository\\boardrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\taskmanagment\\trello\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\taskmanagment\\trello\\service\\cardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:service\\cardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\taskmanagment\\trello\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\taskmanagment\\trello\\service\\boardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:service\\boardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\taskmanagment\\trello\\service\\iservice\\icardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:service\\iservice\\icardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\taskmanagment\\trello\\repository\\cardrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -55,108 +19,140 @@
       "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:repository\\irepository\\icardrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\taskmanagment\\trello\\repository\\backlogrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:repository\\backlogrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\taskmanagment\\trello\\mapper\\cardmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:mapper\\cardmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\taskmanagment\\trello\\dtos\\carddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:dtos\\carddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\taskmanagment\\trello\\helpers\\passwordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:helpers\\passwordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\taskmanagment\\trello\\controller\\cardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:controller\\cardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\taskmanagment\\trello\\model\\backlog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:model\\backlog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\taskmanagment\\trello\\service\\userstoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:service\\userstoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\taskmanagment\\trello\\service\\iservice\\icardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:service\\iservice\\icardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\taskmanagment\\trello\\service\\iservice\\iuserstoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:service\\iservice\\iuserstoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\taskmanagment\\trello\\model\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:model\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\taskmanagment\\trello\\repository\\userstoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:repository\\userstoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\taskmanagment\\trello\\repository\\irepository\\iuserstoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:repository\\irepository\\iuserstoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\taskmanagment\\trello\\controller\\userstorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:controller\\userstorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\taskmanagment\\trello\\service\\iservice\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:service\\iservice\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\taskmanagment\\trello\\controller\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:controller\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\taskmanagment\\trello\\dtos\\boarddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:dtos\\boarddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\taskmanagment\\trello\\service\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:service\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\taskmanagment\\trello\\dtos\\userstorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:dtos\\userstorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\taskmanagment\\trello\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\taskmanagment\\trello\\dtos\\projectdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:dtos\\projectdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\taskmanagment\\trello\\dtos\\carddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:dtos\\carddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\taskmanagment\\trello\\controller\\userstorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:controller\\userstorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\taskmanagment\\trello\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\taskmanagment\\trello\\model\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:model\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\taskmanagment\\trello\\model\\userstory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:model\\userstory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\taskmanagment\\trello\\websocket\\cardhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:websocket\\cardhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\taskmanagment\\trello\\controller\\projectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:controller\\projectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\taskmanagment\\trello\\service\\projectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:service\\projectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\taskmanagment\\trello\\model\\board.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:model\\board.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\taskmanagment\\trello\\model\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:model\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\taskmanagment\\trello\\dtos\\projectdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:dtos\\projectdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\taskmanagment\\trello\\repository\\projectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:repository\\projectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\taskmanagment\\trello\\mapper\\usermapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:mapper\\usermapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\taskmanagment\\trello\\controller\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:controller\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\taskmanagment\\trello\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\taskmanagment\\trello\\dtos\\commentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:dtos\\commentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\taskmanagment\\trello\\service\\userstoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:service\\userstoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\taskmanagment\\trello\\service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\taskmanagment\\trello\\service\\boardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:service\\boardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\taskmanagment\\trello\\service\\backlogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:service\\backlogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\taskmanagment\\trello\\trello.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:trello.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\taskmanagment\\trello\\dtos\\movecarddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:dtos\\movecarddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\taskmanagment\\trello\\controller\\backlogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:controller\\backlogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\taskmanagment\\trello\\repository\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:repository\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\taskmanagment\\trello\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\taskmanagment\\trello\\repository\\irepository\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:repository\\irepository\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\taskmanagment\\trello\\helpers\\serviceextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:helpers\\serviceextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\taskmanagment\\trello\\repository\\boardrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:repository\\boardrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\taskmanagment\\trello\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\taskmanagment\\trello\\helpers\\passwordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:helpers\\passwordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\taskmanagment\\trello\\service\\iservice\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:service\\iservice\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\taskmanagment\\trello\\dtos\\boarddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:dtos\\boarddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\taskmanagment\\trello\\model\\board.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:model\\board.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\taskmanagment\\trello\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|solutionrelative:dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BCFF4081-1B23-42F8-A147-77E5B388A6EB}|Trello.csproj|c:\\users\\user\\desktop\\taskmanagment\\trello\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -170,17 +166,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 22,
+          "SelectedChildIndex": 13,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 5,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Controller\\AuthController.cs",
               "RelativeDocumentMoniker": "Controller\\AuthController.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Controller\\AuthController.cs",
               "RelativeToolTip": "Controller\\AuthController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAewBcAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-13T13:11:07.6Z",
               "IsPinned": true,
@@ -188,26 +184,27 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 21,
               "Title": "UserService.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Service\\UserService.cs",
               "RelativeDocumentMoniker": "Service\\UserService.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Service\\UserService.cs",
               "RelativeToolTip": "Service\\UserService.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAADgv0QAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAACkAAAAAAAAAAAAawEQAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-11T13:33:40.915Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 15,
               "Title": "ProjectService.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Service\\ProjectService.cs",
               "RelativeDocumentMoniker": "Service\\ProjectService.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Service\\ProjectService.cs",
               "RelativeToolTip": "Service\\ProjectService.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAADwv0EAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-25T09:22:33.76Z",
               "IsPinned": true,
@@ -215,13 +212,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 18,
               "Title": "ProjectRepository.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Repository\\ProjectRepository.cs",
               "RelativeDocumentMoniker": "Repository\\ProjectRepository.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Repository\\ProjectRepository.cs",
               "RelativeToolTip": "Repository\\ProjectRepository.cs",
-              "ViewState": "AgIAADQAAAAAAAAAAAAYwD8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACoAAAAAAAAAAAAnwDUAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-26T10:24:09.888Z",
               "IsPinned": true,
@@ -229,13 +226,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 16,
               "Title": "Project.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Model\\Project.cs",
               "RelativeDocumentMoniker": "Model\\Project.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Model\\Project.cs",
               "RelativeToolTip": "Model\\Project.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAzwA0AAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-11T11:00:46.896Z",
               "IsPinned": true,
@@ -243,7 +240,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 36,
               "Title": "Board.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Model\\Board.cs",
               "RelativeDocumentMoniker": "Model\\Board.cs",
@@ -252,12 +249,11 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-10T20:38:05.353Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 35,
               "Title": "BoardDto.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\DTOs\\BoardDto.cs",
               "RelativeDocumentMoniker": "DTOs\\BoardDto.cs",
@@ -266,18 +262,17 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-27T13:54:47.806Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 11,
               "Title": "Card.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Model\\Card.cs",
               "RelativeDocumentMoniker": "Model\\Card.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Model\\Card.cs",
               "RelativeToolTip": "Model\\Card.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAowBIAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-17T09:42:18.874Z",
               "IsPinned": true,
@@ -285,13 +280,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 8,
               "Title": "CardDto.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\DTOs\\CardDto.cs",
               "RelativeDocumentMoniker": "DTOs\\CardDto.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\DTOs\\CardDto.cs",
               "RelativeToolTip": "DTOs\\CardDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-27T14:03:33.485Z",
               "IsPinned": true,
@@ -299,7 +294,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 37,
               "Title": "UserDto.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\DTOs\\UserDto.cs",
               "RelativeDocumentMoniker": "DTOs\\UserDto.cs",
@@ -308,26 +303,11 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-18T11:46:00.113Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "UserMapper.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Mapper\\UserMapper.cs",
-              "RelativeDocumentMoniker": "Mapper\\UserMapper.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Mapper\\UserMapper.cs",
-              "RelativeToolTip": "Mapper\\UserMapper.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T15:51:28.826Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 17,
               "Title": "ProjectDetailsDto.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\DTOs\\ProjectDetailsDto.cs",
               "RelativeDocumentMoniker": "DTOs\\ProjectDetailsDto.cs",
@@ -341,7 +321,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 31,
               "Title": "BoardRepository.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Repository\\BoardRepository.cs",
               "RelativeDocumentMoniker": "Repository\\BoardRepository.cs",
@@ -350,68 +330,11 @@
               "ViewState": "AgIAAAgAAAAAAAAAAAAAwCYAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-26T09:39:52.22Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "CommentDto.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\DTOs\\CommentDto.cs",
-              "RelativeDocumentMoniker": "DTOs\\CommentDto.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\DTOs\\CommentDto.cs",
-              "RelativeToolTip": "DTOs\\CommentDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T12:45:50.143Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "CardService.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Service\\CardService.cs",
-              "RelativeDocumentMoniker": "Service\\CardService.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Service\\CardService.cs",
-              "RelativeToolTip": "Service\\CardService.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAiwEcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T12:35:59.484Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "CardMapper.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Mapper\\CardMapper.cs",
-              "RelativeDocumentMoniker": "Mapper\\CardMapper.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Mapper\\CardMapper.cs",
-              "RelativeToolTip": "Mapper\\CardMapper.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAxwBYAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T13:15:35.841Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "UserStoryDto.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\DTOs\\UserStoryDto.cs",
-              "RelativeDocumentMoniker": "DTOs\\UserStoryDto.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\DTOs\\UserStoryDto.cs",
-              "RelativeToolTip": "DTOs\\UserStoryDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T16:47:18.366Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 38,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "Properties\\launchSettings.json",
@@ -424,59 +347,250 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "BacklogController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Controller\\BacklogController.cs",
-              "RelativeDocumentMoniker": "Controller\\BacklogController.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Controller\\BacklogController.cs",
-              "RelativeToolTip": "Controller\\BacklogController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAtAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "CardService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Service\\CardService.cs",
+              "RelativeDocumentMoniker": "Service\\CardService.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Service\\CardService.cs",
+              "RelativeToolTip": "Service\\CardService.cs",
+              "ViewState": "AgIAAEUAAAAAAAAAAADwv1UAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T11:06:35.65Z",
+              "WhenOpened": "2025-04-08T09:31:27.56Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
+              "Title": "CardRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Repository\\CardRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\CardRepository.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Repository\\CardRepository.cs",
+              "RelativeToolTip": "Repository\\CardRepository.cs",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAowFoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T12:11:51.933Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ICardRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Repository\\IRepository\\ICardRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\IRepository\\ICardRepository.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Repository\\IRepository\\ICardRepository.cs",
+              "RelativeToolTip": "Repository\\IRepository\\ICardRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T12:11:28.809Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UserStoryController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Controller\\UserStoryController.cs",
+              "RelativeDocumentMoniker": "Controller\\UserStoryController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Controller\\UserStoryController.cs",
+              "RelativeToolTip": "Controller\\UserStoryController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T10:46:43.496Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "UserStory.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Model\\UserStory.cs",
+              "RelativeDocumentMoniker": "Model\\UserStory.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Model\\UserStory.cs",
+              "RelativeToolTip": "Model\\UserStory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T10:43:02.224Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ProjectController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Controller\\ProjectController.cs",
+              "RelativeDocumentMoniker": "Controller\\ProjectController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Controller\\ProjectController.cs",
+              "RelativeToolTip": "Controller\\ProjectController.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwBwAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T08:10:20.692Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Controller\\UserController.cs",
+              "RelativeDocumentMoniker": "Controller\\UserController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Controller\\UserController.cs",
+              "RelativeToolTip": "Controller\\UserController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T08:10:12.744Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "JwtService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Service\\JwtService.cs",
+              "RelativeDocumentMoniker": "Service\\JwtService.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Service\\JwtService.cs",
+              "RelativeToolTip": "Service\\JwtService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T08:08:11.488Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
               "Title": "BacklogService.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Service\\BacklogService.cs",
               "RelativeDocumentMoniker": "Service\\BacklogService.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Service\\BacklogService.cs",
               "RelativeToolTip": "Service\\BacklogService.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T11:06:15.448Z",
+              "WhenOpened": "2025-04-09T08:07:28.738Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 20,
+              "Title": "UserStoryService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Service\\UserStoryService.cs",
+              "RelativeDocumentMoniker": "Service\\UserStoryService.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Service\\UserStoryService.cs",
+              "RelativeToolTip": "Service\\UserStoryService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T07:40:59.178Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ICardService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Service\\IService\\ICardService.cs",
+              "RelativeDocumentMoniker": "Service\\IService\\ICardService.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Service\\IService\\ICardService.cs",
+              "RelativeToolTip": "Service\\IService\\ICardService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T06:51:55.634Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Trello.csproj",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Trello.csproj",
+              "RelativeDocumentMoniker": "Trello.csproj",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Trello.csproj",
+              "RelativeToolTip": "Trello.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-08T14:35:39.686Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "CardHub.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\WebSocket\\CardHub.cs",
+              "RelativeDocumentMoniker": "WebSocket\\CardHub.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\WebSocket\\CardHub.cs",
+              "RelativeToolTip": "WebSocket\\CardHub.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T14:25:03.419Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "MoveCardDto.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\DTOs\\MoveCardDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\MoveCardDto.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\DTOs\\MoveCardDto.cs",
+              "RelativeToolTip": "DTOs\\MoveCardDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T08:52:23.539Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CardController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Controller\\CardController.cs",
+              "RelativeDocumentMoniker": "Controller\\CardController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Controller\\CardController.cs*",
+              "RelativeToolTip": "Controller\\CardController.cs*",
+              "ViewState": "AgIAABUAAAAAAAAAAAAYwCsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T08:51:15.156Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "BacklogController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Controller\\BacklogController.cs",
+              "RelativeDocumentMoniker": "Controller\\BacklogController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Controller\\BacklogController.cs",
+              "RelativeToolTip": "Controller\\BacklogController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T09:42:36.014Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "IUnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Repository\\IRepository\\IUnitOfWork.cs",
+              "RelativeDocumentMoniker": "Repository\\IRepository\\IUnitOfWork.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Repository\\IRepository\\IUnitOfWork.cs",
+              "RelativeToolTip": "Repository\\IRepository\\IUnitOfWork.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T08:29:39.706Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
               "Title": "BoardService.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Service\\BoardService.cs",
               "RelativeDocumentMoniker": "Service\\BoardService.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Service\\BoardService.cs",
               "RelativeToolTip": "Service\\BoardService.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADQAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-04T11:03:16.789Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 32,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
               "ToolTip": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\appsettings.json",
               "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA0AAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAABRwA0AAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-04T10:53:34.362Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-04T10:53:34.362Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 28,
               "Title": "UserRepository.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Repository\\UserRepository.cs",
               "RelativeDocumentMoniker": "Repository\\UserRepository.cs",
@@ -484,34 +598,19 @@
               "RelativeToolTip": "Repository\\UserRepository.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T10:46:17.057Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-04T10:46:17.057Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "BacklogRepository.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Repository\\BacklogRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\BacklogRepository.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Repository\\BacklogRepository.cs",
-              "RelativeToolTip": "Repository\\BacklogRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T10:43:37.815Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 27,
               "Title": "UnitOfWork.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Repository\\UnitOfWork.cs",
               "RelativeDocumentMoniker": "Repository\\UnitOfWork.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Repository\\UnitOfWork.cs",
               "RelativeToolTip": "Repository\\UnitOfWork.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAA0wBcAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAzwCcAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T10:39:45.665Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-04T10:39:45.665Z"
             },
             {
               "$type": "Document",
@@ -521,27 +620,26 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAAADoAAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGIAAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-04T10:23:03.581Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 30,
               "Title": "ServiceExtensions.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Helpers\\ServiceExtensions.cs",
               "RelativeDocumentMoniker": "Helpers\\ServiceExtensions.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Helpers\\ServiceExtensions.cs",
               "RelativeToolTip": "Helpers\\ServiceExtensions.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAzwBYAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAADwvxgAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T10:22:48.712Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-04T10:22:48.712Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 33,
               "Title": "PasswordHasher.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Helpers\\PasswordHasher.cs",
               "RelativeDocumentMoniker": "Helpers\\PasswordHasher.cs",
@@ -549,116 +647,24 @@
               "RelativeToolTip": "Helpers\\PasswordHasher.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T10:22:25.799Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-04T10:22:25.799Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 10,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "Data\\AppDbContext.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Data\\AppDbContext.cs",
               "RelativeToolTip": "Data\\AppDbContext.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAUwDwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-04T10:21:36.513Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Backlog.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Model\\Backlog.cs",
-              "RelativeDocumentMoniker": "Model\\Backlog.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Model\\Backlog.cs",
-              "RelativeToolTip": "Model\\Backlog.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T10:03:53.974Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "ICardService.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Service\\IService\\ICardService.cs",
-              "RelativeDocumentMoniker": "Service\\IService\\ICardService.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Service\\IService\\ICardService.cs",
-              "RelativeToolTip": "Service\\IService\\ICardService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T09:06:46.912Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "UserStoryRepository.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Repository\\UserStoryRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\UserStoryRepository.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Repository\\UserStoryRepository.cs",
-              "RelativeToolTip": "Repository\\UserStoryRepository.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAgwEYAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T08:43:05.087Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "IUserStoryRepository.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Repository\\IRepository\\IUserStoryRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\IRepository\\IUserStoryRepository.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Repository\\IRepository\\IUserStoryRepository.cs",
-              "RelativeToolTip": "Repository\\IRepository\\IUserStoryRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T08:42:46.076Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "UserStoryController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Controller\\UserStoryController.cs",
-              "RelativeDocumentMoniker": "Controller\\UserStoryController.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Controller\\UserStoryController.cs",
-              "RelativeToolTip": "Controller\\UserStoryController.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAzwCYAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T08:42:08.941Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "UserStoryService.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Service\\UserStoryService.cs",
-              "RelativeDocumentMoniker": "Service\\UserStoryService.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Service\\UserStoryService.cs",
-              "RelativeToolTip": "Service\\UserStoryService.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAAAEIAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T08:41:02.451Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "IUserStoryService.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Service\\IService\\IUserStoryService.cs",
-              "RelativeDocumentMoniker": "Service\\IService\\IUserStoryService.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Service\\IService\\IUserStoryService.cs",
-              "RelativeToolTip": "Service\\IService\\IUserStoryService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T08:40:46.001Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 34,
               "Title": "IUserService.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Service\\IService\\IUserService.cs",
               "RelativeDocumentMoniker": "Service\\IService\\IUserService.cs",
@@ -666,47 +672,7 @@
               "RelativeToolTip": "Service\\IService\\IUserService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T08:40:37.034Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "CardRepository.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Repository\\CardRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\CardRepository.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Repository\\CardRepository.cs",
-              "RelativeToolTip": "Repository\\CardRepository.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAABSAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T08:38:10.729Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ICardRepository.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Repository\\IRepository\\ICardRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\IRepository\\ICardRepository.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Repository\\IRepository\\ICardRepository.cs",
-              "RelativeToolTip": "Repository\\IRepository\\ICardRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T08:37:29.517Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "CardController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Controller\\CardController.cs",
-              "RelativeDocumentMoniker": "Controller\\CardController.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\TaskManagment\\Trello\\Controller\\CardController.cs",
-              "RelativeToolTip": "Controller\\CardController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAkwCQAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T08:36:42.2Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-04T08:40:37.034Z"
             }
           ]
         }

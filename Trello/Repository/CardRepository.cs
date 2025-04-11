@@ -16,6 +16,8 @@ namespace Trello.Repository
             _context = context;
             _logger = logger;
         }
+
+        
         public async Task CreateAsync(Card card)
         {
             try
@@ -70,7 +72,24 @@ namespace Trello.Repository
             }
         }
 
-       
+        public async Task<ICollection<Card>> GetByUserStoryId(int userStoryId)
+        {
+            try
+            {
+                var cards = await _context.Cards
+                     .Where(p => p.UserStoryId == userStoryId)
+                     .Include(p => p.Comments)
+                     .ToListAsync();
+                _logger.LogInformation($"Successiffuly fetching card with user story id {userStoryId}");
+
+                return cards;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, $"Error fetching card with userStoryId {userStoryId}");
+                throw new Exception($"An error occurred while retrieving card with userStoryId: {userStoryId}. Please try again.");
+            }
+        }
 
         public void Update(Card card)
         {

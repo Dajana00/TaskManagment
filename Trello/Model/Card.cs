@@ -15,6 +15,8 @@
 
         public ICollection<Comment>? Comments { get; set; } = new List<Comment>();
         public ICollection<UserCard>? UserCards { get; set; } = new HashSet<UserCard>();
+        public UserStory UserStory { get; set; }
+        public int UserStoryId { get; set; }
 
         public Card() 
         { 
