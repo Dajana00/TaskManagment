@@ -17,6 +17,8 @@ using Trello.DTOs;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using Trello.Mapper;
+using Trello.WebSocket;
 
 var builder = WebApplication.CreateSlimBuilder(args);
 
@@ -52,7 +54,8 @@ builder.Services.AddCors(options =>
     {
         policy.WithOrigins("http://localhost:3000") // Ovdje stavljate URL svog React frontend-a
               .AllowAnyHeader()
-              .AllowAnyMethod();
+              .AllowAnyMethod()
+               .AllowCredentials();
     });
 });
 
@@ -83,6 +86,8 @@ builder.Services.AddAuthentication(options =>
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
     options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
 })
+
+
 .AddJwtBearer(options =>
 {
     options.TokenValidationParameters = new TokenValidationParameters
@@ -100,7 +105,8 @@ builder.Services.AddAuthentication(options =>
 
 //----------------------------------------------------------------------------------------------------------------------
 
-
+builder.Services.AddAutoMapper(typeof(MapperProfile));
+builder.Services.AddSignalR();
 
 
 
@@ -113,6 +119,7 @@ app.UseMiddleware<ExceptionHandlingMiddleware>();
 app.MapControllers();
 app.UseCors("AllowSpecificOrigin");  // Ovo omogućava CORS samo za specifične izvore
 
+app.MapHub<CardHub>("/cardHub");
 app.Run();
 
 [JsonSerializable(typeof(User))]

@@ -36,6 +36,18 @@ namespace Trello.Controller
             var response = await _cardService.GetAll();
             return Ok(response.Value);
         }
+        [HttpGet("getByUserStoryId/{userStoryId}")]
+        public async Task<IActionResult> GetByUserStoryId([FromRoute]int userStoryId)
+        {
+            var response = await _cardService.GetByUserStoryId(userStoryId);
+            return Ok(response.Value);
+        }
+        [HttpPut("addToActiveSprint/{id}")]
+        public async Task<IActionResult> AddToActiveSprint([FromRoute] int id)
+        {
+            var response = await _cardService.AddToActiveSprint(id);
+            return Ok(response);
+        }
     }
 
 

@@ -17,6 +17,7 @@ namespace Trello.Helpers
             services.AddScoped<ICardRepository, CardRepository>();
             services.AddScoped<IBacklogRepository, BacklogRepository>();
             services.AddScoped<IUserStoryRepository, UserStoryRepository>();
+            services.AddScoped<ISprintRepository, SprintRepository>();
             //singlton da provjerim ovde
 
 

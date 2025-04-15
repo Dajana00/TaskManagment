@@ -1,7 +1,7 @@
-﻿using FluentResults;
+﻿using AutoMapper;
+using FluentResults;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Trello.DTOs;
-using Trello.Mapper;
 using Trello.Model;
 using Trello.Repository.IRepository;
 using Trello.Service.IService;
@@ -13,15 +13,15 @@ namespace Trello.Service
         private readonly IUnitOfWork _unitOfWork;
         private readonly IBoardService _boardService;   
         private readonly IBacklogService _backlogService;
-        private readonly ProjectMapper _projectMapper;  
+        private readonly IMapper _projectMapper;  
         
 
-        public ProjectService(IUnitOfWork unitOfWork, IBoardService boardService, IBacklogService backlogService)
+        public ProjectService(IUnitOfWork unitOfWork, IBoardService boardService, IBacklogService backlogService,IMapper mapper)
         {
             _unitOfWork = unitOfWork;
             _boardService = boardService; 
             _backlogService = backlogService;
-            _projectMapper = new ProjectMapper();
+            _projectMapper = mapper;
         }
 
         public async Task<Result<ProjectDto>> CreateAsync(ProjectDto projectDto)
@@ -43,8 +43,7 @@ namespace Trello.Service
             await _unitOfWork.Projects.CreateAsync(project);
             await _unitOfWork.SaveAsync();
 
-            //CreateDeafaultBoard(project);
-            //CreateDeafaultBacklog(project);
+            
             var boardResult = await _boardService.CreateDefaultBoardAsync(project);
             if (boardResult.IsFailed)
                 return Result.Fail(boardResult.Errors);
@@ -61,7 +60,7 @@ namespace Trello.Service
 
             await _unitOfWork.SaveAsync(); 
 
-            return Result.Ok(MapToProjectDto(project));
+            return Result.Ok(_projectMapper.Map<ProjectDto>(project));
         }
 
        
@@ -77,8 +76,11 @@ namespace Trello.Service
 
                 if (projects == null || projects.Count == 0)
                     return Result.Fail("No projects found for this user.");
-
-                var projectDtos = _projectMapper.CreateDtoList(projects).ToList();
+                var projectDtos = new List<ProjectDetailsDto>();        
+                foreach (var project in projects)
+                {
+                    projectDtos.Add(_projectMapper.Map<ProjectDetailsDto>(project));
+                }
 
                 return Result.Ok((ICollection<ProjectDetailsDto>)projectDtos);
             }
@@ -100,7 +102,7 @@ namespace Trello.Service
                     return Result.Fail($"No project found with id: {id}.");
 
 
-                return Result.Ok(_projectMapper.CreateDto(project));
+                return Result.Ok(_projectMapper.Map<ProjectDetailsDto>(project));
             }
             catch (Exception ex)
             {
