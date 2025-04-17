@@ -8,6 +8,7 @@
         ICardRepository Cards { get; }
         IBacklogRepository Backlogs { get; }
         IUserStoryRepository UserStories { get; }
+        ISprintRepository Sprints { get; }
         //ITaskRepository Tasks { get; }
 
         Task SaveAsync();

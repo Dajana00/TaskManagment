@@ -30,7 +30,8 @@ namespace Trello.Helpers
             services.AddScoped<ICardService, CardService>();
             services.AddScoped<IBacklogService, BacklogService>();
             services.AddScoped<IUserStoryService, UserStoryService>();
-            
+            services.AddScoped<ISprintService, SprintService>();
+
 
             // Konfiguracija za JWT
             services.Configure<JwtSettings>(configuration.GetSection("JwtSettings"));

@@ -30,5 +30,43 @@ namespace Trello.Repository
                 throw new Exception($"An error occurred while retrieving project with this project id: {projectId}. Please try again.");
             }
         }
+        public async Task CreateAsync(Sprint sprint)
+        {
+            try
+            {
+                _context.Sprints.Add(sprint);
+                await _context.SaveChangesAsync();
+                _logger.LogInformation("Sprint added successifully");
+            }
+            catch (DbUpdateException ex)
+            {
+                _logger.LogError(ex, "Database error occurred while adding sprint.");
+                throw new Exception("A database error occurred while adding the sprint. Please try again.");
+            }
+            catch (Exception ex)
+            {
+
+                _logger.LogError(ex, "Unexpected error occurred while adding sprint.");
+                throw new Exception($"An unexpected error occurred while adding the sprint. Please try again. {ex}");
+            }
+        }
+        public async Task<ICollection<Sprint>> GetByProjectId(int projectId)
+        {
+            try
+            {
+                var cards = await _context.Sprints
+                     .Where(p => p.ProjectId == projectId)
+                     .ToListAsync();
+                _logger.LogInformation($"Successiffuly fetching sprints with projct id {projectId}");
+
+                return cards;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, $"Error fetching sprints with projectId {projectId}");
+                throw new Exception($"An error occurred while retrieving sprints with projectId : {projectId}. Please try again.");
+            }
+        }
+
     }
 }

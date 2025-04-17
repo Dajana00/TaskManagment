@@ -11,6 +11,7 @@ public class UnitOfWork : IUnitOfWork
     public ICardRepository Cards { get; }
     public IBacklogRepository Backlogs { get; }
     public IUserStoryRepository UserStories { get; }
+    public ISprintRepository Sprints { get; }
 
     public UnitOfWork(
         AppDbContext context,
@@ -19,7 +20,8 @@ public class UnitOfWork : IUnitOfWork
         IBoardRepository boards,
         ICardRepository cards,
         IBacklogRepository backlogs,
-        IUserStoryRepository userStories)
+        IUserStoryRepository userStories,
+        ISprintRepository sprintRepository)
     {
         _context = context;
         Users = users;
@@ -28,6 +30,7 @@ public class UnitOfWork : IUnitOfWork
         Cards = cards;
         Backlogs = backlogs;
         UserStories = userStories;
+        Sprints = sprintRepository;
     }
 
     public async Task SaveAsync()
