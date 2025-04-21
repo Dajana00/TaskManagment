@@ -30,10 +30,10 @@ namespace Trello.Controller
             return Ok(response);
         }
 
-        [HttpGet("getAll")]
-        public async Task<IActionResult> GetAll()
+        [HttpGet("getByBoardId/{boardId}")]
+        public async Task<IActionResult> GetByBoardId([FromRoute] int boardId)
         {
-            var response = await _cardService.GetAll();
+            var response = await _cardService.GetByBoardId(boardId);
             return Ok(response.Value);
         }
         [HttpGet("getByUserStoryId/{userStoryId}")]

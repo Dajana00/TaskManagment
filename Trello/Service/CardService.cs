@@ -14,12 +14,23 @@ namespace Trello.Service
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
+        private readonly ISprintService _sprintService;  
+        private readonly IUserStoryService _userStoryService;
+        private readonly IBacklogService _backlogService;
+        private readonly IProjectService _projectService;
 
 
-        public CardService(IUnitOfWork unitOfWork, IMapper mapper)
+        public CardService(IUnitOfWork unitOfWork, 
+            IMapper mapper, ISprintService sprintService,
+            IUserStoryService userStoryService,
+            IBacklogService backlogService, IProjectService projectService)
         {
             _unitOfWork = unitOfWork;
-            _mapper = mapper;            
+            _mapper = mapper;
+            _sprintService = sprintService; 
+            _userStoryService = userStoryService;   
+            _backlogService = backlogService;  
+            _projectService = projectService;   
         }
 
         public async Task<Result<CardDto>> CreateAsync(CardDto cardDto)
@@ -57,20 +68,28 @@ namespace Trello.Service
 
             return Result.Ok();
         }
-        public async Task<Result<ICollection<CardDto>>> GetAll()
+        public async Task<Result<ICollection<CardDto>>> GetByBoardId(int boardId)
         {
             try
             {
-                var userStories = await _unitOfWork.Cards.GetAll();
-
-                if (userStories == null || userStories.Count == 0)
-                    return Result.Fail("No cards found.");
-
-                var userStoryDtos = userStories
+                var board = await _unitOfWork.Boards.GetById(boardId);
+                if (board == null)
+                {
+                    return Result.Fail($"No board found with id: {boardId}");
+                }
+                if (board.ActiveSprintId != null)
+                {
+                    var cards = await _unitOfWork.Cards.GetByActiveSprint((int)board.ActiveSprintId);
+                    if (cards == null || cards.Count == 0)
+                        return Result.Fail("No cards found.");
+                    var cardDtos = cards
                     .Select(us => _mapper.Map<CardDto>(us))
                     .ToList();
 
-                return Result.Ok((ICollection<CardDto>)userStoryDtos);
+                    return Result.Ok((ICollection<CardDto>)cardDtos);
+                }
+                return Result.Fail("No cards in this active sprint");
+                
             }
             catch (Exception ex)
             {
@@ -121,11 +140,43 @@ namespace Trello.Service
             if (card == null)
                 return Result.Fail($"Card with ID {id} not found.");
 
-            //card.Sprint = 
+            var result = await GetActiveSprintForCard(card);
+            if (!result.IsSuccess)
+                return Result.Fail(result.Errors);
+
+            var activeSprint = result.Value;
+
+            card.SprintId = activeSprint.Id;
+            card.Sprint = _mapper.Map<Sprint>(activeSprint);
+            card.Status = CardStatus.ToDo;
+
             _unitOfWork.Cards.Update(card);
             await _unitOfWork.SaveAsync();
 
             return Result.Ok();
         }
+
+        private async Task<Result<Sprint>> GetActiveSprintForCard(Card card)
+        {
+            var userStoryDto = await _userStoryService.GetByIdAsync(card.UserStoryId);
+            if (userStoryDto == null)
+                return Result.Fail<Sprint>("User story not found.");
+
+            var backlogResult = await _backlogService.GetById(userStoryDto.Value.BacklogId);
+            if (backlogResult == null)
+                return Result.Fail<Sprint>("Backlog not found.");
+
+            var projectResult = await _projectService.GetById(backlogResult.Value.ProjectId);
+            if (projectResult == null)
+                return Result.Fail<Sprint>("Project not found.");
+
+            var sprintResult = await _sprintService.GetActiveByProjectId(projectResult.Value.Id);
+            if (sprintResult == null)
+                return Result.Fail<Sprint>("Active sprint not found.");
+
+            return Result.Ok(_mapper.Map<Sprint>(sprintResult.Value));
+        }
+
+
     }
 }

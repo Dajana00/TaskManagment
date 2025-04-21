@@ -30,5 +30,12 @@ namespace Trello.Controller
             return Ok(response.Value);
 
         }
+        [HttpPut("activateSprint/{id}")]
+        public async Task<IActionResult> ActivateSprint([FromRoute] int id)
+        {
+            var response = await _sprintService.Activate(id);
+            return Ok(response);
+
+        }
     }
 }

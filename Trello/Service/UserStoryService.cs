@@ -91,6 +91,27 @@ namespace Trello.Service
                 return Result.Fail($"An error occurred while retrieving user stories: {ex.Message}");
             }
         }
+        public async Task<Result<UserStoryDto>> GetByIdAsync(int id)
+        {
+            if (id <= 0)
+                return Result.Fail("Invalid ID.");
+
+            try
+            {
+                var userStory = await _unitOfWork.UserStories.GetByIdAsync(id);
+
+                if (userStory == null)
+                    return Result.Fail($"No user story found with id: {id}.");
+
+
+                return Result.Ok(_mapper.Map<UserStoryDto>(userStory));
+            }
+            catch (Exception ex)
+            {
+                return Result.Fail($"An error occurred while retrieving user story with id {id}: {ex.Message}");
+            }
+        }
+
 
     }
 }

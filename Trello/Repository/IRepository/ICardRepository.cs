@@ -6,7 +6,7 @@ namespace Trello.Repository.IRepository
     {
         Task CreateAsync(Card card);
         Task<Card?> GetByIdAsync(int cardId);
-        Task<ICollection<Card>> GetAll();
+        Task<ICollection<Card>> GetByActiveSprint(int activeSprintId);
         Task<ICollection<Card>> GetByUserStoryId(int userStoryId);
         void Update(Card card);
 

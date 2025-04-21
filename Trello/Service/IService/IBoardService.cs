@@ -8,5 +8,6 @@ namespace Trello.Service.IService
     {
         Task<Result<Board>> CreateDefaultBoardAsync(Project project);
         Task<Result<BoardDto>> GetById(int id);
+        Task<Result<BoardDto>> AddSprintToBoard(Sprint sprint);
     }
 }

@@ -7,5 +7,8 @@ namespace Trello.Repository.IRepository
         Task CreateAsync(UserStory userStory);
         Task<ICollection<UserStory>> GetByBacklogId(int backlogId);
         Task<ICollection<UserStory>> GetAll();
+        Task<UserStory?> GetByIdAsync(int id);
+
     }
+
 }

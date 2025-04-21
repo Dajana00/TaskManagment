@@ -20,14 +20,14 @@ namespace Trello.Repository
             try
             {
                 var project = await _context.Sprints
-                    .FirstOrDefaultAsync(p => p.ProjectId == projectId);
+                    .FirstOrDefaultAsync(p => p.ProjectId == projectId && p.Status == SprintStatus.Active);
 
                 return project;
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, $"Error fetching sprint with project id {projectId}");
-                throw new Exception($"An error occurred while retrieving project with this project id: {projectId}. Please try again.");
+                _logger.LogError(ex, $"Error fetching active sprint with project id {projectId}");
+                throw new Exception($"An error occurred while retrieving active sprint with this project id: {projectId}. Please try again.");
             }
         }
         public async Task CreateAsync(Sprint sprint)
@@ -68,5 +68,49 @@ namespace Trello.Repository
             }
         }
 
+        public async Task<Sprint> Activate(int id)
+        {
+            try
+            {
+                var sprint = await _context.Sprints
+                    .FirstOrDefaultAsync(p => p.Id == id);
+
+                if (sprint == null)
+                    throw new Exception("Sprint to acitvate not found.");
+
+                var existingActiveSprint = await _context.Sprints
+                    .FirstOrDefaultAsync(s => s.ProjectId == sprint.ProjectId && s.Status == SprintStatus.Active);
+
+                if (existingActiveSprint != null && existingActiveSprint.Id != sprint.Id)
+                    throw new Exception("Another sprint is already active in this project.");
+
+                sprint.Status = SprintStatus.Active;
+
+                await _context.SaveChangesAsync(); 
+
+                return sprint;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, $"Error activating sprint with id {id}");
+                throw;
+            }
+        }
+
+        public async Task<Sprint> GetById(int id)
+        {
+            try
+            {
+                var sprint = await _context.Sprints
+                    .FirstOrDefaultAsync(p => p.Id == id);
+
+                return sprint;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, $"Error fetching sprint with id {id}");
+                throw new Exception($"An error occurred while retrieving project with this id: {id}. Please try again.");
+            }
+        }
     }
 }

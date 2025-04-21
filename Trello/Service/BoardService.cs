@@ -57,6 +57,35 @@ namespace Trello.Service
                 return Result.Fail($"An error occurred while retrieving user projects: {ex.Message}");
             }
         }
+
+        public async Task<Result<BoardDto>> AddSprintToBoard(Sprint sprint)
+        {
+            if (sprint == null)
+                return Result.Fail<BoardDto>("Cannot add sprint to board. Invalid sprint.");
+
+            try
+            {
+                var project = await _unitOfWork.Projects.GetById(sprint.ProjectId);
+                if (project == null)
+                    return Result.Fail<BoardDto>($"Project with id {sprint.ProjectId} not found.");
+
+                var board = await _unitOfWork.Boards.GetById(project.BoardId);
+                if (board == null)
+                    return Result.Fail<BoardDto>($"No board found with id: {project.BoardId}.");
+
+                board.ActiveSprint = sprint;
+                board.ActiveSprintId = sprint.Id;
+
+                await _unitOfWork.SaveAsync();
+
+                return Result.Ok(_mapper.Map<BoardDto>(board));
+            }
+            catch (Exception ex)
+            {
+                return Result.Fail<BoardDto>($"An error occurred while adding sprint to board: {ex.Message}");
+            }
+        }
+
     }
 }
 

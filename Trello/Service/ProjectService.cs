@@ -110,16 +110,7 @@ namespace Trello.Service
             }
         }
 
-        private ProjectDto MapToProjectDto(Project project)
-        {
-            return new ProjectDto
-            {
-                Id = project.Id,
-                Name = project.Name,
-                OwnerId = project.OwnerId,
-                BoardId = project.BoardId
-            };
-        }
+        
        
         
 
