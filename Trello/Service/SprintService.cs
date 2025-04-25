@@ -1,9 +1,12 @@
 ﻿using AutoMapper;
 using FluentResults;
+using Org.BouncyCastle.Crypto.Operators;
+using System.Reflection.Metadata.Ecma335;
 using Trello.DTOs;
 using Trello.Model;
 using Trello.Repository.IRepository;
 using Trello.Service.IService;
+using Trello.Validation;
 
 namespace Trello.Service
 {
@@ -11,14 +14,19 @@ namespace Trello.Service
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _sprintMapper;
-        private readonly IBoardService _boardService;   
+        private readonly IBoardService _boardService;  
+        private readonly ICardService _cardService; 
 
 
-        public SprintService(IUnitOfWork unitOfWork, IMapper mapper, IBoardService boardService)
+
+        public SprintService(IUnitOfWork unitOfWork, IMapper mapper, IBoardService boardService,
+            ICardService cardService, IUserStoryService userStoryService,
+            IBacklogService backlogService)
         {
             _unitOfWork = unitOfWork;
             _sprintMapper = mapper;
-            _boardService = boardService;   
+            _boardService = boardService; 
+            _cardService = cardService; 
         }
 
         public async Task<Result<SprintDto>> Activate(int id)
@@ -41,15 +49,38 @@ namespace Trello.Service
 
         }
 
+        public async Task<Result<SprintDto>> Complete(int boardId)
+        {
+            try
+            {
+                if (boardId == 0)
+                    throw new Exception($"Cannot complete sprint. Board id is invalid.");
+                var allCardsDone = await _cardService.AreAllCardsDone(boardId);
+                if (!allCardsDone)
+                    return Result.Fail("Cannot complete sprint. All cards must be done.");
+                var board = await _boardService.GetById(boardId);
+                
+                var sprintId = board.Value.ActiveSprintId;
+                await _unitOfWork.Sprints.Complete((int)sprintId);
+                return Result.Ok(_sprintMapper.Map<SprintDto>(GetById((int)sprintId)));
+            }
+            catch (Exception ex)
+            {
+                return Result.Fail($"An error occurred during completing sprint : {ex.Message}");
+            }
+
+        }
+
 
         public async Task<Result<SprintDto>> CreateAsync(SprintDto sprintDto)
         {
-            if (sprintDto == null)
-                return Result.Fail("Sprint to create cannot be null.");
+            var allSprints = await _unitOfWork.Sprints.GetAll();
+            SprintValidator sprintValidator = new SprintValidator(allSprints);
 
-            if (string.IsNullOrWhiteSpace(sprintDto.Name))
-                return Result.Fail("Sprint name is required.");
+            var errors = sprintValidator.Validate(sprintDto);
 
+            if (errors.Any())
+                return Result.Fail(errors.First());
 
             var sprint = _sprintMapper.Map<Sprint>(sprintDto);
 
@@ -59,6 +90,7 @@ namespace Trello.Service
             return Result.Ok(_sprintMapper.Map<SprintDto>(sprint));
         }
 
+       
         public async Task<Sprint> GetById(int id)
         {
             return await _unitOfWork.Sprints.GetById(id);
@@ -101,5 +133,7 @@ namespace Trello.Service
                 return Result.Fail($"An error occurred while retrieving cards with user story id {id} : {ex.Message}");
             }
         }
+
+      
     }
 }

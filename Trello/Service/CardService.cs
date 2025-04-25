@@ -14,20 +14,20 @@ namespace Trello.Service
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
-        private readonly ISprintService _sprintService;  
         private readonly IUserStoryService _userStoryService;
         private readonly IBacklogService _backlogService;
         private readonly IProjectService _projectService;
 
 
+
         public CardService(IUnitOfWork unitOfWork, 
-            IMapper mapper, ISprintService sprintService,
+            IMapper mapper,
             IUserStoryService userStoryService,
-            IBacklogService backlogService, IProjectService projectService)
+            IBacklogService backlogService, 
+            IProjectService projectService)
         {
             _unitOfWork = unitOfWork;
             _mapper = mapper;
-            _sprintService = sprintService; 
             _userStoryService = userStoryService;   
             _backlogService = backlogService;  
             _projectService = projectService;   
@@ -63,8 +63,7 @@ namespace Trello.Service
                 return Result.Fail($"Card with ID {moveCardDto.CardId} not found.");
 
             card.Status = ConvertToCardStatus(moveCardDto.NewStatus); 
-            _unitOfWork.Cards.Update(card);
-            await _unitOfWork.SaveAsync();
+            await _unitOfWork.Cards.Update(card);
 
             return Result.Ok();
         }
@@ -131,7 +130,7 @@ namespace Trello.Service
             }
         }
 
-        public async Task<Result> AddToActiveSprint(int id)
+       /* public async Task<Result> AddToActiveSprint(int id)
         {
             if (id == 0)
                 return Result.Fail("Invalid id.");
@@ -140,11 +139,12 @@ namespace Trello.Service
             if (card == null)
                 return Result.Fail($"Card with ID {id} not found.");
 
-            var result = await GetActiveSprintForCard(card);
-            if (!result.IsSuccess)
-                return Result.Fail(result.Errors);
-
-            var activeSprint = result.Value;
+            var project = _projectService.GetByUserStory(card.UserStoryId);
+            if(project == null)
+            {
+                return Result.Fail("Cannot add to acitve sprint. Cannot find project from user story od this card");
+            }
+            var activeSprint = _sprintService.GetActiveByProjectId(project.Result.Value.Id);
 
             card.SprintId = activeSprint.Id;
             card.Sprint = _mapper.Map<Sprint>(activeSprint);
@@ -156,27 +156,36 @@ namespace Trello.Service
             return Result.Ok();
         }
 
-        private async Task<Result<Sprint>> GetActiveSprintForCard(Card card)
+       */
+
+        public async Task<bool> AreAllCardsDone(int boardId)
         {
-            var userStoryDto = await _userStoryService.GetByIdAsync(card.UserStoryId);
-            if (userStoryDto == null)
-                return Result.Fail<Sprint>("User story not found.");
+            var result = await GetByBoardId(boardId);
+            if (result.IsFailed || result.Value == null)
+                return false;
 
-            var backlogResult = await _backlogService.GetById(userStoryDto.Value.BacklogId);
-            if (backlogResult == null)
-                return Result.Fail<Sprint>("Backlog not found.");
-
-            var projectResult = await _projectService.GetById(backlogResult.Value.ProjectId);
-            if (projectResult == null)
-                return Result.Fail<Sprint>("Project not found.");
-
-            var sprintResult = await _sprintService.GetActiveByProjectId(projectResult.Value.Id);
-            if (sprintResult == null)
-                return Result.Fail<Sprint>("Active sprint not found.");
-
-            return Result.Ok(_mapper.Map<Sprint>(sprintResult.Value));
+            return result.Value.All(card => card.Status == CardStatus.Done);
         }
 
+        public async Task<Result<CardDto>> GetByIdAsync(int id)
+        {
+            var card = await _unitOfWork.Cards.GetByIdAsync(id);
+            return _mapper.Map<CardDto>(card);  
+        }
+        public async Task<Result> UpdateAsync(Card card)
+        {
+            if (card == null)
+                return Result.Fail("Card cannot be null.");
+            try
+            {
+                await _unitOfWork.Cards.Update(card);
+                return Result.Ok();
+            }
+            catch (Exception ex)
+            {
+                return Result.Fail($"Failed to update card: {ex.Message}");
+            }
+        }
 
     }
 }

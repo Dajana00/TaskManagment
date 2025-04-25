@@ -10,10 +10,12 @@ namespace Trello.Controller
     public class CardController : ControllerBase
     {
         private readonly ICardService _cardService;
+        private readonly ICardSprintService _cardSprintService; 
 
-        public CardController(ICardService cardService)
+        public CardController(ICardService cardService, ICardSprintService cardSprintService)
         {
             _cardService = cardService;
+            _cardSprintService = cardSprintService; 
         }
 
         [HttpPost("create")]
@@ -45,7 +47,7 @@ namespace Trello.Controller
         [HttpPut("addToActiveSprint/{id}")]
         public async Task<IActionResult> AddToActiveSprint([FromRoute] int id)
         {
-            var response = await _cardService.AddToActiveSprint(id);
+            var response = await _cardSprintService.AddCardToActiveSprint(id);
             return Ok(response);
         }
     }

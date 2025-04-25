@@ -54,7 +54,7 @@ namespace Trello.Repository
             }
         }
 
-        public async Task<Card?> GetByIdAsync(int id)
+        public async Task<Card> GetByIdAsync(int id)
         {
             try
             {
@@ -91,11 +91,12 @@ namespace Trello.Repository
             }
         }
 
-        public void Update(Card card)
+        public async Task Update(Card card)
         {
             try
             {
                 _context.Cards.Update(card);
+                await _context.SaveChangesAsync();
                 _logger.LogInformation($"Successiffuly updated card with id {card.Id}");
             }
             catch (Exception ex) 

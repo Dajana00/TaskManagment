@@ -14,14 +14,18 @@ namespace Trello.Service
         private readonly IBoardService _boardService;   
         private readonly IBacklogService _backlogService;
         private readonly IMapper _projectMapper;  
+        private readonly IUserStoryService _userStoryService;   
         
 
-        public ProjectService(IUnitOfWork unitOfWork, IBoardService boardService, IBacklogService backlogService,IMapper mapper)
+        public ProjectService(IUnitOfWork unitOfWork, IBoardService boardService,
+            IBacklogService backlogService,IMapper mapper,
+            IUserStoryService userStoryService)
         {
             _unitOfWork = unitOfWork;
             _boardService = boardService; 
             _backlogService = backlogService;
             _projectMapper = mapper;
+            _userStoryService = userStoryService;   
         }
 
         public async Task<Result<ProjectDto>> CreateAsync(ProjectDto projectDto)
@@ -110,9 +114,21 @@ namespace Trello.Service
             }
         }
 
-        
-       
-        
+        public async Task<Result<Project>> GetByUserStory(int userStoryId)
+        {
+            var userStoryDto = await _userStoryService.GetByIdAsync(userStoryId);
+            if (userStoryDto == null)
+                return Result.Fail($"Error fetching project by user story. User story with id {userStoryId} not found.");
 
+            var backlogResult = await _backlogService.GetById(userStoryDto.Value.BacklogId);
+            if (backlogResult == null)
+                return Result.Fail($"Error fetching project by user story.Backlog not found.");
+
+            var projectResult = await GetById(backlogResult.Value.ProjectId);
+            if (projectResult == null)
+                return Result.Fail("Project not found.");
+            return _projectMapper.Map<Project>(projectResult);
+
+        }
     }
 }

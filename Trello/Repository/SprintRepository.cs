@@ -50,6 +50,21 @@ namespace Trello.Repository
                 throw new Exception($"An unexpected error occurred while adding the sprint. Please try again. {ex}");
             }
         }
+        public async Task<ICollection<Sprint>> GetAll()
+        {
+            try
+            {
+                var sprints = await _context.Sprints.ToListAsync();
+                _logger.LogInformation("Successfully fetched all sprints.");
+                return sprints;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "An error occurred while fetching sprints.");
+                throw new Exception("An error occurred while fetching sprints. Please try again.");
+            }
+        }
+
         public async Task<ICollection<Sprint>> GetByProjectId(int projectId)
         {
             try
@@ -93,6 +108,28 @@ namespace Trello.Repository
             catch (Exception ex)
             {
                 _logger.LogError(ex, $"Error activating sprint with id {id}");
+                throw;
+            }
+        }
+        public async Task<Sprint> Complete(int id)
+        {
+            try
+            {
+                var sprint = await _context.Sprints
+                    .FirstOrDefaultAsync(p => p.Id == id);
+
+                if (sprint == null)
+                    throw new Exception("Sprint to complete not found.");
+
+                sprint.Status = SprintStatus.Completed;
+
+                await _context.SaveChangesAsync();
+
+                return sprint;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, $"Error completing sprint with id {id}");
                 throw;
             }
         }

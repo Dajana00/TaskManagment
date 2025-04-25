@@ -37,5 +37,12 @@ namespace Trello.Controller
             return Ok(response);
 
         }
+        [HttpPut("complete/{boardId}")]
+        public async Task<IActionResult> Complete([FromRoute] int boardId)
+        {
+            var response = await _sprintService.Complete(boardId);
+            return Ok(response);
+
+        }
     }
 }
