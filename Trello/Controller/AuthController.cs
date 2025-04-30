@@ -5,10 +5,12 @@ using System;
 using System.Threading.Tasks;
 using Trello.Service.Iservice;
 using FluentResults;
+using Trello.Filters;
 
 namespace Trello.Controller
 {
     [Route("api/auth")]
+    [ResultFilter]
     [ApiController]
     public class AuthController : ControllerBase
     {
