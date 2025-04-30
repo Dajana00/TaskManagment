@@ -15,18 +15,18 @@ namespace Trello.Service
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _sprintMapper;
         private readonly IBoardService _boardService;  
-        private readonly ICardService _cardService; 
-
-
+        private readonly ICardService _cardService;
+        private readonly Func<IEnumerable<Sprint>, SprintValidator> _sprintValidatorFactory;
 
         public SprintService(IUnitOfWork unitOfWork, IMapper mapper, IBoardService boardService,
             ICardService cardService, IUserStoryService userStoryService,
-            IBacklogService backlogService)
+            IBacklogService backlogService, Func<IEnumerable<Sprint>, SprintValidator> sprintValidatorFactory)
         {
             _unitOfWork = unitOfWork;
             _sprintMapper = mapper;
             _boardService = boardService; 
-            _cardService = cardService; 
+            _cardService = cardService;
+            _sprintValidatorFactory = sprintValidatorFactory;
         }
 
         public async Task<Result<SprintDto>> Activate(int id)
@@ -61,8 +61,8 @@ namespace Trello.Service
                 var board = await _boardService.GetById(boardId);
                 
                 var sprintId = board.Value.ActiveSprintId;
-                await _unitOfWork.Sprints.Complete((int)sprintId);
-                return Result.Ok(_sprintMapper.Map<SprintDto>(GetById((int)sprintId)));
+                var sprint = await _unitOfWork.Sprints.Complete((int)sprintId);
+                return Result.Ok(_sprintMapper.Map<SprintDto>(sprint));
             }
             catch (Exception ex)
             {
@@ -74,9 +74,10 @@ namespace Trello.Service
 
         public async Task<Result<SprintDto>> CreateAsync(SprintDto sprintDto)
         {
-            var allSprints = await _unitOfWork.Sprints.GetAll();
-            SprintValidator sprintValidator = new SprintValidator(allSprints);
+            var existingSprints = await GetByProjectId(sprintDto.ProjectId);
+            var mappedSprints = _sprintMapper.Map<ICollection<Sprint>>(existingSprints);
 
+            var sprintValidator = _sprintValidatorFactory(mappedSprints);
             var errors = sprintValidator.Validate(sprintDto);
 
             if (errors.Any())

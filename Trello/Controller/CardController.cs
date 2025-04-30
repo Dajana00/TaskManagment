@@ -19,7 +19,7 @@ namespace Trello.Controller
         }
 
         [HttpPost("create")]
-        public async Task<IActionResult> Create([FromBody] CardDto cardDto)
+        public async Task<IActionResult> Create([FromBody] CreateCardDto cardDto)
         {
             var response = await _cardService.CreateAsync(cardDto);
             return Ok(response);

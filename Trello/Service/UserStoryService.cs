@@ -5,6 +5,7 @@ using Trello.Mapper;
 using Trello.Model;
 using Trello.Repository.IRepository;
 using Trello.Service.IService;
+using Trello.Validation;
 
 namespace Trello.Service
 {
@@ -12,35 +13,23 @@ namespace Trello.Service
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
+        private readonly CreateUserStoryValidator _validator;
         
 
 
-        public UserStoryService(IUnitOfWork unitOfWork, IMapper mapper)
+        public UserStoryService(IUnitOfWork unitOfWork, IMapper mapper, CreateUserStoryValidator createUserStoryValidator)
         {
             _unitOfWork = unitOfWork;
             _mapper = mapper;
+            _validator = createUserStoryValidator;  
 
         }
 
         public async Task<Result<UserStoryDto>> CreateAsync(UserStoryDto userStoryDto)
         {
-            if (userStoryDto == null)
-                return Result.Fail("UserStory to create cannot be null.");
-
-            if (string.IsNullOrWhiteSpace(userStoryDto.Title))
-                return Result.Fail("UserStory title is required.");
-
-            if (string.IsNullOrWhiteSpace(userStoryDto.Description))
-                return Result.Fail("UserStory description is required.");
-
-
-            var userStory = new UserStory
-            {
-                Title = userStoryDto.Title,
-                Description = userStoryDto.Description,
-                BacklogId = userStoryDto.BacklogId
-            };
-
+            _validator.Validate(userStoryDto);
+            var userStory  = _mapper.Map<UserStory>(userStoryDto);  
+            
             await _unitOfWork.UserStories.CreateAsync(userStory);
             await _unitOfWork.SaveAsync();
 

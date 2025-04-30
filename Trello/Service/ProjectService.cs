@@ -114,21 +114,28 @@ namespace Trello.Service
             }
         }
 
-        public async Task<Result<Project>> GetByUserStory(int userStoryId)
+        public async Task<Result<ProjectDetailsDto>> GetByUserStory(int userStoryId)
         {
-            var userStoryDto = await _userStoryService.GetByIdAsync(userStoryId);
-            if (userStoryDto == null)
-                return Result.Fail($"Error fetching project by user story. User story with id {userStoryId} not found.");
+            try
+            {
+                var userStoryDto = await _userStoryService.GetByIdAsync(userStoryId);
+                if (userStoryDto == null)
+                    return Result.Fail($"Error fetching project by user story. User story with id {userStoryId} not found.");
 
-            var backlogResult = await _backlogService.GetById(userStoryDto.Value.BacklogId);
-            if (backlogResult == null)
-                return Result.Fail($"Error fetching project by user story.Backlog not found.");
+                var backlogResult = await _backlogService.GetById(userStoryDto.Value.BacklogId);
+                if (backlogResult == null)
+                    return Result.Fail($"Error fetching project by user story.Backlog not found.");
 
-            var projectResult = await GetById(backlogResult.Value.ProjectId);
-            if (projectResult == null)
-                return Result.Fail("Project not found.");
-            return _projectMapper.Map<Project>(projectResult);
+                var projectResult = await GetById(backlogResult.Value.ProjectId);
+                if (projectResult == null)
+                    return Result.Fail("Project not found.");
 
+                return Result.Ok(projectResult.Value);
+            }
+            catch (Exception ex)
+            {
+                return Result.Fail($"An error occurred while retrieving project by user story id: {ex.Message}");
+            }
         }
     }
 }

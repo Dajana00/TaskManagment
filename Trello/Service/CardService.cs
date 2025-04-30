@@ -6,6 +6,7 @@ using Trello.Mapper;
 using Trello.Model;
 using Trello.Repository.IRepository;
 using Trello.Service.IService;
+using Trello.Validation;
 using Trello.WebSocket;
 
 namespace Trello.Service
@@ -17,6 +18,7 @@ namespace Trello.Service
         private readonly IUserStoryService _userStoryService;
         private readonly IBacklogService _backlogService;
         private readonly IProjectService _projectService;
+        private readonly CreateCardValidator _createCardValidator;  
 
 
 
@@ -24,28 +26,21 @@ namespace Trello.Service
             IMapper mapper,
             IUserStoryService userStoryService,
             IBacklogService backlogService, 
-            IProjectService projectService)
+            IProjectService projectService,
+            CreateCardValidator createCardValidator)
         {
             _unitOfWork = unitOfWork;
             _mapper = mapper;
             _userStoryService = userStoryService;   
             _backlogService = backlogService;  
             _projectService = projectService;   
+            _createCardValidator = createCardValidator; 
         }
 
-        public async Task<Result<CardDto>> CreateAsync(CardDto cardDto)
+        public async Task<Result<CardDto>> CreateAsync(CreateCardDto cardDto)
         {
-            if (cardDto == null)
-                return Result.Fail("Card to create cannot be null.");
-
-            if (string.IsNullOrWhiteSpace(cardDto.Title))
-                return Result.Fail("Card title is required.");
-
-            if (string.IsNullOrWhiteSpace(cardDto.Description))
-                return Result.Fail("Card description is required.");
+            _createCardValidator.Validate(cardDto);
             var card = _mapper.Map<Card>(cardDto);
-
-          
 
             await _unitOfWork.Cards.CreateAsync(card);
             await _unitOfWork.SaveAsync();
@@ -130,33 +125,6 @@ namespace Trello.Service
             }
         }
 
-       /* public async Task<Result> AddToActiveSprint(int id)
-        {
-            if (id == 0)
-                return Result.Fail("Invalid id.");
-
-            var card = await _unitOfWork.Cards.GetByIdAsync(id);
-            if (card == null)
-                return Result.Fail($"Card with ID {id} not found.");
-
-            var project = _projectService.GetByUserStory(card.UserStoryId);
-            if(project == null)
-            {
-                return Result.Fail("Cannot add to acitve sprint. Cannot find project from user story od this card");
-            }
-            var activeSprint = _sprintService.GetActiveByProjectId(project.Result.Value.Id);
-
-            card.SprintId = activeSprint.Id;
-            card.Sprint = _mapper.Map<Sprint>(activeSprint);
-            card.Status = CardStatus.ToDo;
-
-            _unitOfWork.Cards.Update(card);
-            await _unitOfWork.SaveAsync();
-
-            return Result.Ok();
-        }
-
-       */
 
         public async Task<bool> AreAllCardsDone(int boardId)
         {
@@ -179,6 +147,7 @@ namespace Trello.Service
             try
             {
                 await _unitOfWork.Cards.Update(card);
+                
                 return Result.Ok();
             }
             catch (Exception ex)

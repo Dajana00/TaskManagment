@@ -3,6 +3,8 @@ using Trello.Repository;
 using Trello.Service.Iservice;
 using Trello.Service.IService;
 using Trello.Service;
+using Trello.Model;
+using Trello.Validation;
 
 namespace Trello.Helpers
 {
@@ -18,9 +20,7 @@ namespace Trello.Helpers
             services.AddScoped<IBacklogRepository, BacklogRepository>();
             services.AddScoped<IUserStoryRepository, UserStoryRepository>();
             services.AddScoped<ISprintRepository, SprintRepository>();
-            //singlton da provjerim ovde
-
-
+            
             // Servisi
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IAuthService, AuthService>();
@@ -31,8 +31,14 @@ namespace Trello.Helpers
             services.AddScoped<IBacklogService, BacklogService>();
             services.AddScoped<IUserStoryService, UserStoryService>();
             services.AddScoped<ISprintService, SprintService>();
-            services.AddScoped<ICardSprintService, CardSprintService>();    
-
+            services.AddScoped<ICardSprintService, CardSprintService>();
+            //validatori
+            services.AddScoped<Func<IEnumerable<Sprint>, SprintValidator>>(provider =>
+            {
+                return (existingSprints) => new SprintValidator(existingSprints);
+            });
+            services.AddScoped<CreateCardValidator>();
+            services.AddScoped<CreateUserStoryValidator>();
 
             // Konfiguracija za JWT
             services.Configure<JwtSettings>(configuration.GetSection("JwtSettings"));

@@ -1,9 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Trello.DTOs;
+using Trello.Filters;
 using Trello.Service.IService;
 
 namespace Trello.Controller
 {
+    [ResultFilter]
     [Route("api/boards")]
     [ApiController]
     public class BoardController : ControllerBase

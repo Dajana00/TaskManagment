@@ -6,7 +6,7 @@ namespace Trello.Service.IService
 {
     public interface ICardService
     {
-        Task<Result<CardDto>> CreateAsync(CardDto card);
+        Task<Result<CardDto>> CreateAsync(CreateCardDto card);
         Task<Result<CardDto>> GetByIdAsync(int id);
         Task<Result> UpdateCardStatus(MoveCardDto moveCarddto);
        // Task<Result> AddToActiveSprint(int id);

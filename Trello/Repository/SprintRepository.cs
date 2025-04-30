@@ -61,7 +61,7 @@ namespace Trello.Repository
             catch (Exception ex)
             {
                 _logger.LogError(ex, "An error occurred while fetching sprints.");
-                throw new Exception("An error occurred while fetching sprints. Please try again.");
+                throw new Exception($"An error occurred while fetching sprints. { ex.Message }");
             }
         }
 
@@ -146,7 +146,7 @@ namespace Trello.Repository
             catch (Exception ex)
             {
                 _logger.LogError(ex, $"Error fetching sprint with id {id}");
-                throw new Exception($"An error occurred while retrieving project with this id: {id}. Please try again.");
+                throw new Exception($"An error occurred while retrieving project with this id: {id}. {ex.Message}");
             }
         }
     }

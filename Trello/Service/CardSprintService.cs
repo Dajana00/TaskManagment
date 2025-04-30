@@ -12,16 +12,18 @@ namespace Trello.Service
         private readonly ISprintService _sprintService;
         private readonly IProjectService _projectService;
         private readonly IMapper _mapper;
+        private readonly IUnitOfWork _unitOfWork;
 
         public CardSprintService(
             ICardService cardService,
             ISprintService sprintService,
-            IProjectService projectService, IMapper mapper)
+            IProjectService projectService, IMapper mapper, IUnitOfWork unitOfWork)
         {
             _cardService = cardService;
             _sprintService = sprintService;
             _projectService = projectService;
-            _mapper = mapper;   
+            _mapper = mapper;
+            _unitOfWork = unitOfWork;
         }
         public async Task<Result> AddCardToActiveSprint(int cardId)
         {
@@ -32,17 +34,20 @@ namespace Trello.Service
             if (card == null)
                 return Result.Fail($"Card with ID {cardId} not found.");
 
-            var project = _projectService.GetByUserStory(card.Value.Id);
+            var existingEntity = await _unitOfWork.Cards.GetByIdAsync(card.Value.Id);
+            if (existingEntity == null)
+                return Result.Fail("Card not found.");
+            var project = await _projectService.GetByUserStory(card.Value.UserStoryId);
             if (project == null)
             {
                 return Result.Fail("Cannot add to acitve sprint. Cannot find project from user story od this card");
             }
-            var activeSprint = _sprintService.GetActiveByProjectId(project.Result.Value.Id);
+            var activeSprint = await _sprintService.GetActiveByProjectId(project.Value.Id);
 
-            card.Value.SprintId = activeSprint.Id;
-            card.Value.Status = CardStatus.ToDo;
+            existingEntity.SprintId = activeSprint.Value.Id;
+            existingEntity.Status = CardStatus.ToDo;
 
-            var result = await _cardService.UpdateAsync(_mapper.Map<Card>(card));
+            await _unitOfWork.Cards.Update(existingEntity);
 
             return Result.Ok();
         }
