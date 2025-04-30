@@ -1,7 +1,7 @@
-﻿using FluentResults;
+﻿using AutoMapper;
+using FluentResults;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Trello.DTOs;
-using Trello.Mapper;
 using Trello.Model;
 using Trello.Repository.IRepository;
 using Trello.Service.IService;
@@ -13,15 +13,19 @@ namespace Trello.Service
         private readonly IUnitOfWork _unitOfWork;
         private readonly IBoardService _boardService;   
         private readonly IBacklogService _backlogService;
-        private readonly ProjectMapper _projectMapper;  
+        private readonly IMapper _projectMapper;  
+        private readonly IUserStoryService _userStoryService;   
         
 
-        public ProjectService(IUnitOfWork unitOfWork, IBoardService boardService, IBacklogService backlogService)
+        public ProjectService(IUnitOfWork unitOfWork, IBoardService boardService,
+            IBacklogService backlogService,IMapper mapper,
+            IUserStoryService userStoryService)
         {
             _unitOfWork = unitOfWork;
             _boardService = boardService; 
             _backlogService = backlogService;
-            _projectMapper = new ProjectMapper();
+            _projectMapper = mapper;
+            _userStoryService = userStoryService;   
         }
 
         public async Task<Result<ProjectDto>> CreateAsync(ProjectDto projectDto)
@@ -43,8 +47,7 @@ namespace Trello.Service
             await _unitOfWork.Projects.CreateAsync(project);
             await _unitOfWork.SaveAsync();
 
-            //CreateDeafaultBoard(project);
-            //CreateDeafaultBacklog(project);
+            
             var boardResult = await _boardService.CreateDefaultBoardAsync(project);
             if (boardResult.IsFailed)
                 return Result.Fail(boardResult.Errors);
@@ -61,7 +64,7 @@ namespace Trello.Service
 
             await _unitOfWork.SaveAsync(); 
 
-            return Result.Ok(MapToProjectDto(project));
+            return Result.Ok(_projectMapper.Map<ProjectDto>(project));
         }
 
        
@@ -77,8 +80,11 @@ namespace Trello.Service
 
                 if (projects == null || projects.Count == 0)
                     return Result.Fail("No projects found for this user.");
-
-                var projectDtos = _projectMapper.CreateDtoList(projects).ToList();
+                var projectDtos = new List<ProjectDetailsDto>();        
+                foreach (var project in projects)
+                {
+                    projectDtos.Add(_projectMapper.Map<ProjectDetailsDto>(project));
+                }
 
                 return Result.Ok((ICollection<ProjectDetailsDto>)projectDtos);
             }
@@ -100,7 +106,7 @@ namespace Trello.Service
                     return Result.Fail($"No project found with id: {id}.");
 
 
-                return Result.Ok(_projectMapper.CreateDto(project));
+                return Result.Ok(_projectMapper.Map<ProjectDetailsDto>(project));
             }
             catch (Exception ex)
             {
@@ -108,18 +114,28 @@ namespace Trello.Service
             }
         }
 
-        private ProjectDto MapToProjectDto(Project project)
+        public async Task<Result<ProjectDetailsDto>> GetByUserStory(int userStoryId)
         {
-            return new ProjectDto
+            try
             {
-                Id = project.Id,
-                Name = project.Name,
-                OwnerId = project.OwnerId,
-                BoardId = project.BoardId
-            };
-        }
-       
-        
+                var userStoryDto = await _userStoryService.GetByIdAsync(userStoryId);
+                if (userStoryDto == null)
+                    return Result.Fail($"Error fetching project by user story. User story with id {userStoryId} not found.");
 
+                var backlogResult = await _backlogService.GetById(userStoryDto.Value.BacklogId);
+                if (backlogResult == null)
+                    return Result.Fail($"Error fetching project by user story.Backlog not found.");
+
+                var projectResult = await GetById(backlogResult.Value.ProjectId);
+                if (projectResult == null)
+                    return Result.Fail("Project not found.");
+
+                return Result.Ok(projectResult.Value);
+            }
+            catch (Exception ex)
+            {
+                return Result.Fail($"An error occurred while retrieving project by user story id: {ex.Message}");
+            }
+        }
     }
 }

@@ -9,6 +9,8 @@ namespace Trello.DTOs
         public string Description { get; set; }
         public DateTime DueDate { get; set; }
         public CardStatus Status { get; set; }
+        public int UserStoryId {  get; set; }   
+        public int SprintId {  get; set; }  
         //recordi 
     }
 }

@@ -59,6 +59,12 @@ namespace Trello.Data
                 .HasForeignKey(s => s.BacklogId)
                 .OnDelete(DeleteBehavior.Cascade);
 
+            modelBuilder.Entity<UserStory>()
+                .HasMany(s => s.Cards)
+                .WithOne(p => p.UserStory)          
+                .HasForeignKey(s => s.UserStoryId)
+                .OnDelete(DeleteBehavior.Cascade);
+
             modelBuilder.Entity<Board>()
                 .HasOne(b => b.ActiveSprint) 
                 .WithOne()                     

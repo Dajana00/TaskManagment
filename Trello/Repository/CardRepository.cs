@@ -16,6 +16,8 @@ namespace Trello.Repository
             _context = context;
             _logger = logger;
         }
+
+        
         public async Task CreateAsync(Card card)
         {
             try
@@ -37,22 +39,22 @@ namespace Trello.Repository
             }
         }
 
-        public async Task<ICollection<Card>> GetAll()
+        public async Task<ICollection<Card>> GetByActiveSprint(int activeSprintId)
         {
             try
             {
-                var cards = await _context.Cards.ToListAsync();
-                _logger.LogInformation("Successfully fetched all cards.");
+                var cards = await _context.Cards.Where(p=> p.SprintId == activeSprintId).ToListAsync();
+                _logger.LogInformation("Successfully fetched cards for active sprint.");
                 return cards;
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "An error occurred while fetching all cards.");
-                throw new Exception("An error occurred while retrieving all cards. Please try again.");
+                _logger.LogError(ex, "An error occurred while fetching cards for active sprint.");
+                throw new Exception("An error occurred while retrieving cards for active sprint. Please try again.");
             }
         }
 
-        public async Task<Card?> GetByIdAsync(int id)
+        public async Task<Card> GetByIdAsync(int id)
         {
             try
             {
@@ -70,13 +72,31 @@ namespace Trello.Repository
             }
         }
 
-       
+        public async Task<ICollection<Card>> GetByUserStoryId(int userStoryId)
+        {
+            try
+            {
+                var cards = await _context.Cards
+                     .Where(p => p.UserStoryId == userStoryId)
+                     .Include(p => p.Comments)
+                     .ToListAsync();
+                _logger.LogInformation($"Successiffuly fetching card with user story id {userStoryId}");
 
-        public void Update(Card card)
+                return cards;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, $"Error fetching card with userStoryId {userStoryId}");
+                throw new Exception($"An error occurred while retrieving card with userStoryId: {userStoryId}. Please try again.");
+            }
+        }
+
+        public async Task Update(Card card)
         {
             try
             {
                 _context.Cards.Update(card);
+                await _context.SaveChangesAsync();
                 _logger.LogInformation($"Successiffuly updated card with id {card.Id}");
             }
             catch (Exception ex) 

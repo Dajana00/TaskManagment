@@ -12,6 +12,6 @@ namespace Trello.DTOs
         public DateTime EndDate { get; set; }
 
         public int ProjectId { get; set; }  // Sprint pripada projektu
-        public ProjectDto Project { get; set; }
+       // public ProjectDto Project { get; set; }
     }
 }

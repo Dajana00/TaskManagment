@@ -67,6 +67,22 @@ namespace Trello.Repository
                 throw new Exception("An error occurred while retrieving all stories. Please try again.");
             }
         }
+        public async Task<UserStory?> GetByIdAsync(int id)
+        {
+            try
+            {
+                var userStory = await _context.UserStories
+                    .FirstOrDefaultAsync(p => p.Id == id);
+                _logger.LogInformation($"Successiffuly fetching userStory with id {id}");
+
+                return userStory;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, $"Error fetching user story with id {id}");
+                throw new Exception($"An error occurred while retrieving user story with this id: {id}. Please try again.");
+            }
+        }
 
     }
 }
