@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Trello.DTOs;
 using Trello.Filters;
 using Trello.Service.IService;
@@ -8,6 +9,7 @@ namespace Trello.Controller
     [ResultFilter]
     [Route("api/sprint")]
     [ApiController]
+    [Authorize]
     public class SprintController : ControllerBase
     {
         private readonly ISprintService _sprintService;

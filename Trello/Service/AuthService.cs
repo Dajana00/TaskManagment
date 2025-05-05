@@ -62,6 +62,31 @@ namespace Trello.Service
             var tokens = _jwtService.GenerateTokens(user);
             return Result.Ok(new AuthResponseDto { AccessToken = tokens.accessToken, RefreshToken = tokens.refreshToken });
         }
+
+        public async Task<Result<AuthResponseDto>> RefreshTokenAsync(string refreshToken)
+        {
+            var principal = _jwtService.GetPrincipalFromExpiredToken(refreshToken);
+            if (principal == null)
+            {
+                return Result.Fail("Invalid refresh token.");
+            }
+
+            var username = principal.Identity.Name;
+            var user = await _userManager.FindByNameAsync(username);
+
+            if (user == null || !_jwtService.ValidateRefreshToken(user, refreshToken))
+            {
+                return Result.Fail("Invalid refresh token.");
+            }
+
+            var tokens = _jwtService.GenerateTokens(user);
+            return Result.Ok(new AuthResponseDto
+            {
+                AccessToken = tokens.accessToken,
+                RefreshToken = tokens.refreshToken
+            });
+        }
+
     }
 
 }
