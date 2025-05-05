@@ -12,6 +12,7 @@ namespace Trello.Controller
     
         [ApiController]
         [Route("api/user")]
+        [Authorize]
         public class UserController : BaseApiController
         {
             private readonly IAuthService _authService;

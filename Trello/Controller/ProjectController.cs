@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Trello.DTOs;
 using Trello.Service.Iservice;
 using Trello.Service.IService;
@@ -7,6 +8,7 @@ namespace Trello.Controller
 {
     [Route("api/projects")]
     [ApiController]
+    [Authorize]
     public class ProjectController : ControllerBase
     {
         private readonly IProjectService _projectService;
