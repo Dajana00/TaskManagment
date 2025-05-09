@@ -37,5 +37,12 @@ namespace Trello.Controller
             var response = await _userStoryService.GetAll();
             return Ok(response);
         }
+
+        [HttpGet("getById/{id}")]
+        public async Task<IActionResult> GetAll([FromRoute] int id)
+        {
+            var response = await _userStoryService.GetByIdAsync(id);
+            return Ok(response);
+        }
     }
 }

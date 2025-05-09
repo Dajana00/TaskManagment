@@ -124,5 +124,64 @@ namespace Trello.Service
                 PhoneNumber = user.PhoneNumber
             };
         }
+
+        public async Task<Result<ICollection<UserDto>>> GetByProjectIdAsync(int projectId)
+        {
+            if (projectId <= 0)
+                return Result.Fail("Invalid project ID. ID must be greater than zero.");
+
+            try
+            {
+                var users = await _unitOfWork.Users.GetByProjectIdAsync(projectId);
+                if (users == null || !users.Any())
+                    return Result.Ok((ICollection<UserDto>)new List<UserDto>());
+
+                var userDtos = users.Select(MapToUserDto).ToList();
+                return Result.Ok((ICollection<UserDto>)userDtos);
+            }
+            catch (Exception ex)
+            {
+                return Result.Fail($"An error occurred while fetching users for project ID {projectId}: {ex.Message}");
+            }
+        }
+
+        public async Task<Result<ICollection<UserDto>>> GetNonMembers(int projectId)
+        {
+            if (projectId <= 0)
+                return Result.Fail("Invalid project ID. ID must be greater than zero.");
+
+            try
+            {
+                var users = await _unitOfWork.Users.GetNonMembers(projectId);
+
+                if (users == null || !users.Any())
+                    return Result.Fail("All users are project members.");
+
+                var userDtos = users.Select(MapToUserDto).ToList();
+
+                return Result.Ok((ICollection<UserDto>)userDtos);
+            }
+            catch (Exception ex)
+            {
+                return Result.Fail($"An error occurred while fetching users not members for project ID {projectId}: {ex.Message}");
+            }
+        }
+        public async Task<Result> AddUserToProjectAsync(int projectId, int userId)
+        {
+            if (userId <= 0 || projectId <= 0)
+                return Result.Fail("User ID and Project ID must be greater than zero.");
+
+            try
+            {
+                await _unitOfWork.Users.AddUserToProjectAsync(projectId, userId);
+                return Result.Ok();
+            }
+            catch (Exception ex)
+            {
+                return Result.Fail($"An error occurred while adding user {userId} to project {projectId}: {ex.Message}");
+            }
+        }
+
+
     }
 }

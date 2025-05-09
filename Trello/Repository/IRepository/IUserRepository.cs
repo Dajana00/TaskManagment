@@ -10,6 +10,9 @@ namespace Trello.Repository.IRepository
         Task AddUserAsync(User user);
         Task<bool> UserExistsAsync(string email, string username);
         Task SaveUserAsync(User user);
+        Task<ICollection<User>> GetByProjectIdAsync(int projectId);
+        Task<ICollection<User>> GetNonMembers(int projectId);
+        Task AddUserToProjectAsync(int projectId, int userId);
     }
 
 }
