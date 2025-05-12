@@ -9,8 +9,7 @@
         IBacklogRepository Backlogs { get; }
         IUserStoryRepository UserStories { get; }
         ISprintRepository Sprints { get; }
-        //ITaskRepository Tasks { get; }
-
+        IUserCardRepository UserCards { get; }
         Task SaveAsync();
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Trello.Data;
 using Trello.Repository.IRepository;
+using Trello.Service;
 
 public class UnitOfWork : IUnitOfWork
 {
@@ -12,6 +13,7 @@ public class UnitOfWork : IUnitOfWork
     public IBacklogRepository Backlogs { get; }
     public IUserStoryRepository UserStories { get; }
     public ISprintRepository Sprints { get; }
+    public IUserCardRepository UserCards { get; }
 
     public UnitOfWork(
         AppDbContext context,
@@ -21,7 +23,8 @@ public class UnitOfWork : IUnitOfWork
         ICardRepository cards,
         IBacklogRepository backlogs,
         IUserStoryRepository userStories,
-        ISprintRepository sprintRepository)
+        ISprintRepository sprintRepository, 
+        IUserCardRepository userCardRepository)
     {
         _context = context;
         Users = users;
@@ -31,6 +34,7 @@ public class UnitOfWork : IUnitOfWork
         Backlogs = backlogs;
         UserStories = userStories;
         Sprints = sprintRepository;
+        UserCards = userCardRepository; 
     }
 
     public async Task SaveAsync()

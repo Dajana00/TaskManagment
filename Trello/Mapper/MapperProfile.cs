@@ -17,6 +17,7 @@ namespace Trello.Mapper
             CreateMap<UserStory,UserStoryDto>().ReverseMap();   
             CreateMap<Sprint,SprintDto>().ReverseMap();
             CreateMap<Card,CreateCardDto>().ReverseMap();
+            CreateMap<User,UserDto>().ReverseMap();
 
         }
     }

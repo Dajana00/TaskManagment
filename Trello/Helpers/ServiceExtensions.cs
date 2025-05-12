@@ -20,7 +20,8 @@ namespace Trello.Helpers
             services.AddScoped<IBacklogRepository, BacklogRepository>();
             services.AddScoped<IUserStoryRepository, UserStoryRepository>();
             services.AddScoped<ISprintRepository, SprintRepository>();
-            
+            services.AddScoped<IUserCardRepository, UserCardRepository>();
+
             // Servisi
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IAuthService, AuthService>();
@@ -32,6 +33,7 @@ namespace Trello.Helpers
             services.AddScoped<IUserStoryService, UserStoryService>();
             services.AddScoped<ISprintService, SprintService>();
             services.AddScoped<ICardSprintService, CardSprintService>();
+            services.AddScoped<IUserCardService, UserCardService>();
             //validatori
             services.AddScoped<Func<IEnumerable<Sprint>, SprintValidator>>(provider =>
             {
