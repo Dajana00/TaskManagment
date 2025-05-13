@@ -75,7 +75,7 @@ namespace Trello.Service
         public async Task<Result<SprintDto>> CreateAsync(SprintDto sprintDto)
         {
             var existingSprints = await GetByProjectId(sprintDto.ProjectId);
-            var mappedSprints = _sprintMapper.Map<ICollection<Sprint>>(existingSprints);
+            var mappedSprints = _sprintMapper.Map<ICollection<Sprint>>(existingSprints.Value);
 
             var sprintValidator = _sprintValidatorFactory(mappedSprints);
             var errors = sprintValidator.Validate(sprintDto);

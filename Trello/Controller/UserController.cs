@@ -7,6 +7,9 @@ using Microsoft.AspNetCore.Authorization;
 using System.Security.Claims;
 using Trello.Service;
 using Trello.Service.IService;
+using Trello.Helpers;
+using MediatR;
+using Trello.Service.UpdateUserCommands;
 
 namespace Trello.Controller
 {
@@ -18,11 +21,13 @@ namespace Trello.Controller
         {
             private readonly IAuthService _authService;
             private readonly IUserService _userService;
+        private readonly IMediator _mediator;
 
-        public UserController(IAuthService authService,IUserService userService)
+        public UserController(IAuthService authService,IUserService userService, IMediator mediator)
         {
              _authService = authService;
              _userService = userService;
+            _mediator = mediator;
 
         }
 
@@ -53,6 +58,24 @@ namespace Trello.Controller
             var response = await _userService.AddUserToProjectAsync(projectId, userId);
             return Ok(response);
         }
+
+        [HttpPatch("{id}")]
+        public async Task<IActionResult> PatchUserField(int id, [FromBody] Dictionary<string, string> fieldsToUpdate)
+        {
+            var command = new UpdateUserFieldCommand
+            {
+                UserId = id,
+                FieldsToUpdate = fieldsToUpdate
+            };
+
+            var result = await _mediator.Send(command);
+
+            if (result == null)
+                return NotFound();
+
+            return Ok(result);
+        }
+
     }
 }
 

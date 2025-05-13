@@ -373,3 +373,5 @@ C:\Users\User\Desktop\TaskManagment\Trello\obj\Debug\net8.0\refint\Trello.dll
 C:\Users\User\Desktop\TaskManagment\Trello\obj\Debug\net8.0\Trello.pdb
 C:\Users\User\Desktop\TaskManagment\Trello\obj\Debug\net8.0\Trello.genruntimeconfig.cache
 C:\Users\User\Desktop\TaskManagment\Trello\obj\Debug\net8.0\ref\Trello.dll
+C:\Users\User\Desktop\TaskManagment\Trello\bin\Debug\net8.0\MediatR.dll
+C:\Users\User\Desktop\TaskManagment\Trello\bin\Debug\net8.0\MediatR.Contracts.dll

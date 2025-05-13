@@ -154,8 +154,6 @@ namespace Trello.Service
             {
                 var users = await _unitOfWork.Users.GetNonMembers(projectId);
 
-                if (users == null || !users.Any())
-                    return Result.Fail("All users are project members.");
 
                 var userDtos = users.Select(MapToUserDto).ToList();
 
