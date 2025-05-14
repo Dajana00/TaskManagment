@@ -5,7 +5,7 @@ using System;
 using System.Threading.Tasks;
 using Trello.Service.Iservice;
 using FluentResults;
-using Trello.Filters;
+using Trello.ExeptionHandlingResultFilter;
 
 namespace Trello.Controller
 {

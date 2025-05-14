@@ -70,7 +70,6 @@ namespace Trello.Service
                 new Claim(ClaimTypes.Name, user.UserName)
             };
 
-            // Generisanje refresh token-a kao JWT
             var refreshTokenDescriptor = new SecurityTokenDescriptor
             {
                 Subject = new ClaimsIdentity(claims),

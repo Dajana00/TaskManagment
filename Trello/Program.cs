@@ -19,6 +19,9 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Trello.Mapper;
 using Trello.WebSocket;
+using Trello.Service.UpdateUserCommands;
+using Trello.Service.UpdateUserCommandPattern;
+using Trello.ExeptionHandlingMiddleware;
 
 var builder = WebApplication.CreateSlimBuilder(args);
 
@@ -108,6 +111,7 @@ builder.Services.AddAuthentication(options =>
 
 builder.Services.AddAutoMapper(typeof(MapperProfile));
 builder.Services.AddSignalR();
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(UpdateUserFieldCommandHandler).Assembly));
 
 
 

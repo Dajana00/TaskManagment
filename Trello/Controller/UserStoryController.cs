@@ -1,10 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Trello.DTOs;
+using Trello.ExeptionHandlingResultFilter;
 using Trello.Service;
 using Trello.Service.IService;
 
 namespace Trello.Controller
 {
+    [ResultFilter]
     [Route("api/userStory")]
     [ApiController]
     public class UserStoryController : ControllerBase
@@ -35,6 +37,13 @@ namespace Trello.Controller
         public async Task<IActionResult> GetAll()
         {
             var response = await _userStoryService.GetAll();
+            return Ok(response);
+        }
+
+        [HttpGet("getById/{id}")]
+        public async Task<IActionResult> GetAll([FromRoute] int id)
+        {
+            var response = await _userStoryService.GetByIdAsync(id);
             return Ok(response);
         }
     }
