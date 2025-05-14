@@ -1,24 +1,22 @@
-﻿using Trello.Service.UpdateUserCommandPattern.Interface;
+﻿using Microsoft.AspNetCore.Identity;
+using Trello.Service.UpdateUserCommandPattern.Interface;
 using Trello.Service.UpdateUserCommands.Commands;
 
 namespace Trello.Service.UpdateUserCommandPattern.Factory
 {
     public static class UserFieldUpdateCommandFactory
     {
-        private static readonly Dictionary<string, IUserFieldUpdateCommand> _commands = new()
-    {
-        { "firstname", new FirstNameUpdateCommand() },
-        { "lastname", new LastNameUpdateCommand() },
-        { "email", new EmailUpdateCommand() },
-        { "username", new UsernameUpdateCommand() },
-        { "phonenumber", new PhoneNumberUpdateCommand() }
-    };
-
-        public static IUserFieldUpdateCommand? GetCommand(string fieldName)
+        public static IUserFieldUpdateCommand? GetCommand(string fieldName, IServiceProvider serviceProvider)
         {
-            _commands.TryGetValue(fieldName.ToLower(), out var command);
-            return command;
+            return fieldName.ToLower() switch
+            {
+                "firstname" => serviceProvider.GetService<FirstNameUpdateCommand>(),
+                "lastname" => serviceProvider.GetService<LastNameUpdateCommand>(),
+                "email" => serviceProvider.GetService<EmailUpdateCommand>(),
+                "username" => serviceProvider.GetService<UsernameUpdateCommand>(), 
+                "phonenumber" => serviceProvider.GetService<PhoneNumberUpdateCommand>(),
+                _ => null
+            };
         }
     }
-
 }

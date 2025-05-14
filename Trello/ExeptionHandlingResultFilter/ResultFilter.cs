@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using System.Net;
 
-namespace Trello.Filters
+namespace Trello.ExeptionHandlingResultFilter
 {
     public class ResultFilterAttribute : ActionFilterAttribute
     {

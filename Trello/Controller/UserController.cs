@@ -10,10 +10,11 @@ using Trello.Service.IService;
 using Trello.Helpers;
 using MediatR;
 using Trello.Service.UpdateUserCommands;
+using Trello.ExeptionHandlingResultFilter;
 
 namespace Trello.Controller
 {
-    
+        [ResultFilter]
         [ApiController]
         [Route("api/user")]
         [Authorize]

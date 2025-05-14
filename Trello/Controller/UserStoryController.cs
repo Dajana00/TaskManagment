@@ -1,10 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Trello.DTOs;
+using Trello.ExeptionHandlingResultFilter;
 using Trello.Service;
 using Trello.Service.IService;
 
 namespace Trello.Controller
 {
+    [ResultFilter]
     [Route("api/userStory")]
     [ApiController]
     public class UserStoryController : ControllerBase

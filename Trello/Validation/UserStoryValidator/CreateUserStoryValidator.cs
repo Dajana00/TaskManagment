@@ -1,6 +1,6 @@
 ﻿using Trello.DTOs;
 
-namespace Trello.Validation
+namespace Trello.Validation.UserStoryValidator
 {
     public class CreateUserStoryValidator : Validator<UserStoryDto>
     {

@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Data.SqlTypes;
 
-namespace Trello.Helpers
+namespace Trello.ExeptionHandlingMiddleware
 {
     public class ExceptionHandlingMiddleware
     {
@@ -34,7 +34,7 @@ namespace Trello.Helpers
                     _ => StatusCodes.Status500InternalServerError
                 };
 
-                var response = new { Message = ex.Message };
+                var response = new { ex.Message };
                 await context.Response.WriteAsJsonAsync(response);
             }
         }

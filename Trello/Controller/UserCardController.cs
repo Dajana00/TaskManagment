@@ -1,9 +1,11 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Trello.ExeptionHandlingResultFilter;
 using Trello.Service.IService;
 
 namespace Trello.Controller
 {
+    [ResultFilter]
     [Route("api/userCard")]
     [ApiController]
     [Authorize]

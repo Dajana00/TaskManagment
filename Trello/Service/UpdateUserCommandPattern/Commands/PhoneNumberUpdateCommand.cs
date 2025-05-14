@@ -5,9 +5,11 @@ namespace Trello.Service.UpdateUserCommands.Commands
 {
     public class PhoneNumberUpdateCommand : IUserFieldUpdateCommand
     {
-        public void Apply(User user, string newValue)
+        public Task ApplyAsync(User user, string newValue)
         {
             user.PhoneNumber = newValue;
+            return Task.CompletedTask;
+
         }
     }
 }

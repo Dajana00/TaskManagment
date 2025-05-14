@@ -2,7 +2,7 @@
 using Trello.DTOs;
 using Trello.Model;
 
-namespace Trello.Validation
+namespace Trello.Validation.CardValidator
 {
     public class CreateCardValidator : Validator<CreateCardDto>
     {

@@ -241,3 +241,6 @@ C:\Users\User\Desktop\TaskManagment\TestProject\obj\Debug\net8.0\refint\TestProj
 C:\Users\User\Desktop\TaskManagment\TestProject\obj\Debug\net8.0\TestProject.pdb
 C:\Users\User\Desktop\TaskManagment\TestProject\obj\Debug\net8.0\TestProject.genruntimeconfig.cache
 C:\Users\User\Desktop\TaskManagment\TestProject\obj\Debug\net8.0\ref\TestProject.dll
+C:\Users\User\Desktop\TaskManagment\TestProject\bin\Debug\net8.0\Castle.Core.dll
+C:\Users\User\Desktop\TaskManagment\TestProject\bin\Debug\net8.0\Moq.dll
+C:\Users\User\Desktop\TaskManagment\TestProject\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.InMemory.dll

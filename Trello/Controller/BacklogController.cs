@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Trello.Filters;
+using Trello.ExeptionHandlingResultFilter;
 using Trello.Service.IService;
 
 namespace Trello.Controller

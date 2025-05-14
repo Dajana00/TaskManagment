@@ -5,7 +5,7 @@ using Trello.Mapper;
 using Trello.Model;
 using Trello.Repository.IRepository;
 using Trello.Service.IService;
-using Trello.Validation;
+using Trello.Validation.UserStoryValidator;
 
 namespace Trello.Service
 {

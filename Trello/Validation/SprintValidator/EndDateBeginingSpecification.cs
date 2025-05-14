@@ -1,6 +1,6 @@
 ﻿using Trello.DTOs;
 
-namespace Trello.Validation
+namespace Trello.Validation.SprintValidator
 {
     public class EndDateBeginingSpecification : ISpecification<SprintDto>
     {

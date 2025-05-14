@@ -20,6 +20,8 @@ using System.Text;
 using Trello.Mapper;
 using Trello.WebSocket;
 using Trello.Service.UpdateUserCommands;
+using Trello.Service.UpdateUserCommandPattern;
+using Trello.ExeptionHandlingMiddleware;
 
 var builder = WebApplication.CreateSlimBuilder(args);
 

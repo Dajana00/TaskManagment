@@ -1,7 +1,7 @@
 ﻿using Trello.DTOs;
 using Trello.Model;
 
-namespace Trello.Validation
+namespace Trello.Validation.SprintValidator
 {
     public class SprintValidator : Validator<SprintDto>
     {

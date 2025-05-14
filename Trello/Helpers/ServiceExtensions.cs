@@ -4,7 +4,10 @@ using Trello.Service.Iservice;
 using Trello.Service.IService;
 using Trello.Service;
 using Trello.Model;
-using Trello.Validation;
+using Trello.Validation.SprintValidator;
+using Trello.Validation.UserStoryValidator;
+using Trello.Validation.CardValidator;
+using Trello.Service.UpdateUserCommands.Commands;
 
 namespace Trello.Helpers
 {
@@ -41,6 +44,12 @@ namespace Trello.Helpers
             });
             services.AddScoped<CreateCardValidator>();
             services.AddScoped<CreateUserStoryValidator>();
+
+            services.AddScoped<UsernameUpdateCommand>();
+            services.AddScoped<PhoneNumberUpdateCommand>();
+            services.AddScoped<EmailUpdateCommand>();
+            services.AddScoped<FirstNameUpdateCommand>();
+            services.AddScoped<LastNameUpdateCommand>();
 
             // Konfiguracija za JWT
             services.Configure<JwtSettings>(configuration.GetSection("JwtSettings"));

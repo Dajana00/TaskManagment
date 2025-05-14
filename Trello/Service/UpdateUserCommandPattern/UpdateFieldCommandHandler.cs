@@ -2,16 +2,20 @@
 using Trello.Data;
 using Trello.DTOs;
 using Trello.Service.UpdateUserCommandPattern.Factory;
+using Trello.Service.UpdateUserCommands;
 
-namespace Trello.Service.UpdateUserCommands
+namespace Trello.Service.UpdateUserCommandPattern
 {
+
     public class UpdateUserFieldCommandHandler : IRequestHandler<UpdateUserFieldCommand, UserDto>
     {
         private readonly AppDbContext _context;
+        private readonly IServiceProvider _serviceProvider;
 
-        public UpdateUserFieldCommandHandler(AppDbContext context)
+        public UpdateUserFieldCommandHandler(AppDbContext context, IServiceProvider serviceProvider)
         {
             _context = context;
+            _serviceProvider = serviceProvider;
         }
 
         public async Task<UserDto> Handle(UpdateUserFieldCommand request, CancellationToken cancellationToken)
@@ -22,8 +26,8 @@ namespace Trello.Service.UpdateUserCommands
 
             foreach (var field in request.FieldsToUpdate)
             {
-                var command = UserFieldUpdateCommandFactory.GetCommand(field.Key);
-                command?.Apply(user, field.Value);
+                var command = UserFieldUpdateCommandFactory.GetCommand(field.Key, _serviceProvider);
+                await command?.ApplyAsync(user, field.Value);
             }
 
             await _context.SaveChangesAsync(cancellationToken);

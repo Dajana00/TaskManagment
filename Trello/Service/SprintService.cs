@@ -1,12 +1,10 @@
 ﻿using AutoMapper;
 using FluentResults;
-using Org.BouncyCastle.Crypto.Operators;
-using System.Reflection.Metadata.Ecma335;
 using Trello.DTOs;
 using Trello.Model;
 using Trello.Repository.IRepository;
 using Trello.Service.IService;
-using Trello.Validation;
+using Trello.Validation.SprintValidator;
 
 namespace Trello.Service
 {
@@ -46,9 +44,7 @@ namespace Trello.Service
             {
                 return Result.Fail($"An error occurred during activating sprint : {ex.Message}");
             }
-
         }
-
         public async Task<Result<SprintDto>> Complete(int boardId)
         {
             try
@@ -70,8 +66,6 @@ namespace Trello.Service
             }
 
         }
-
-
         public async Task<Result<SprintDto>> CreateAsync(SprintDto sprintDto)
         {
             var existingSprints = await GetByProjectId(sprintDto.ProjectId);
