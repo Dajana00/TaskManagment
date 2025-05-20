@@ -5,7 +5,7 @@ using Trello.Mapper;
 using Trello.Model;
 using Trello.Repository.IRepository;
 using Trello.Service.IService;
-using Trello.Validation;
+using Trello.Validation.UserStoryValidator;
 
 namespace Trello.Service
 {
@@ -102,6 +102,29 @@ namespace Trello.Service
             }
         }
 
+        public async Task<Result<UserStoryDto>> Update(int id, UserStoryDto updatedStory)
+        {
+            var existingStory = await _unitOfWork.UserStories.GetByIdAsync(id);
+            if (existingStory == null)
+                return Result.Fail($"User story with ID {id} not found.");
+
+            existingStory.Title = updatedStory.Title;
+            existingStory.Description = updatedStory.Description;
+            existingStory.BacklogId = updatedStory.BacklogId;
+
+            await _unitOfWork.SaveAsync();
+            return Result.Ok(_mapper.Map<UserStoryDto>(existingStory));
+        }
+
+        public async Task<Result> Delete(int id)
+        {
+            var userStory = await _unitOfWork.UserStories.GetByIdAsync(id);
+            if (userStory == null)
+                return Result.Fail($"User story with ID {id} not found.");
+
+            await _unitOfWork.UserStories.Delete(userStory);
+            return Result.Ok();
+        }
 
     }
 }

@@ -5,7 +5,7 @@ using System;
 using System.Threading.Tasks;
 using Trello.Service.Iservice;
 using FluentResults;
-using Trello.Filters;
+using Trello.ExeptionHandlingResultFilter;
 
 namespace Trello.Controller
 {
@@ -25,29 +25,23 @@ namespace Trello.Controller
         public async Task<IActionResult> SignUp([FromBody] RegisterRequestDto userDto)
         {
             var response = await _authService.RegisterUserAsync(userDto);
-            if (response.IsSuccess)
-            {
-                return Ok(response);
-            }
-            else
-            {
-                return BadRequest(new { Errors = response.Errors.Select(e => e.Reasons) });
-
-            }
-
-
+            return Ok(response);
+          
         }
 
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] UserLoginDto userDto)
         {
-           
             var response = await _authService.LoginAsync(userDto);
-            if (response.IsSuccess)
-            {
-                return Ok(response);
-            }
-            return BadRequest(new { Errors = response.Errors.Select(e => e.Reasons) });
+            return Ok(response);
+            
         }
+        [HttpPost("refresh")]
+        public async Task<IActionResult> Refresh([FromBody] string refreshToken)
+        {
+            var result = await _authService.RefreshTokenAsync(refreshToken);
+            return Ok(result.Value);
+        }
+
     }
 }

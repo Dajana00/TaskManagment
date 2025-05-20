@@ -98,7 +98,7 @@ namespace Trello.Data
                 .HasOne(uc => uc.Card)
                 .WithMany(c => c.UserCards)
                 .HasForeignKey(uc => uc.CardId)
-                .OnDelete(DeleteBehavior.Restrict);  // brisanje card -> brisanje veze
+                .OnDelete(DeleteBehavior.Cascade);  // brisanje card -> brisanje veze
 
             modelBuilder.Entity<Comment>()
             .HasOne(c => c.Author)

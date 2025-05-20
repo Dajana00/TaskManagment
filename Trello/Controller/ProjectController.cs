@@ -1,12 +1,16 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Trello.DTOs;
-using Trello.Service.Iservice;
+using Trello.ExeptionHandlingResultFilter;
+
 using Trello.Service.IService;
 
 namespace Trello.Controller
 {
+    [ResultFilter]
     [Route("api/projects")]
     [ApiController]
+    [Authorize]
     public class ProjectController : ControllerBase
     {
         private readonly IProjectService _projectService;
@@ -38,6 +42,8 @@ namespace Trello.Controller
             return Ok(response.Value);
 
         }
+
+       
     }
 
 

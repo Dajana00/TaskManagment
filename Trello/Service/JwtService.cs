@@ -49,22 +49,71 @@ namespace Trello.Service
 
             var tokenHandler = new JwtSecurityTokenHandler();
             var accessToken = tokenHandler.WriteToken(tokenHandler.CreateToken(tokenDescriptor));
-            var refreshToken = GenerateRefreshToken();
+            var refreshToken = GenerateRefreshToken(user); 
 
             user.RefreshToken = refreshToken;
-            user.RefreshTokenExpiry = DateTime.UtcNow.AddDays(_jwtSettings.RefreshTokenExpiryDays); // Refresh token traje 7 dana
+            user.RefreshTokenExpiry = DateTime.UtcNow.AddDays(_jwtSettings.RefreshTokenExpiryDays); 
             _unitOfWork.SaveAsync();
             return (accessToken, refreshToken);
         }
 
 
-        private string GenerateRefreshToken()
+        private string GenerateRefreshToken(User user)
         {
-            var randomNumber = new byte[32];
-            using var rng = RandomNumberGenerator.Create();
-            rng.GetBytes(randomNumber);
-            return Convert.ToBase64String(randomNumber);
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtSettings.Key));  
+            var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+
+            var claims = new List<Claim>
+            {
+                new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()), 
+                new Claim(JwtRegisteredClaimNames.Email, user.Email),
+                new Claim(ClaimTypes.Name, user.UserName)
+            };
+
+            var refreshTokenDescriptor = new SecurityTokenDescriptor
+            {
+                Subject = new ClaimsIdentity(claims),
+                Expires = DateTime.UtcNow.AddDays(_jwtSettings.RefreshTokenExpiryDays),
+                Issuer = _jwtSettings.Issuer,
+                Audience = _jwtSettings.Audience,
+                SigningCredentials = credentials
+            };
+
+            var tokenHandler = new JwtSecurityTokenHandler();
+            var refreshToken = tokenHandler.WriteToken(tokenHandler.CreateToken(refreshTokenDescriptor));
+
+            return refreshToken; 
         }
+
+
+        public ClaimsPrincipal? GetPrincipalFromExpiredToken(string token)
+        {
+            var tokenValidationParameters = new TokenValidationParameters
+            {
+                ValidateAudience = false,
+                ValidateIssuer = false,
+                ValidateIssuerSigningKey = true,
+                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtSettings.Key)),
+                ValidateLifetime = false 
+            };
+
+            var tokenHandler = new JwtSecurityTokenHandler();
+            var principal = tokenHandler.ValidateToken(token, tokenValidationParameters, out SecurityToken securityToken);
+
+            if (securityToken is not JwtSecurityToken jwtSecurityToken || !jwtSecurityToken.Header.Alg.Equals(SecurityAlgorithms.HmacSha256, StringComparison.InvariantCultureIgnoreCase))
+                return null;
+
+            return principal;
+        }
+        public bool ValidateRefreshToken(User user, string refreshToken)
+        {
+            if (user == null || string.IsNullOrEmpty(user.RefreshToken))
+                return false;
+
+            var isValid = user.RefreshToken == refreshToken && user.RefreshTokenExpiry.Value > DateTime.UtcNow;
+            return isValid;
+        }
+
 
     }
 }

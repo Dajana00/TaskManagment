@@ -83,6 +83,21 @@ namespace Trello.Repository
                 throw new Exception($"An error occurred while retrieving user story with this id: {id}. Please try again.");
             }
         }
+        public async Task Delete(UserStory userStory)
+        {
+            try
+            {
+                _context.UserStories.Remove(userStory);
+                await _context.SaveChangesAsync();  
+                _logger.LogInformation("UserStory with ID {Id} deleted successfully.", userStory.Id);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred while deleting user story with ID {Id}", userStory.Id);
+                throw new Exception("An error occurred while deleting the user story. Please try again.");
+            }
+        }
+
 
     }
 }

@@ -9,6 +9,7 @@ namespace Trello.Repository.IRepository
         Task<ICollection<Card>> GetByActiveSprint(int activeSprintId);
         Task<ICollection<Card>> GetByUserStoryId(int userStoryId);
         Task Update(Card card);
+        Task Delete(Card card);
 
     }
 }

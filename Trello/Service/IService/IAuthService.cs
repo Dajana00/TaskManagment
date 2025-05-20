@@ -8,8 +8,7 @@ namespace Trello.Service.Iservice
         Task<Result<AuthResponseDto>> RegisterUserAsync(RegisterRequestDto request);
         Task<Result<AuthResponseDto>> LoginAsync(UserLoginDto request);
 
-       // Task<AuthResponseDto> RefreshTokenAsync(string refreshToken);
-
+        Task<Result<AuthResponseDto>> RefreshTokenAsync(string refreshToken);
     }
 
 }

@@ -1,5 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Trello.Filters;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Trello.ExeptionHandlingResultFilter;
 using Trello.Service.IService;
 
 namespace Trello.Controller
@@ -7,6 +8,7 @@ namespace Trello.Controller
     [ResultFilter]
     [Route("api/backlog")]
     [ApiController]
+    [Authorize]
     public class BacklogController : ControllerBase
     {
         private readonly IBacklogService _backlogService;

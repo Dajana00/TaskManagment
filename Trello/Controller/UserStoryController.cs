@@ -1,10 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Trello.DTOs;
+using Trello.ExeptionHandlingResultFilter;
 using Trello.Service;
 using Trello.Service.IService;
 
 namespace Trello.Controller
 {
+    [ResultFilter]
     [Route("api/userStory")]
     [ApiController]
     public class UserStoryController : ControllerBase
@@ -37,5 +39,27 @@ namespace Trello.Controller
             var response = await _userStoryService.GetAll();
             return Ok(response);
         }
+
+        [HttpGet("getById/{id}")]
+        public async Task<IActionResult> GetAll([FromRoute] int id)
+        {
+            var response = await _userStoryService.GetByIdAsync(id);
+            return Ok(response);
+        }
+
+        [HttpPut("update/{id}")]
+        public async Task<IActionResult> Update(int id, [FromBody] UserStoryDto updatedStory)
+        {
+            var result = await _userStoryService.Update(id, updatedStory);
+            return Ok(result.Value);
+        }
+
+        [HttpDelete("delete/{id}")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var result = await _userStoryService.Delete(id);
+            return NoContent();
+        }
+
     }
 }
