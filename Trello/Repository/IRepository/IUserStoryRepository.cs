@@ -8,6 +8,7 @@ namespace Trello.Repository.IRepository
         Task<ICollection<UserStory>> GetByBacklogId(int backlogId);
         Task<ICollection<UserStory>> GetAll();
         Task<UserStory?> GetByIdAsync(int id);
+        Task Delete(UserStory userStory);
 
     }
 

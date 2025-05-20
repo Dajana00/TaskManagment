@@ -428,7 +428,7 @@ namespace Trello.Migrations
                     b.HasOne("Trello.Model.Card", "Card")
                         .WithMany("UserCards")
                         .HasForeignKey("CardId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Trello.Model.User", "User")
