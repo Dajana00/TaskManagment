@@ -108,6 +108,22 @@ namespace Trello.Repository
            
         }
 
+        public async Task Delete(Card card)
+        {
+            try
+            {
+                _context.Cards.Remove(card);
+                await _context.SaveChangesAsync();
+                _logger.LogInformation($"Successfully deleted card with id {card.Id}");
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, $"Error deleting card with id {card.Id}");
+                throw new Exception($"An error occurred while deleting the card with id {card.Id}. Please try again.", ex);
+            }
+        }
+
+
 
 
     }

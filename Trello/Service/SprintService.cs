@@ -55,9 +55,12 @@ namespace Trello.Service
                 if (!allCardsDone)
                     return Result.Fail("Cannot complete sprint. All cards must be done.");
                 var board = await _boardService.GetById(boardId);
-                
+              
                 var sprintId = board.Value.ActiveSprintId;
                 var sprint = await _unitOfWork.Sprints.Complete((int)sprintId);
+
+                board.Value.ActiveSprintId = null;
+                await _unitOfWork.SaveAsync();
                 return Result.Ok(_sprintMapper.Map<SprintDto>(sprint));
             }
             catch (Exception ex)

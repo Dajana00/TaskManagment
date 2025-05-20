@@ -54,6 +54,21 @@ namespace Trello.Controller
             var response = await _cardSprintService.AddCardToActiveSprint(id);
             return Ok(response);
         }
+
+        [HttpDelete("delete/{cardId}")]
+        public async Task<IActionResult> DeleteCard(int cardId)
+        {
+            var result = await _cardService.Delete(cardId);
+            return NoContent();
+        }
+
+        [HttpPut("update/{cardId}")]
+        public async Task<IActionResult> UpdateCard(int cardId, [FromBody] UpdateCardDto dto)
+        {
+            var result = await _cardService.Update(cardId, dto);
+            return Ok(result.Value);
+        }
+
     }
 
 

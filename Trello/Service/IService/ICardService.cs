@@ -13,7 +13,8 @@ namespace Trello.Service.IService
         Task<Result<ICollection<CardDto>>> GetByBoardId(int boardId);
         Task<Result<ICollection<CardDto>>> GetByUserStoryId(int id);
         Task<bool> AreAllCardsDone(int boardId);
-        Task<Result> UpdateAsync(Card card);
+        Task<Result<CardDto>> Update(int cardId, UpdateCardDto dto);
+        Task<Result> Delete(int cardId);
 
 
     }

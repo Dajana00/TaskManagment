@@ -8,6 +8,9 @@ namespace Trello.Service.IService
         Task<Result<UserStoryDto>> CreateAsync(UserStoryDto userStoryDto);
         Task<Result<ICollection<UserStoryDto>>> GetByBacklogIdAsync(int backlogId);
         Task<Result<ICollection<UserStoryDto>>> GetAll();
-        Task<Result<UserStoryDto>> GetByIdAsync(int id);    
+        Task<Result<UserStoryDto>> GetByIdAsync(int id);
+        Task<Result<UserStoryDto>> Update(int id, UserStoryDto updatedStory);
+        Task<Result> Delete(int id);
+
     }
 }

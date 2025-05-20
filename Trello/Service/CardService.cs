@@ -74,8 +74,6 @@ namespace Trello.Service
                 if (board.ActiveSprintId != null)
                 {
                     var cards = await _unitOfWork.Cards.GetByActiveSprint((int)board.ActiveSprintId);
-                    if (cards == null || cards.Count == 0)
-                        return Result.Fail("No cards found.");
                     var cardDtos = cards
                     .Select(us => _mapper.Map<CardDto>(us))
                     .ToList();
@@ -110,9 +108,6 @@ namespace Trello.Service
             {
                 var userStories = await _unitOfWork.Cards.GetByUserStoryId(id);
 
-                if (userStories == null || userStories.Count == 0)
-                    return Result.Fail($"No cards found with user story id: {id}");
-
                 var userStoryDtos = userStories
                     .Select(us => _mapper.Map<CardDto>(us))
                     .ToList();
@@ -140,21 +135,36 @@ namespace Trello.Service
             var card = await _unitOfWork.Cards.GetByIdAsync(id);
             return _mapper.Map<CardDto>(card);  
         }
-        public async Task<Result> UpdateAsync(Card card)
+      
+        public async Task<Result> Delete(int cardId)
         {
+            var card = await _unitOfWork.Cards.GetByIdAsync(cardId);
             if (card == null)
-                return Result.Fail("Card cannot be null.");
-            try
-            {
-                await _unitOfWork.Cards.Update(card);
-                
-                return Result.Ok();
-            }
-            catch (Exception ex)
-            {
-                return Result.Fail($"Failed to update card: {ex.Message}");
-            }
+                return Result.Fail($"Card with ID {cardId} not found.");
+
+            await _unitOfWork.Cards.Delete(card);
+            await _unitOfWork.SaveAsync();
+
+            return Result.Ok();
         }
+
+        public async Task<Result<CardDto>> Update(int cardId, UpdateCardDto dto)
+        {
+            var card = await _unitOfWork.Cards.GetByIdAsync(cardId);
+            if (card == null)
+                return Result.Fail($"Card with ID {cardId} not found.");
+
+            card.Title = dto.Title;
+            card.Description = dto.Description;
+            card.DueDate = dto.DueDate; 
+
+            await _unitOfWork.Cards.Update(card);
+            await _unitOfWork.SaveAsync();
+
+            var updatedDto = _mapper.Map<CardDto>(card);
+            return Result.Ok(updatedDto);
+        }
+
 
     }
 }
